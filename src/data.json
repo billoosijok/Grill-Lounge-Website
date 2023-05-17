@@ -1,0 +1,56 @@
+{
+  "langs": {
+    "fr": {
+      "icon": "france",
+      "label": "Français"
+    },
+    "en": {
+      "icon": "united-kingdom",
+      "label": "English"
+    }
+  },
+  "icons": [
+    {
+      "icon": "instagram",
+      "link": "https://instagram.com/the_grill_lounge"
+    },
+    {
+      "icon": "facebook",
+      "link": "https://www.facebook.com/people/Grill-Lounge/100091425234364"
+    },
+    {
+      "icon": "tiktok",
+      "link": "https://tiktok.com/@the_grill_lounge"
+    },
+    {
+      "icon": "phone",
+      "link": "tel:0955000298"
+    }
+  ],
+  "links": [
+    {
+      "label": {
+        "fr": "Adresse",
+        "en": "Address"
+      },
+      "url": {
+        "fr": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9"
+      },
+      "analyticsId": "adresse_click"
+    },
+    {
+      "label": "Menu",
+      "url": {
+        "fr": "/resources/Menu.pdf"
+      },
+      "analyticsId": "menu_click"
+    },
+    {
+      "label": "Brunch & Breakfast",
+      "url": {
+        "fr": "/resources/Brunch.pdf"
+      },
+      "analyticsId": "brunch_click"
+    }
+  ]
+}
