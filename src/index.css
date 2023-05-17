@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    font-family: 'Alegreya', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: url("./img/background.jpg") center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+header {
+    text-align: center;
+    color: white;
+}
+
+.logo {
+    margin-bottom: -10px;
+    max-width: 80%;
+}
+
+h3 {
+    margin: 0;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+main > ul {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+main > ul > li {
+    display: block;
+}
+
+.social-media > li {
+    width: 40px;
+}
+
+.social-icons > svg {
+    color: inherit;
+    stroke: white;
+    fill: white;
+}
+
+main > .links {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+}
+
+main > .links a {
+    background-color: #759883;
+    display: block;
+    padding: 15px;
+    border-radius: 40px;
+    color: inherit;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2em;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+main > .links a:hover, main > .links a:active {
+    background-color: white;
+    color: #759883
+}
