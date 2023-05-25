@@ -14,9 +14,8 @@ export const LangPicker = ({lang, onChange}) => {
       >
         <img width={40} src={require(`../img/${data.langs[lang].icon}.png`)}/>
       </Button>
-
     </Dropdown.Trigger>
-    <Dropdown.Menu disabledKeys={['en']} selectedKeys={[lang]} onAction={onChange as any}>
+    <Dropdown.Menu selectedKeys={[lang]} onAction={onChange as any}>
       {Object.entries(data.langs).map(([lang, {label, icon}]) => (
         <Dropdown.Item
           key={lang}
