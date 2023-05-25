@@ -36,8 +36,8 @@ function App() {
         </header>
         <main className="animate__animated animate__fadeIn">
           <ul className="social-media">
-            {data.icons.map(({link, icon}) => (
-              <li><a href={link}><Icon icon={icon as any}/></a></li>
+            {data.icons.map(({link, icon, analyticsId}) => (
+              <li><a href={link} onClick={() => global.gtag('event', analyticsId)}><Icon icon={icon as any}/></a></li>
             ))}
             <li style={{paddingTop: 6}}>
               <LangPicker lang={lang} onChange={setLang}/>

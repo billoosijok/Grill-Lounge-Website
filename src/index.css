@@ -3,10 +3,8 @@ body {
     font-family: 'Alegreya', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url("./img/background.jpg") center center no-repeat;
+    background: url("./img/background.jpg") center center no-repeat fixed;
     background-size: cover;
-    height: 100vh;
-    overflow-y: scroll;
 }
 
 header {

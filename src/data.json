@@ -12,19 +12,23 @@
   "icons": [
     {
       "icon": "instagram",
-      "link": "https://instagram.com/the_grill_lounge"
+      "link": "https://instagram.com/the_grill_lounge",
+      "analyticsId": "instagram_click"
     },
     {
       "icon": "facebook",
-      "link": "https://www.facebook.com/people/Grill-Lounge/100091425234364"
+      "link": "https://www.facebook.com/people/Grill-Lounge/100091425234364",
+      "analyticsId": "facebook_click"
     },
     {
       "icon": "tiktok",
-      "link": "https://tiktok.com/@the_grill_lounge"
+      "link": "https://tiktok.com/@the_grill_lounge",
+      "analyticsId": "tiktok_click"
     },
     {
       "icon": "phone",
-      "link": "tel:0955000298"
+      "link": "tel:0955000298",
+      "analyticsId": "phone_click"
     }
   ],
   "links": [
@@ -37,6 +41,14 @@
         "fr": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9"
       },
       "analyticsId": "adresse_click"
+    },
+    {
+      "label": {
+        "fr": "Réservation",
+        "en": "Reservation"
+      },
+      "url": "tel:0955000298",
+      "analyticsId": "reservation_click"
     },
     {
       "label": "Menu",
