@@ -53,15 +53,14 @@
     {
       "label": "Menu",
       "url": {
-        "fr": "/resources/Menu.pdf"
+        "fr": "/resources/Menu.pdf",
+        "en": "/resources/Menu_en.pdf"
       },
       "analyticsId": "menu_click"
     },
     {
       "label": "Brunch & Breakfast",
-      "url": {
-        "fr": "/resources/Brunch.pdf"
-      },
+      "url": "/resources/Brunch.pdf",
       "analyticsId": "brunch_click"
     }
   ]
