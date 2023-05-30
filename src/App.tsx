@@ -4,6 +4,7 @@ import data from './data.json'
 import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
 import {LangPicker} from "./components/LangPicker";
+import {useLocation} from "react-router-dom";
 
 const theme = createTheme({
   type: 'light',
@@ -14,6 +15,7 @@ const theme = createTheme({
 
 function App() {
   const [lang, setLang] = useState<'fr' | 'en'>('fr');
+  const location = useLocation();
 
   const potentiallyLocalizedProp = useCallback((val) => {
     if (typeof val !== 'object') return val;
@@ -26,9 +28,15 @@ function App() {
     element.item(0)?.setAttribute('lang', lang)
   }, [lang])
 
+  useEffect(() => {
+    if (location.pathname.match(/mere/i)) {
+      window.location.href = "https://grilllounge.fr/resources/menu_mere.pdf"
+    }
+  }, []);
+
   return (
     <NextUIProvider theme={theme}>
-      <div className={'root-container'}>
+      <div className={'root-container'} style={{paddingBottom: 100}}>
         <header className="animate__animated animate__faster animate__fadeIn">
           <img className="logo " alt="Grill Lounge Logo" src={require('./img/logo.png')} width="400"/>
           <h3>Steak &nbsp;·&nbsp; Burger &nbsp;·&nbsp; Pasta &nbsp;·&nbsp; Brunch</h3>
