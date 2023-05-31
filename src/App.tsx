@@ -5,13 +5,9 @@ import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
 import {LangPicker} from "./components/LangPicker";
 import {useLocation} from "react-router-dom";
+import {OfferBanner} from "./components/OfferBanner";
+import {theme} from "./utils/theme";
 
-const theme = createTheme({
-  type: 'light',
-  theme: {
-    fonts: {sans: 'Alegreya, serif'}
-  }
-})
 
 function App() {
   const [lang, setLang] = useState<'fr' | 'en'>('fr');
@@ -30,6 +26,7 @@ function App() {
 
   useEffect(() => {
     if (location.pathname.match(/mere/i)) {
+      global.gtag('event', 'mere')
       window.location.href = "https://grilllounge.fr/resources/menu_mere.pdf"
     }
   }, []);
@@ -43,6 +40,8 @@ function App() {
           <h5>Narbonne,&nbsp; France</h5>
         </header>
         <main className="animate__animated animate__fadeIn">
+          <OfferBanner text={'Offre  fête des méres'} action={{
+            label: 'En savoir plus', url: "https://grilllounge.fr/resources/menu_mere.pdf"}} />
           <ul className="social-media">
             {data.icons.map(({link, icon, analyticsId}) => (
               <li><a href={link} onClick={() => global.gtag('event', analyticsId)}><Icon icon={icon as any}/></a></li>
