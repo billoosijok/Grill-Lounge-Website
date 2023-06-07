@@ -40,8 +40,6 @@ function App() {
           <h5>Narbonne,&nbsp; France</h5>
         </header>
         <main className="animate__animated animate__fadeIn">
-          <OfferBanner text={'Offre  fête des méres'} action={{
-            label: 'En savoir plus', url: "https://grilllounge.fr/resources/menu_mere.pdf"}} />
           <ul className="social-media">
             {data.icons.map(({link, icon, analyticsId}) => (
               <li><a href={link} onClick={() => global.gtag('event', analyticsId)}><Icon icon={icon as any}/></a></li>
