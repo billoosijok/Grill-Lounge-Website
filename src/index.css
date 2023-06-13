@@ -79,13 +79,24 @@ main > .links a:hover, main > .links a:active {
 .OfferBanner {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
     padding: 20px;
     width: 100%;
     position: fixed;
     top: 0;
     background-color: white;
     box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .OfferBanner {
+        flex-direction: column;
+        gap: 5px;
+        padding: 10px;
+    }
 }
 
 

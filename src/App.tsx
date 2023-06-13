@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {createTheme, NextUIProvider} from '@nextui-org/react';
+import {NextUIProvider} from '@nextui-org/react';
 import data from './data.json'
 import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
@@ -25,9 +25,9 @@ function App() {
   }, [lang])
 
   useEffect(() => {
-    if (location.pathname.match(/mere/i)) {
-      global.gtag('event', 'mere')
-      window.location.href = "https://grilllounge.fr/resources/menu_mere.pdf"
+    if (location.pathname.match(/pere/i)) {
+      global.gtag('event', 'pere')
+      window.location.href = "https://grilllounge.fr/resources/menu_pere.pdf"
     }
   }, []);
 
@@ -39,6 +39,7 @@ function App() {
           <h3>Steak &nbsp;·&nbsp; Burger &nbsp;·&nbsp; Pasta &nbsp;·&nbsp; Brunch</h3>
           <h5>Narbonne,&nbsp; France</h5>
         </header>
+        <OfferBanner text={'Menu Spécial Fête des Pères'} action={{label: 'En savoir plus', url: '/resources/menu_pere.pdf'}} />
         <main className="animate__animated animate__fadeIn">
           <ul className="social-media">
             {data.icons.map(({link, icon, analyticsId}) => (
