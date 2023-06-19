@@ -39,7 +39,6 @@ function App() {
           <h3>Steak &nbsp;·&nbsp; Burger &nbsp;·&nbsp; Pasta &nbsp;·&nbsp; Brunch</h3>
           <h5>Narbonne,&nbsp; France</h5>
         </header>
-        <OfferBanner text={'Menu Spécial Fête des Pères'} action={{label: 'En savoir plus', url: '/resources/menu_pere.pdf'}} />
         <main className="animate__animated animate__fadeIn">
           <ul className="social-media">
             {data.icons.map(({link, icon, analyticsId}) => (
