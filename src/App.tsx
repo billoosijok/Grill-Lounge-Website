@@ -25,11 +25,10 @@ function App() {
   }, [lang])
 
   useEffect(() => {
-    if (location.pathname.match(/pere/i)) {
-      global.gtag('event', 'pere')
-      window.location.href = "https://grilllounge.fr/resources/menu_pere.pdf"
+    if (location.pathname.match(/\/en\/?/i)) {
+      setLang('en')
     }
-  }, []);
+  }, [location.pathname]);
 
   return (
     <NextUIProvider theme={theme}>
