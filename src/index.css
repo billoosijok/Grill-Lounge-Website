@@ -5,7 +5,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background: url("./img/background.jpg") center center no-repeat fixed;
     background-size: cover;
-    min-height: 100vh;
+    min-height: 100vh !important;
 }
 
 header {
