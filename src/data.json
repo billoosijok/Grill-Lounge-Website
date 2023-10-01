@@ -29,6 +29,11 @@
       "icon": "phone",
       "link": "tel:0955000298",
       "analyticsId": "phone_click"
+    },
+    {
+      "icon": "email",
+      "link": "mailto:grilllounge.narbonne@gmail.com",
+      "analyticsId": "email_click"
     }
   ],
   "links": [
