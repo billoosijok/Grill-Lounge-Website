@@ -5,7 +5,7 @@ import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
 import {LangPicker} from "./components/LangPicker";
 import {useLocation} from "react-router-dom";
-import {OfferBanner} from "./components/OfferBanner";
+// import {OfferBanner} from "./components/OfferBanner";
 import {theme} from "./utils/theme";
 
 
