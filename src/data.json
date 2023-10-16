@@ -42,9 +42,7 @@
         "fr": "Adresse",
         "en": "Address"
       },
-      "url": {
-        "fr": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9"
-      },
+      "url": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9",
       "analyticsId": "adresse_click"
     },
     {
@@ -64,7 +62,10 @@
       "analyticsId": "menu_click"
     },
     {
-      "label": "Brunch & Breakfast",
+      "label": {
+        "fr": "Brunch & Petit-Déjeuner",
+        "en": "Brunch & Breakfast"
+      },
       "url": "/resources/Brunch.pdf",
       "analyticsId": "brunch_click"
     }
