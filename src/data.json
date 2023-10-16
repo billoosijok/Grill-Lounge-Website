@@ -46,14 +46,6 @@
       "analyticsId": "adresse_click"
     },
     {
-      "label": {
-        "fr": "Réservation",
-        "en": "Reservation"
-      },
-      "url": "tel:0468652742",
-      "analyticsId": "reservation_click"
-    },
-    {
       "label": "Menu",
       "url": {
         "fr": "/resources/Menu.pdf",
