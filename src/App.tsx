@@ -8,9 +8,10 @@ import {useLocation} from "react-router-dom";
 // import {OfferBanner} from "./components/OfferBanner";
 import {theme} from "./utils/theme";
 import { ReservationModal } from "./components/ReservationModal";
+import {LanguageProvider, useLanguage} from "./hooks/useLanguage";
 
 function App() {
-  const [lang, setLang] = useState<"fr" | "en">("fr");
+  const {lang, setLang} = useLanguage();
   const location = useLocation();
   const [isModalOpen, setIsModalOpen] = useState<boolean>();
 
@@ -36,7 +37,7 @@ function App() {
 
   return (
     <NextUIProvider theme={theme}>
-      <div className={"root-container"} style={{ paddingBottom: 100 }}>
+        <div className={"root-container"} style={{ paddingBottom: 100 }}>
         <header className="animate__animated animate__faster animate__fadeIn">
           <img
             className="logo "

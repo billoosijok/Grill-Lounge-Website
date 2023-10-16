@@ -4,6 +4,7 @@ import {
   Text,
   ModalProps,
 } from "@nextui-org/react";
+import {useLanguage} from "../hooks/useLanguage";
 
 declare global {
   interface Date {
@@ -12,6 +13,8 @@ declare global {
 }
 
 export const ReservationModal = (props: ModalProps) => {
+  const {lang} = useLanguage();
+
   return (
     <div style={{padding: 20, position:'relative'}}>
     <Modal {...props} fullScreen closeButton aria-labelledby="modal-title">
@@ -23,7 +26,7 @@ export const ReservationModal = (props: ModalProps) => {
         </Modal.Header>
         <Modal.Body style={{height: '80vh', padding: 0}}>
           <iframe
-            src="https://widget.thefork.com/fr/92c5df3d-9b97-4412-acdc-9ffa27e9f759?"
+            src={`https://widget.thefork.com/${lang}/92c5df3d-9b97-4412-acdc-9ffa27e9f759?`}
             style={{"width": '100%', height: '100%', border:'none', overflow:'scroll'}}
           ></iframe>
         </Modal.Body>
