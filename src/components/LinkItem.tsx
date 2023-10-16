@@ -1,5 +1,19 @@
-import React from "react";
+import React, {useCallback} from "react";
 
-export const LinkItem = ({label, url, analyticsId}) => {
-  return <a href={url} target="_blank" onClick={() => global.gtag('event', analyticsId)}>{label}</a>
+interface LinkItemProps {
+  label: string;
+  url?: string;
+  analyticsId: string;
+  onClick?: () => void;
+}
+
+export const LinkItem = ({label, url, analyticsId, onClick}: LinkItemProps) => {
+  const onLinkClick = useCallback((event) => {
+    global.gtag('event', analyticsId);
+    if (onClick) {
+      event.preventDefault();
+      onClick()
+    }
+  }, [analyticsId, onClick]);
+  return <a href={url} target="_blank" onClick={onLinkClick}>{label}</a>
 }
