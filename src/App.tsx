@@ -67,7 +67,7 @@ function App() {
             </li>
           </ul>
           <ul className="links">
-            {data.links.map(({ label, url, ...item }, i) => (
+            {data.links.map(({ label, url, analyticsId,...item }, i) => (
               <>
                 {i === 1 ? (<li>
                   <LinkItem
@@ -81,6 +81,7 @@ function App() {
                   <LinkItem
                     label={potentiallyLocalizedProp(label)}
                     url={potentiallyLocalizedProp(url)}
+                    analyticsId={potentiallyLocalizedProp(analyticsId)}
                     {...item}
                   />
                 </li>

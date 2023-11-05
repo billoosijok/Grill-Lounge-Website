@@ -43,7 +43,10 @@
         "fr": "/resources/Menu.pdf",
         "en": "/resources/Menu_en.pdf"
       },
-      "analyticsId": "menu_click"
+      "analyticsId": {
+        "fr": "menu_click_fr",
+        "en": "menu_click_en"
+      }
     },
     {
       "label": {
