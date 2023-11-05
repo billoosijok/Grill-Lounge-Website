@@ -38,14 +38,6 @@
   ],
   "links": [
     {
-      "label": {
-        "fr": "Adresse",
-        "en": "Address"
-      },
-      "url": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9",
-      "analyticsId": "adresse_click"
-    },
-    {
       "label": "Menu",
       "url": {
         "fr": "/resources/Menu.pdf",
@@ -55,11 +47,11 @@
     },
     {
       "label": {
-        "fr": "Brunch & Petit-Déjeuner",
-        "en": "Brunch & Breakfast"
+        "fr": "Adresse",
+        "en": "Address"
       },
-      "url": "/resources/Brunch.pdf",
-      "analyticsId": "brunch_click"
+      "url": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9",
+      "analyticsId": "adresse_click"
     }
   ]
 }
