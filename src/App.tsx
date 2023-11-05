@@ -46,7 +46,7 @@ function App() {
             width="400"
           />
           <h3>
-            Steak &nbsp;·&nbsp; Burger &nbsp;·&nbsp; Pasta &nbsp;·&nbsp; Brunch
+            Steak &nbsp;·&nbsp; Burger &nbsp;·&nbsp; Pasta &nbsp;·&nbsp; Tapas
           </h3>
           <h5>Narbonne,&nbsp; France</h5>
         </header>
