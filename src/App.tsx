@@ -38,6 +38,9 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
+          <div className={'langPickerWrapper'}>
+            <LangPicker lang={lang} onChange={setLang} />
+          </div>
         <header className="animate__animated animate__faster animate__fadeIn">
           <img
             className="logo "
@@ -62,9 +65,6 @@ function App() {
                 </a>
               </li>
             ))}
-            <li style={{ paddingTop: 6 }}>
-              <LangPicker lang={lang} onChange={setLang} />
-            </li>
           </ul>
           <ul className="links">
             {data.links.map(({ label, url, analyticsId,...item }, i) => (
