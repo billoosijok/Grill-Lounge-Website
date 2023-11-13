@@ -13,6 +13,12 @@ header {
     color: white;
 }
 
+.langPickerWrapper {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 0 0;
+}
+
 .logo {
     margin-bottom: -10px;
     max-width: 80%;
