@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "publish-site": "git add . && git commit -m 'Publish' && git push",
+    "pub": "git add . && git commit -m 'Publish' && git push",
     "postbuild": "sh after-build.sh",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

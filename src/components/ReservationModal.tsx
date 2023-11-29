@@ -12,13 +12,12 @@ declare global {
   }
 }
 
-const GAP_AROUND_MODAL = 40;
 export const ReservationModal = (props: ModalProps) => {
   const {lang} = useLanguage();
 
   return (
     <div style={{padding: 20, position:'relative'}}>
-    <Modal {...props} css={{height: `calc(100vh - ${GAP_AROUND_MODAL}px)`, width: `calc(100vw - ${GAP_AROUND_MODAL}px)`, margin: `${GAP_AROUND_MODAL/2}px auto 0`}} fullScreen closeButton aria-labelledby="modal-title">
+    <Modal {...props} fullScreen closeButton aria-labelledby="modal-title">
         <Modal.Header
           css={{ position: "relative" }}
           className="flex flex-row gap-1"

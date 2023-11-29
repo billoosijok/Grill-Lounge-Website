@@ -6,6 +6,7 @@ body {
     background: url("./img/background.jpg") center center no-repeat fixed;
     background-size: cover;
     min-height: 100vh !important;
+    padding-bottom: env(safe-area-inset-bottom);
 }
 
 header {
