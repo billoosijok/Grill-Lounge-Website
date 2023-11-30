@@ -17,7 +17,7 @@ export const ReservationModal = (props: ModalProps) => {
 
   return (
     <div style={{padding: 20, position:'relative'}}>
-    <Modal {...props} fullScreen closeButton aria-labelledby="modal-title">
+    <Modal {...props} css={{bottom: 'env(safe-area-inset-bottom)'}} fullScreen closeButton aria-labelledby="modal-title">
         <Modal.Header
           css={{ position: "relative" }}
           className="flex flex-row gap-1"

@@ -110,3 +110,13 @@ main > .links a:hover, main > .links a:active {
 .OfferBanner > span {
     font-size: 1.4em;
 }
+
+#nextui-modal > div[class*="fullScreen-true"] {
+    top: 0;
+    bottom: 0;
+    bottom: env(safe-area-inset-bottom);
+}
+#nextui-modal > div[class*="fullScreen-true"] > .nextui-backdrop-content {
+    height: 100%;
+}
+
