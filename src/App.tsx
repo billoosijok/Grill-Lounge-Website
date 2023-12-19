@@ -42,7 +42,12 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
-          <OfferBanner text={'Menu Spécial de Noël'} action={{label: 'en savoir plus', url: '/resources/Menu_noel.pdf', color: "error"}}>
+          <OfferBanner
+              text={'Menus Spécials de Noël et Nouvel An'}
+              actions={[
+                {label: 'Menu Noël', url: '/resources/Menu_noel.pdf', color: "error"},
+                {label: 'Menu Nouvel An', url: '/resources/Menu_nouvel_an.pdf', color: "secondary", customStyles: { background: `url(${require('./img/stars.png')}) #111111 100%` }}
+              ]}>
             <div className={'bg-div'} >
               <img src={require('./img/green.png')} style={{flex: 1, maxWidth: 160}} />
               <img src={require('./img/deco.png')}  style={{flex: 5, opacity: 0.6, maxWidth: 300}} />
