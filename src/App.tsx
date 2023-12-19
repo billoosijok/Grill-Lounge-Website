@@ -5,10 +5,10 @@ import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
 import {LangPicker} from "./components/LangPicker";
 import {useLocation} from "react-router-dom";
-// import {OfferBanner} from "./components/OfferBanner";
+import {OfferBanner} from "./components/OfferBanner";
 import {theme} from "./utils/theme";
 import { ReservationModal } from "./components/ReservationModal";
-import {LanguageProvider, useLanguage} from "./hooks/useLanguage";
+import {useLanguage} from "./hooks/useLanguage";
 
 function App() {
   const {lang, setLang} = useLanguage();
@@ -33,11 +33,15 @@ function App() {
     if (location.pathname.match(/\/en\/?/i)) {
       setLang("en");
     }
+    if (location.pathname.match(/\/reservez\//)) {
+      setIsModalOpen(true)
+    }
   }, [location.pathname]);
 
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
+          <OfferBanner text={'Menu Spécial de Noël'} action={{label: 'en savoir plus', url: '/resources/Menu_noel.pdf'}} />
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
           </div>
