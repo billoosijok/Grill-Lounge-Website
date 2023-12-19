@@ -101,7 +101,7 @@ function App() {
                       <LinkItem
                         label={lang === 'fr' ? "Réservez pour le réveillon du Nouvel An" : "Reserve for New Year's Eve"}
                         analyticsId={'reservation_nye_click'}
-                        badge={<img src={require('./img/2024.png')} width={100} style={{maxWidth: 'unset',  position: 'relative', left: -40, top: 5}} />}
+                        badge={<img src={require('./img/2024.png')} width={70} style={{maxWidth: 'unset',  position: 'relative', right: 40, top: 15}} />}
                         customStyles={{
                           background: `url(${require("./img/stars.png")}) #111 100%`,
                           color: 'white',
