@@ -83,6 +83,30 @@ main > .links a:hover, main > .links a:active {
     color: #759883
 }
 
+.LinkItem {
+    position: relative;
+}
+
+.LinkItem .badge {
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    border-radius: 100%;
+    display: none;
+}
+
+.LinkItem .badge:not(.custom) {
+    background: #8B0E1B;
+}
+
+.LinkItem .badge.display,
+.LinkItem .badge.custom {
+    display: block;
+}
+
 .OfferBanner {
     display: flex;
     flex-direction: row;
@@ -96,6 +120,23 @@ main > .links a:hover, main > .links a:active {
     box-shadow: 1px 2px 10px rgba(0,0,0,0.5);
     flex-wrap: wrap;
     justify-content: center;
+    z-index: 1000;
+}
+
+.OfferBanner .bg-div {
+    background: url("./img/xmas-bg.jpg");
+    background-size: cover;
+    opacity: 0.7;
+    z-index: -1;
+    display: flex;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
 }
 
 @media (max-width: 720px) {
