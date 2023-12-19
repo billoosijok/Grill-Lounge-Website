@@ -34,7 +34,7 @@ function App() {
     if (location.pathname.match(/\/en\/?/i)) {
       setLang("en");
     }
-    if (location.pathname.match(/\/reservez\//)) {
+    if (location.pathname.match(/\/reservez\/?/)) {
       setIsModalOpen(true)
     }
   }, [location.pathname]);
