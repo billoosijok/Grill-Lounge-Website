@@ -4,7 +4,7 @@ import data from './data.json'
 import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
 import {LangPicker} from "./components/LangPicker";
-import {useLocation} from "react-router-dom";
+import {useLocation, useNavigate} from "react-router-dom";
 import {OfferBanner} from "./components/OfferBanner";
 import {theme} from "./utils/theme";
 import { ReservationModal } from "./components/ReservationModal";
@@ -13,6 +13,7 @@ import {useLanguage} from "./hooks/useLanguage";
 function App() {
   const {lang, setLang} = useLanguage();
   const location = useLocation();
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState<boolean>();
 
   const potentiallyLocalizedProp = useCallback(
@@ -41,7 +42,13 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
-          <OfferBanner text={'Menu Spécial de Noël'} action={{label: 'en savoir plus', url: '/resources/Menu_noel.pdf'}} />
+          <OfferBanner text={'Menu Spécial de Noël'} action={{label: 'en savoir plus', url: '/resources/Menu_noel.pdf', color: "error"}}>
+            <div className={'bg-div'} >
+              <img src={require('./img/green.png')} style={{flex: 1, maxWidth: 160}} />
+              <img src={require('./img/deco.png')}  style={{flex: 5, opacity: 0.6, maxWidth: 300}} />
+              <img src={require('./img/green.png')} style={{flex: 1, maxWidth: 160}} />
+            </div>
+          </OfferBanner>
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
           </div>
@@ -73,14 +80,49 @@ function App() {
           <ul className="links">
             {data.links.map(({ label, url, analyticsId,...item }, i) => (
               <>
-                {i === 1 ? (<li>
-                  <LinkItem
-                    label={lang === 'fr' ? "Réservez une table" : "Reserve a table"}
-                    analyticsId={'reservation_click'}
-                    onClick={() => setIsModalOpen(true)}
-                  />
-                </li>): null
-                }
+                {i === 1 ? (
+                  <>
+                    <li>
+                      <LinkItem
+                        label={lang === 'fr' ? "Réservez pour Noël" : "Reserve for Christmas"}
+                        analyticsId={'reservation_noel_click'}
+                        badge={<span style={{fontSize: 70, position: 'relative', left: -40, top: -30}}>🎄</span>}
+                        customStyles={{
+                          backgroundColor: '#8B0E1B',
+                          color: 'white',
+                          fontWeight: 'bold'
+                        }}
+                        onClick={() => {
+                          navigate('/reservez/24-12-2023')
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <LinkItem
+                        label={lang === 'fr' ? "Réservez pour le réveillon du Nouvel An" : "Reserve for New Year's Eve"}
+                        analyticsId={'reservation_nye_click'}
+                        badge={<img src={require('./img/2024.png')} width={100} style={{maxWidth: 'unset',  position: 'relative', left: -40, top: 5}} />}
+                        customStyles={{
+                          background: `url(${require("./img/stars.png")}) #111 100%`,
+                          color: 'white',
+                          fontWeight: 'bold'
+                        }}
+                        onClick={() => {
+                          navigate('/reservez/31-12-2023')
+                        }}
+                      />
+                    </li>
+                    <li>
+                      <LinkItem
+                        label={lang === 'fr' ? "Réservez une table" : "Reserve a table"}
+                        analyticsId={'reservation_click'}
+                        onClick={() => {
+                          navigate('/reservez')
+                        }}
+                      />
+                    </li>
+                  </>
+                ): null}
                 <li>
                   <LinkItem
                     label={potentiallyLocalizedProp(label)}
@@ -96,7 +138,10 @@ function App() {
         </main>
           <ReservationModal
             title={lang === 'fr' ? 'Réservez une table' : 'Reserve a table'}
-            onClose={() => setIsModalOpen(false)}
+            onClose={() => {
+              setIsModalOpen(false)
+              navigate('/')
+            }}
             open={isModalOpen}
           />
       </div>

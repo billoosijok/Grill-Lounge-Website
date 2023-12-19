@@ -15,6 +15,7 @@ export const theme = createTheme({
       primarySolidHover: '$green700',
       primarySolidContrast: '$white',
       primaryShadow: '$green500',
+      error: '#8B0E1B'
     }
   }
 })

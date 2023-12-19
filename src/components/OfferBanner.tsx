@@ -1,7 +1,16 @@
-import React, {useEffect} from "react";
+import React, {FC, ReactNode, useEffect} from "react";
 import {Button} from "@nextui-org/react";
 
-export const OfferBanner = ({text, action: { label, url }}) => {
+interface OfferBannerProps {
+  text: string;
+  action: {
+    label: string;
+    url: string;
+    color?: string;
+  }
+  children?: ReactNode
+}
+export const OfferBanner: FC<OfferBannerProps> = ({text, action: { label, url, color }, children}) => {
 
   useEffect(() => {
     document.body.setAttribute('style', "padding-top: 80px")
@@ -9,8 +18,9 @@ export const OfferBanner = ({text, action: { label, url }}) => {
 
   return (
     <div className={'OfferBanner animate__animated animate__fadeInDown animate__faster'}>
-        <span>{text}</span>
-        <Button size={'sm'} onClick={() => window.open(url)}>{label}</Button>
+        {children}
+        <span style={{fontWeight: 'bold'}}>{text}</span>
+        <Button color={color as any} size={'sm'} onClick={() => window.open(url)}>{label}</Button>
     </div>
   );
 }
