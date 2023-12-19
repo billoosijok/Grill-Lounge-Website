@@ -43,7 +43,7 @@ function App() {
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
           <OfferBanner
-              text={'Menus Spécials de Noël et Nouvel An'}
+              text={''}
               actions={[
                 {label: 'Menu Noël', url: '/resources/Menu_noel.pdf', color: "error"},
                 {label: 'Menu Nouvel An', url: '/resources/Menu_nouvel_an.pdf', color: "secondary", customStyles: { background: `url(${require('./img/stars.png')}) #111111 100%` }}
