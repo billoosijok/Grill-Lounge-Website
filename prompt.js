@@ -12,7 +12,7 @@ const rl = readline.createInterface({
     output: process.stdout
 });
 
-rl.question('Enter publish message', (input) => {
+rl.question('Enter publish message: ', (input) => {
     exec(`PROMPT_ENV=${input}`);
     rl.close();
 });
