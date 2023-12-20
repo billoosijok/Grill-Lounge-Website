@@ -31,6 +31,14 @@ function App() {
   }, [lang]);
 
   useEffect(() => {
+    if (location.pathname.match(/\/noel/)) {
+      navigate('/reservez/24-12-2023')
+      return;
+    }
+    if (location.pathname.match(/\/24/)) {
+      navigate('/reservez/31-12-2023')
+      return;
+    }
     if (location.pathname.match(/\/en\/?/i)) {
       setLang("en");
     }
