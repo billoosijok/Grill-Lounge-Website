@@ -31,10 +31,6 @@ function App() {
   }, [lang]);
 
   useEffect(() => {
-    if (location.pathname.match(/\/noel/)) {
-      navigate('/reservez/24-12-2023')
-      return;
-    }
     if (location.pathname.match(/\/24/)) {
       navigate('/reservez/31-12-2023')
       return;
@@ -53,7 +49,6 @@ function App() {
           <OfferBanner
               text={''}
               actions={[
-                {label: 'Menu Noël', url: '/resources/Menu_noel.pdf', color: "error"},
                 {label: 'Menu Nouvel An', url: '/resources/Menu_nouvel_an.pdf', color: "secondary", customStyles: { background: `url(${require('./img/stars.png')}) #111111 100%` }}
               ]}>
             <div className={'bg-div'} >
@@ -95,21 +90,6 @@ function App() {
               <>
                 {i === 1 ? (
                   <>
-                    <li>
-                      <LinkItem
-                        label={lang === 'fr' ? "Réservez pour Noël" : "Reserve for Christmas"}
-                        analyticsId={'reservation_noel_click'}
-                        badge={<span style={{fontSize: 70, position: 'relative', left: -40, top: -30}}>🎄</span>}
-                        customStyles={{
-                          backgroundColor: '#8B0E1B',
-                          color: 'white',
-                          fontWeight: 'bold'
-                        }}
-                        onClick={() => {
-                          navigate('/reservez/24-12-2023')
-                        }}
-                      />
-                    </li>
                     <li>
                       <LinkItem
                         label={lang === 'fr' ? "Réservez pour le réveillon du Nouvel An" : "Reserve for New Year's Eve"}
