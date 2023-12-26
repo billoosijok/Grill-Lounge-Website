@@ -28,6 +28,7 @@ export const ReservationModal = (props: ModalProps) => {
     };
   }, [pathname]);
 
+
   return (
     <div style={{padding: 20, position:'relative'}}>
     <Modal {...props}
