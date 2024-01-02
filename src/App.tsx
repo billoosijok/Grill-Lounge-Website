@@ -47,15 +47,11 @@ function App() {
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
           <OfferBanner
-              text={''}
+              text={'Fermeture du mardi 03/01/2024 au samedi 13/01/2024 inclus.'}
               actions={[
-                {label: 'Menu Nouvel An', url: '/resources/Menu_nouvel_an.pdf', color: "secondary", customStyles: { background: `url(${require('./img/stars.png')}) #111111 100%` }}
+                {label: 'Réservez pour le 14/01', url: '/reservez/14-01-2024', color: "primary", }
               ]}>
-            <div className={'bg-div'} >
-              <img src={require('./img/green.png')} style={{flex: 1, maxWidth: 160}} />
-              <img src={require('./img/deco.png')}  style={{flex: 5, opacity: 0.6, maxWidth: 300}} />
-              <img src={require('./img/green.png')} style={{flex: 1, maxWidth: 160}} />
-            </div>
+            <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>
           </OfferBanner>
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
@@ -90,21 +86,6 @@ function App() {
               <>
                 {i === 1 ? (
                   <>
-                    <li>
-                      <LinkItem
-                        label={lang === 'fr' ? "Réservez pour le réveillon du Nouvel An" : "Reserve for New Year's Eve"}
-                        analyticsId={'reservation_nye_click'}
-                        badge={<img src={require('./img/2024.png')} width={70} style={{maxWidth: 'unset',  position: 'relative', right: 40, top: 15}} />}
-                        customStyles={{
-                          background: `url(${require("./img/stars.png")}) #111 100%`,
-                          color: 'white',
-                          fontWeight: 'bold'
-                        }}
-                        onClick={() => {
-                          navigate('/reservez/31-12-2023')
-                        }}
-                      />
-                    </li>
                     <li>
                       <LinkItem
                         label={lang === 'fr' ? "Réservez une table" : "Reserve a table"}
