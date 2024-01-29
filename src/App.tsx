@@ -54,13 +54,13 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
-          <OfferBanner
-              text={'Fermeture du mardi 03/01/2024 au samedi 13/01/2024 inclus.'}
-              actions={[
-                {label: 'Réservez pour le 14/01', url: '/reservez/14-01-2024', color: "primary", }
-              ]}>
-            <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>
-          </OfferBanner>
+          {/*<OfferBanner*/}
+          {/*    text={'Fermeture du mardi 03/01/2024 au samedi 13/01/2024 inclus.'}*/}
+          {/*    actions={[*/}
+          {/*      {label: 'Réservez pour le 14/01', url: '/reservez/14-01-2024', color: "primary", }*/}
+          {/*    ]}>*/}
+          {/*  <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>*/}
+          {/*</OfferBanner>*/}
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
           </div>
@@ -155,16 +155,6 @@ function App() {
                     analyticsId={'english_client'}
                     onClick={() => {
                       setLang('en');
-                      setMenuModalVisible(false)
-                    }}
-                  />
-                </li>
-                <li>
-                  <LinkItem
-                    label={"Español"}
-                    analyticsId={'spanish_client'}
-                    onClick={() => {
-                      setLang('fr');
                       setMenuModalVisible(false)
                     }}
                   />
