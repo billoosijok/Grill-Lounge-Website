@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d989e42.css",
-    "main.js": "/static/js/main.f886f516.js",
-    "static/media/xmas-bg.jpg": "/static/media/xmas-bg.e98b26f1c8487f745d35.jpg",
+    "main.css": "/static/css/main.3e0cb22a.css",
+    "main.js": "/static/js/main.0dd9da04.js",
     "static/media/background.jpg": "/static/media/background.f56f0ddad7b3c541f0c4.jpg",
+    "static/media/bg_valentin.jpg": "/static/media/bg_valentin.8267adf228716024705f.jpg",
     "static/media/logo.png": "/static/media/logo.beca4dd99c760ad25c89.png",
     "static/media/stars.png": "/static/media/stars.fd26355892b58065ef33.png",
     "static/media/2024.png": "/static/media/2024.242dc8abee8a39454712.png",
@@ -12,11 +12,11 @@
     "static/media/united-kingdom.png": "/static/media/united-kingdom.ecde48fbd3fb7ca5ee0b.png",
     "static/media/snow.png": "/static/media/snow.cac23c42663a1902d318.png",
     "index.html": "/index.html",
-    "main.4d989e42.css.map": "/static/css/main.4d989e42.css.map",
-    "main.f886f516.js.map": "/static/js/main.f886f516.js.map"
+    "main.3e0cb22a.css.map": "/static/css/main.3e0cb22a.css.map",
+    "main.0dd9da04.js.map": "/static/js/main.0dd9da04.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d989e42.css",
-    "static/js/main.f886f516.js"
+    "static/css/main.3e0cb22a.css",
+    "static/js/main.0dd9da04.js"
   ]
 }

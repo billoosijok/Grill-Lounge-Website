@@ -39,7 +39,7 @@ function App() {
       navigate('/reservez/31-12-2023')
       return;
     }
-    if (location.pathname.match(/\/Valentin/i)) {
+    if (location.pathname.match(/\/valentin/i)) {
       navigate('/reservez/14-02-2024')
       return;
     }
@@ -54,13 +54,14 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
-          {/*<OfferBanner*/}
-          {/*    text={'Fermeture du mardi 03/01/2024 au samedi 13/01/2024 inclus.'}*/}
-          {/*    actions={[*/}
-          {/*      {label: 'Réservez pour le 14/01', url: '/reservez/14-01-2024', color: "primary", }*/}
-          {/*    ]}>*/}
-          {/*  <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>*/}
-          {/*</OfferBanner>*/}
+          <OfferBanner
+              text={'Les réservations pour la St. Valentin sont ouvertes. Le nombre de tables est limité.'}
+              actions={[
+                {label: 'Réservez', url: '/valentin', color: "primary"},
+                {label: 'Menu St. Valentin', url: '/resources/menu_valentin.pdf', color: "error", newTab: true}
+              ]}>
+            <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>
+          </OfferBanner>
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
           </div>

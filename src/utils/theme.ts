@@ -17,6 +17,7 @@ export const theme = createTheme({
       primaryShadow: '$green500',
       error: '#8B0E1B',
       secondary: '#111111',
+
     }
   }
 })
