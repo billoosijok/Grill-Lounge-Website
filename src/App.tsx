@@ -1,5 +1,5 @@
 import React, {useCallback, useEffect, useState} from 'react';
-import {NextUIProvider} from '@nextui-org/react';
+import {Modal, NextUIProvider, Text, useModal} from '@nextui-org/react';
 import data from './data.json'
 import {LinkItem} from "./components/LinkItem";
 import {Icon} from "./components/Icon";
@@ -15,7 +15,7 @@ function App() {
   const location = useLocation();
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState<boolean>();
-
+  const {visible: menuModalVisible, setVisible: setMenuModalVisible} = useModal(false);
   const potentiallyLocalizedProp = useCallback(
     (val) => {
       if (typeof val !== "object") return val;
@@ -31,8 +31,16 @@ function App() {
   }, [lang]);
 
   useEffect(() => {
+    if (location.pathname.match(/\/menu/)) {
+      setMenuModalVisible(true)
+      return;
+    }
     if (location.pathname.match(/\/24/)) {
       navigate('/reservez/31-12-2023')
+      return;
+    }
+    if (location.pathname.match(/\/Valentin/i)) {
+      navigate('/reservez/14-02-2024')
       return;
     }
     if (location.pathname.match(/\/en\/?/i)) {
@@ -118,6 +126,52 @@ function App() {
             }}
             open={isModalOpen}
           />
+          <Modal
+             open={menuModalVisible}
+             closeButton
+             onClose={() => setMenuModalVisible(false)}
+             aria-labelledby="modal-title">
+            <Modal.Header
+              css={{ position: "relative" }}
+              className="flex flex-row gap-1"
+            >
+              <Text h2 id={'modal-title'} size={24} css={{marginTop: '-20px !important'}}>Menu</Text>
+            </Modal.Header>
+            <Modal.Body style={{height: '80vh', padding: 0}}>
+              <ul>
+                <li>
+                  <LinkItem
+                    label={"Français"}
+                    analyticsId={'french_client'}
+                    onClick={() => {
+                      setLang('fr');
+                      setMenuModalVisible(false)
+                    }}
+                  />
+                </li>
+                <li>
+                  <LinkItem
+                    label={"English"}
+                    analyticsId={'english_client'}
+                    onClick={() => {
+                      setLang('en');
+                      setMenuModalVisible(false)
+                    }}
+                  />
+                </li>
+                <li>
+                  <LinkItem
+                    label={"Español"}
+                    analyticsId={'spanish_client'}
+                    onClick={() => {
+                      setLang('fr');
+                      setMenuModalVisible(false)
+                    }}
+                  />
+                </li>
+              </ul>
+            </Modal.Body>
+          </Modal>
       </div>
     </NextUIProvider>
   );
