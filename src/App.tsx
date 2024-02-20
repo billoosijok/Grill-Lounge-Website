@@ -54,14 +54,14 @@ function App() {
   return (
     <NextUIProvider theme={theme}>
         <div className={"root-container"} style={{ paddingBottom: 100 }}>
-          <OfferBanner
-              text={'Les réservations pour la St. Valentin sont ouvertes. Le nombre de tables est limité.'}
-              actions={[
-                {label: 'Réservez', url: '/valentin', color: "primary"},
-                {label: 'Menu St. Valentin', url: '/resources/menu_valentin.pdf', color: "error", newTab: true}
-              ]}>
-            <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>
-          </OfferBanner>
+          {/*<OfferBanner*/}
+          {/*    text={'Les réservations pour la St. Valentin sont ouvertes. Le nombre de tables est limité.'}*/}
+          {/*    actions={[*/}
+          {/*      {label: 'Réservez', url: '/valentin', color: "primary"},*/}
+          {/*      {label: 'Menu St. Valentin', url: '/resources/menu_valentin.pdf', color: "error", newTab: true}*/}
+          {/*    ]}>*/}
+          {/*  <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>*/}
+          {/*</OfferBanner>*/}
           <div className={'langPickerWrapper'}>
             <LangPicker lang={lang} onChange={setLang} />
           </div>
