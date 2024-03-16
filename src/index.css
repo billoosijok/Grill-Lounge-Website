@@ -3,12 +3,24 @@ body {
     font-family: 'Alegreya', serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: url("./img/background.jpg") center center no-repeat fixed;
-    background-size: cover;
     min-height: 100vh !important;
     padding-bottom: env(safe-area-inset-bottom);
     overflow-x: hidden;
     max-width: 100vw;
+    background-image: url("./img/background.jpg");
+    
+}
+
+body > #root {
+    backdrop-filter: blur(8px);
+}
+
+.root-container {
+    background-image: url("./img/background.jpg");
+    background-size: cover;
+    height: 100vh;
+    margin: auto;
+    max-width: 1280px;
 }
 
 header {
