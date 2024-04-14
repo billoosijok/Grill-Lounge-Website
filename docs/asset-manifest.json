@@ -1,22 +1,16 @@
 {
   "files": {
     "main.css": "/static/css/main.3d80fc25.css",
-    "main.js": "/static/js/main.1a26dfc5.js",
+    "main.js": "/static/js/main.3ff1d6a3.js",
     "static/media/background.jpg": "/static/media/background.87b30353e5f10aa32095.jpg",
     "static/media/bg_valentin.jpg": "/static/media/bg_valentin.8267adf228716024705f.jpg",
     "static/media/logo.png": "/static/media/logo.beca4dd99c760ad25c89.png",
-    "static/media/stars.png": "/static/media/stars.fd26355892b58065ef33.png",
-    "static/media/2024.png": "/static/media/2024.242dc8abee8a39454712.png",
-    "static/media/deco.png": "/static/media/deco.22d4c1bb53ee225f283d.png",
-    "static/media/green.png": "/static/media/green.866306734d9eadd435b4.png",
-    "static/media/united-kingdom.png": "/static/media/united-kingdom.ecde48fbd3fb7ca5ee0b.png",
-    "static/media/snow.png": "/static/media/snow.cac23c42663a1902d318.png",
     "index.html": "/index.html",
     "main.3d80fc25.css.map": "/static/css/main.3d80fc25.css.map",
-    "main.1a26dfc5.js.map": "/static/js/main.1a26dfc5.js.map"
+    "main.3ff1d6a3.js.map": "/static/js/main.3ff1d6a3.js.map"
   },
   "entrypoints": [
     "static/css/main.3d80fc25.css",
-    "static/js/main.1a26dfc5.js"
+    "static/js/main.3ff1d6a3.js"
   ]
 }
