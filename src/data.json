@@ -3,6 +3,10 @@
     "fr": {
       "icon": "france",
       "label": "Français"
+    },
+    "en": {
+      "icon": "united-kingdom",
+      "label": "English"
     }
   },
   "icons": [
