@@ -43,9 +43,9 @@ function App() {
       navigate('/reservez/14-02-2024')
       return;
     }
-    // if (location.pathname.match(/\/en\/?/i)) {
-    //   setLang("en");
-    // }
+    if (location.pathname.match(/\/en\/?/i)) {
+      setLang("en");
+    }
     if (location.pathname.match(/\/reservez\/?/)) {
       setIsModalOpen(true)
     }
@@ -63,7 +63,7 @@ function App() {
           {/*  <div className={'bg-div'} style={{backgroundColor: 'lightsalmon'}} ></div>*/}
           {/*</OfferBanner>*/}
           <div className={'langPickerWrapper'}>
-            {/* <LangPicker lang={lang} onChange={setLang} /> */}
+            <LangPicker lang={lang} onChange={setLang} />
           </div>
         <header className="animate__animated animate__faster animate__fadeIn">
           <img
