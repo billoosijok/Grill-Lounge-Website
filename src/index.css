@@ -124,6 +124,10 @@ main > .links a.LinkItem {
     display: block;
 }
 
+.menu-modal li {
+    font-size: 1.5em;
+}
+
 .OfferBanner {
     display: flex;
     flex-direction: row;

@@ -47,7 +47,7 @@ function App() {
       setLang("en");
     }
     if (location.pathname.match(/\/reservez\/?/)) {
-      setIsModalOpen(true)
+      // setIsModalOpen(true)
     }
   }, [location.pathname]);
 
@@ -128,6 +128,7 @@ function App() {
             open={isModalOpen}
           />
           <Modal
+            className='menu-modal'
              open={menuModalVisible}
              closeButton
              onClose={() => setMenuModalVisible(false)}
