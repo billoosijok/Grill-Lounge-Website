@@ -1,6 +1,6 @@
 import {createContext, useContext, useMemo, useState} from "react";
 
-type SupportedLanguages = 'fr'|'en';
+type SupportedLanguages = 'fr'|'en'|'es';
 
 interface LanguageContextProps {
   lang: SupportedLanguages;

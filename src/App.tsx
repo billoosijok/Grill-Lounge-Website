@@ -162,6 +162,16 @@ function App() {
                     }}
                   />
                 </li>
+                <li>
+                  <LinkItem
+                    label={"Español"}
+                    analyticsId={'spanish_client'}
+                    onClick={() => {
+                      setLang('es');
+                      setMenuModalVisible(false)
+                    }}
+                  />
+                </li>
               </ul>
             </Modal.Body>
           </Modal>
