@@ -7,6 +7,10 @@
     "en": {
       "icon": "united-kingdom",
       "label": "English"
+    },
+    "es": {
+      "icon": "espana",
+      "label": "Espanõl"
     }
   },
   "icons": [
@@ -38,20 +42,27 @@
   ],
   "links": [
     {
-      "label": "Menu",
+      "label": {
+        "en": "Menu",
+        "fr": "Menu",
+        "es": "Menú"
+      },
       "url": {
         "fr": "/resources/Menu.pdf",
-        "en": "/resources/Menu_en.pdf"
+        "en": "/resources/Menu_en.pdf",
+        "es": "/resources/Menu_es.pdf"
       },
       "analyticsId": {
         "fr": "menu_click_fr",
-        "en": "menu_click_en"
+        "en": "menu_click_en",
+        "es": "menu_click_es"
       }
     },
     {
       "label": {
         "en": "Reserve a table",
-        "fr": "Réservez une table"
+        "fr": "Réservez une table",
+        "es": "Reserve una mesa"
       },
       "url": "tel:0468652742",
       "analyticsId": "phone_reservation_click"
@@ -59,7 +70,8 @@
     {
       "label": {
         "fr": "Adresse",
-        "en": "Address"
+        "en": "Address",
+        "es": "Dirección"
       },
       "url": "https://goo.gl/maps/7hAnjQGf3SJPrkCo9",
       "analyticsId": "adresse_click"

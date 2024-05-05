@@ -131,6 +131,7 @@ function App() {
             className='menu-modal'
              open={menuModalVisible}
              closeButton
+             fullScreen={false}
              onClose={() => setMenuModalVisible(false)}
              aria-labelledby="modal-title">
             <Modal.Header
