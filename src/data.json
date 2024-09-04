@@ -60,15 +60,6 @@
     },
     {
       "label": {
-        "en": "Reserve a table",
-        "fr": "Réservez une table",
-        "es": "Reserve una mesa"
-      },
-      "url": "tel:0468652742",
-      "analyticsId": "phone_reservation_click"
-    },
-    {
-      "label": {
         "fr": "Adresse",
         "en": "Address",
         "es": "Dirección"
