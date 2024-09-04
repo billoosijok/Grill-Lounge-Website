@@ -47,7 +47,7 @@ function App() {
       setLang("en");
     }
     if (location.pathname.match(/\/reservez\/?/)) {
-      // setIsModalOpen(true)
+      setIsModalOpen(true)
     }
   }, [location.pathname]);
 
@@ -93,11 +93,11 @@ function App() {
           <ul className="links">
             {data.links.map(({ label, url, analyticsId,...item }, i) => (
               <>
-                {/* {i === 1 ? (
+                {i === 1 ? (
                   <>
                     <li>
                       <LinkItem
-                        label={lang === 'fr' ? "Réservez une table" : "Reserve a table"}
+                        label={lang === 'fr' ? "Réservez une table" : lang === 'es' ? "Reserve una mesa" : "Reserve a table"}
                         analyticsId={'reservation_click'}
                         onClick={() => {
                           navigate('/reservez')
@@ -105,7 +105,7 @@ function App() {
                       />
                     </li>
                   </>
-                ): null} */}
+                ): null}
                 <li>
                   <LinkItem
                     label={potentiallyLocalizedProp(label)}
