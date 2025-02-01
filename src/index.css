@@ -18,7 +18,7 @@ body > #root {
 .root-container {
     background-image: url("./img/background.jpg");
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
     margin: auto;
     max-width: 1280px;
 }

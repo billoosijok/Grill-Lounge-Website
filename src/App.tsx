@@ -40,7 +40,7 @@ function App() {
       return;
     }
     if (location.pathname.match(/\/valentin/i)) {
-      navigate('/reservez/14-02-2024')
+      navigate('/reservez/14-02-2025')
       return;
     }
     if (location.pathname.match(/\/en\/?/i)) {
@@ -93,7 +93,7 @@ function App() {
           <ul className="links">
             {data.links.map(({ label, url, analyticsId,...item }, i) => (
               <>
-                {i === 1 ? (
+                {i === 0 ? (
                   <>
                     <li>
                       <LinkItem
