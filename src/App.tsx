@@ -43,6 +43,10 @@ function App() {
       navigate('/reservez/14-02-2025')
       return;
     }
+    if (location.pathname.match(/\/avis/i)) {
+      window.location.href = 'https://maps.app.goo.gl/Ag2oGZsLE964ojCC9';
+      return;
+    }
     if (location.pathname.match(/\/en\/?/i)) {
       setLang("en");
     }
