@@ -1,0 +1,334 @@
+{
+    "categories": [
+        {
+            "name": "STARTERS & TAPAS",
+            "subcategories": [
+                {
+                    "name": "",
+                    "items": [
+                        {
+                            "name": "Muhammara",
+                            "price": "8",
+                            "description": "Red pepper and walnut dip, slightly spicy, toasted bread.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Hummus, served with toasted bread",
+                            "price": "8",
+                            "description": "Creamy and fragrant, served with toasted bread."
+                        },
+                        {
+                            "name": "Labneh & Whipped Feta",
+                            "price": "9",
+                            "description": "Creamy, fresh and slightly salty, perfect to share.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Beetroot puree & roasted seeds",
+                            "price": "7",
+                            "description": "Sweet and colorful, crunchy touch."
+                        },
+                        {
+                            "name": "Falafels & hummus",
+                            "price": "8",
+                            "description": "Crispy balls, melting heart."
+                        },
+                        {
+                            "name": "Burrata, cherry tomatoes & crushed pistachios",
+                            "price": "10",
+                            "description": "Creamy, fresh and generous."
+                        },
+                        {
+                            "name": "Beef carpaccio, capers & parmesan",
+                            "price": "10",
+                            "description": "Thin seasoned slices, freshness and character."
+                        },
+                        {
+                            "name": "Garlic mushrooms, creamy sauce",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Panko breaded goat cheese",
+                            "price": "8",
+                            "description": "Served with beetroot puree and honey."
+                        },
+                        {
+                            "name": "Grilled soujouk, honey, sesame seeds",
+                            "price": "6",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Oriental Chicken Wings",
+                            "price": "8",
+                            "description": "Homemade marinade, grilled and caramelized."
+                        },
+                        {
+                            "name": "Breaded chicken strips, sriracha mayo sauce",
+                            "price": "9",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Panko shrimp, Thai chili sauce",
+                            "price": "9"
+                        },
+                        {
+                            "name": "Roman calamari, aioli sauce",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Grill Lounge style fries",
+                            "price": "6"
+                        }
+                    ]
+                },
+                {
+                    "name": "TO SHARE",
+                    "description": "2 PERSONS",
+                    "items": [
+                        {
+                            "name": "Mezze Board",
+                            "price": "24",
+                            "description": "Hummus, Labneh & Whipped Feta, Beetroot puree, Falafels, Calamari, Muhammara, Breaded chicken strips, Bread.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GRILLS & MEATS",
+            "subcategories": [
+                {
+                    "name": "BEEF",
+                    "description": "Served with salad and fries + 1 sauce of choice",
+                    "items": [
+                        {
+                            "name": "Rib of beef 500g",
+                            "price": "29"
+                        },
+                        {
+                            "name": "Beef Entrecôte",
+                            "price": "24"
+                        },
+                        {
+                            "name": "Beef Sirloin",
+                            "price": "22",
+                            "isNew": true
+                        }
+                    ]
+                },
+                {
+                    "name": "SAUCES",
+                    "description": "If taken as a supplement: 2.5",
+                    "items": [
+                        {
+                            "name": "Mushroom"
+                        },
+                        {
+                            "name": "Pepper"
+                        },
+                        {
+                            "name": "Roquefort"
+                        },
+                        {
+                            "name": "Grill Lounge Sauce"
+                        },
+                        {
+                            "name": "Creamy orange sauce"
+                        }
+                    ]
+                },
+                {
+                    "name": "SIGNATURE GRILLS",
+                    "description": "Served with rice + Grill Lounge sauce",
+                    "items": [
+                        {
+                            "name": "Mix fajita",
+                            "price": "21",
+                            "description": "Peppers, onions, mixed grill of marinated chicken and beef fajita style.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "4 Grilled lamb chops",
+                            "price": "25"
+                        },
+                        {
+                            "name": "2 Grilled chicken skewers",
+                            "price": "16"
+                        },
+                        {
+                            "name": "2 Mixed grilled skewers (meat + chicken)",
+                            "price": "18",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Trio Grill (2 mixed skewers + 2 mini Adana)",
+                            "price": "22",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Mix Grill",
+                            "price": "28",
+                            "description": "1 lamb chop, 1 chicken fillet, 1 mixed meat & chicken skewer, chicken wings, 2 mini Adana, soujouk.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Candied lamb shank",
+                            "price": "25",
+                            "description": "Served with creamy mashed potatoes & Grill Lounge sauce."
+                        }
+                    ]
+                },
+                {
+                    "name": "POULTRY & FISH",
+                    "items": [
+                        {
+                            "name": "Grilled chicken fillets",
+                            "price": "19",
+                            "description": "Sautéed potatoes with mushroom sauce"
+                        },
+                        {
+                            "name": "Grilled duck breast",
+                            "price": "26",
+                            "description": "Sautéed potatoes, creamy orange sauce"
+                        },
+                        {
+                            "name": "Fish of the day, rice",
+                            "price": "23",
+                            "description": "Creamy lemon sauce"
+                        }
+                    ]
+                },
+                {
+                    "name": "TO SHARE",
+                    "description": "2 PERSONS",
+                    "items": [
+                        {
+                            "name": "King of Grill",
+                            "price": "49",
+                            "description": "2 lamb chops, 2 chicken fillets, 2 mixed meat & chicken skewers, chicken wings, 4 mini Adanas, soujouks.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "SIGNATURE BURGERS",
+            "description": "All our burgers are served with fries",
+            "items": [
+                {
+                    "name": "The Classic Grill Lounge",
+                    "price": "15",
+                    "description": "Grilled beef, sriracha mayo sauce, pickles, cheddar, caramelized onions, salad, tomatoes."
+                },
+                {
+                    "name": "The Chicken Grill Lounge",
+                    "price": "14",
+                    "description": "Grilled chicken fillets, homemade aioli, cheddar, red onions, salad, pickles, tomatoes."
+                }
+            ]
+        },
+        {
+            "name": "SALADS",
+            "items": [
+                {
+                    "name": "Grill Lounge Caesar Salad",
+                    "price": "17",
+                    "description": "Romaine lettuce with caesar dressing, grilled chicken, toasted bread, parmesan shavings."
+                },
+                {
+                    "name": "Panko Goat Cheese & Pomegranate Salad",
+                    "price": "15",
+                    "description": "Mixed salad, crispy goat cheese, tomatoes, cucumbers, honey, walnuts, pomegranate, lightly spicy vinaigrette."
+                }
+            ]
+        },
+        {
+            "name": "PASTA",
+            "items": [
+                {
+                    "name": "Slightly spicy Penne Arrabiata",
+                    "price": "13"
+                },
+                {
+                    "name": "Chicken Penne with cream and mushrooms",
+                    "price": "16"
+                }
+            ],
+            "supplements": [
+                {
+                    "name": "Chicken Supplement",
+                    "price": "+3 €"
+                }
+            ]
+        },
+        {
+            "name": "EXTRA SIDES",
+            "items": [
+                {
+                    "name": "Fries",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Rice",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Sautéed potatoes",
+                    "price": "4"
+                },
+                {
+                    "name": "Homemade mashed potatoes",
+                    "price": "5"
+                },
+                {
+                    "name": "Vegetables",
+                    "price": "4"
+                },
+                {
+                    "name": "Salad",
+                    "price": "3"
+                }
+            ]
+        },
+        {
+            "name": "DESSERTS",
+            "items": [
+                {
+                    "name": "Chocolate lava cake",
+                    "price": "7"
+                },
+                {
+                    "name": "Cheesecake of the day",
+                    "price": "8"
+                },
+                {
+                    "name": "Homemade Tiramisu (coffee & speculoos)",
+                    "price": "8"
+                },
+                {
+                    "name": "Baklawa served with a scoop of vanilla ice cream",
+                    "price": "8"
+                },
+                {
+                    "name": "Ice cream (3 scoops based on suggestion)",
+                    "price": "7"
+                },
+                {
+                    "name": "Gourmet Coffee or Tea & oriental pastries",
+                    "price": "10"
+                }
+            ]
+        },
+        {
+            "name": "KIDS MENU",
+            "items": [
+                {
+                    "name": "Pasta with tomato sauce or Burger with fries, a Capri-Sun and a scoop of ice cream",
+                    "price": "11"
+                }
+            ]
+        }
+    ]
+}

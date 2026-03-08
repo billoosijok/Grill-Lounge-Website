@@ -47,11 +47,7 @@
         "fr": "Menu",
         "es": "Menú"
       },
-      "url": {
-        "fr": "/resources/Menu.pdf",
-        "en": "/resources/Menu_en.pdf",
-        "es": "/resources/Menu_es.pdf"
-      },
+      "url": "/menu",
       "analyticsId": {
         "fr": "menu_click_fr",
         "en": "menu_click_en",
