@@ -1,0 +1,334 @@
+{
+    "categories": [
+        {
+            "name": "ENTRÉES & TAPAS",
+            "subcategories": [
+                {
+                    "name": "",
+                    "items": [
+                        {
+                            "name": "Muhammara",
+                            "price": "8",
+                            "description": "Crème de poivrons et noix, légèrement relevée, pain grillé.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Houmous, servi avec pain grillé",
+                            "price": "8",
+                            "description": "Onctueux et parfumé, servi avec pain grillé."
+                        },
+                        {
+                            "name": "Labneh & Feta fouettée",
+                            "price": "9",
+                            "description": "Crémeux, frais et légèrement salé, parfait à partager.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Purée de betterave & graines torréfiées",
+                            "price": "7",
+                            "description": "Douce et colorée, touche croquante."
+                        },
+                        {
+                            "name": "Falafels & houmous",
+                            "price": "8",
+                            "description": "Boulettes croustillantes, cœur fondant."
+                        },
+                        {
+                            "name": "Burrata, tomates cerises & éclats de pistache",
+                            "price": "10",
+                            "description": "Crémeuse, fraîche et généreuse."
+                        },
+                        {
+                            "name": "Carpaccio de bœuf, câpres & parmesan",
+                            "price": "10",
+                            "description": "Fines tranches assaisonnées, fraîcheur et caractère."
+                        },
+                        {
+                            "name": "Champignons à l'ail, sauce crémeuse",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Fromage de chèvre pané au panko",
+                            "price": "8",
+                            "description": "Servi avec purée de betterave et miel."
+                        },
+                        {
+                            "name": "Soujouk grillé, miel, graine de sésame",
+                            "price": "6",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Chicken Wings à l'orientale",
+                            "price": "8",
+                            "description": "Marinade maison, grillées et caramélisées."
+                        },
+                        {
+                            "name": "Aiguillettes de poulet panées, sauce sriracha mayo",
+                            "price": "9",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Crevettes Panko, sauce chili thaï",
+                            "price": "9"
+                        },
+                        {
+                            "name": "Calamars à la romaine, sauce aïoli",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Frites façon Grill Lounge",
+                            "price": "6"
+                        }
+                    ]
+                },
+                {
+                    "name": "À PARTAGER",
+                    "description": "2 PERSONNES",
+                    "items": [
+                        {
+                            "name": "Planche de Mezzés",
+                            "price": "24",
+                            "description": "Houmous, Labneh & Feta fouettée, Purée de betterave, Falafels, Calamars, Muhammara, Aiguillettes de poulet panées, Pain.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GRILLADES & VIANDES",
+            "subcategories": [
+                {
+                    "name": "BŒUF",
+                    "description": "Servi avec salade et frites + 1 sauce au choix",
+                    "items": [
+                        {
+                            "name": "Côte de bœuf 500g",
+                            "price": "29"
+                        },
+                        {
+                            "name": "Entrecôte de bœuf",
+                            "price": "24"
+                        },
+                        {
+                            "name": "Faux Filet de bœuf",
+                            "price": "22",
+                            "isNew": true
+                        }
+                    ]
+                },
+                {
+                    "name": "SAUCES",
+                    "description": "Si pris en supplément: 2.5",
+                    "items": [
+                        {
+                            "name": "Champignons"
+                        },
+                        {
+                            "name": "Poivre"
+                        },
+                        {
+                            "name": "Roquefort"
+                        },
+                        {
+                            "name": "Sauce Grill Lounge"
+                        },
+                        {
+                            "name": "Sauce orange crémeuse"
+                        }
+                    ]
+                },
+                {
+                    "name": "GRILLADES SIGNATURES",
+                    "description": "Servi avec riz + sauce Grill Lounge",
+                    "items": [
+                        {
+                            "name": "Mix fajita",
+                            "price": "21",
+                            "description": "Poivrons, oignons, grillade mixte de poulet et de bœuf marinés façon fajita.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "4 Côtelettes d'agneau grillées",
+                            "price": "25"
+                        },
+                        {
+                            "name": "2 Brochettes de poulet grillées",
+                            "price": "16"
+                        },
+                        {
+                            "name": "2 Brochettes mixtes grillées (viande + poulet)",
+                            "price": "18",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Trio Grill (2 brochettes mixtes + 2 mini Adana)",
+                            "price": "22",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Mix Grill",
+                            "price": "28",
+                            "description": "1 côtelette, 1 filet de poulet, 1 brochettes mixte viande & poulet, ailes de poulet, 2 mini Adana, soujouk.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Souris d'agneau confite",
+                            "price": "25",
+                            "description": "Servie avec une purée de pommes de terre crémeuse & sa sauce Grill Lounge."
+                        }
+                    ]
+                },
+                {
+                    "name": "VOLAILLES & POISSONS",
+                    "items": [
+                        {
+                            "name": "Filets de poulet grillés",
+                            "price": "19",
+                            "description": "Pommes de terre sautées sauce champignon"
+                        },
+                        {
+                            "name": "Magret de canard grillé",
+                            "price": "26",
+                            "description": "Pommes de terre sautées, sauce à l'orange crémeuse"
+                        },
+                        {
+                            "name": "Poisson du jour, riz",
+                            "price": "23",
+                            "description": "Sauce citronnée crémeuse"
+                        }
+                    ]
+                },
+                {
+                    "name": "À PARTAGER",
+                    "description": "2 PERSONNES",
+                    "items": [
+                        {
+                            "name": "King of Grill",
+                            "price": "49",
+                            "description": "2 Côtelettes, 2 filets de poulet, 2 brochettes mixtes viande & poulet, ailes de poulet, 4 mini Adanas, soujouks.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "BURGERS SIGNATURES",
+            "description": "Tous nos burgers sont servis avec frites",
+            "items": [
+                {
+                    "name": "Le Classic Grill Lounge",
+                    "price": "15",
+                    "description": "Bœuf grillé, sauce sriracha mayo, cornichons, cheddar, oignons caramélisés, salade, tomates."
+                },
+                {
+                    "name": "Le Chicken Grill Lounge",
+                    "price": "14",
+                    "description": "Filets de poulet grillés, aïoli maison, cheddar, oignons rouges, salade, cornichons, tomates."
+                }
+            ]
+        },
+        {
+            "name": "SALADES",
+            "items": [
+                {
+                    "name": "Salade César Grill Lounge",
+                    "price": "17",
+                    "description": "Salade romaine avec sa sauce césar, poulet grillé, pain toasté, copeaux de parmesan."
+                },
+                {
+                    "name": "Salade Chèvre Panko & Grenade",
+                    "price": "15",
+                    "description": "Salade mixte, chèvre croustillant, tomates, concombres, miel, cerneaux de noix, grenade, vinaigrette légèrement relevée."
+                }
+            ]
+        },
+        {
+            "name": "PÂTES",
+            "items": [
+                {
+                    "name": "Penne à l'Arrabiata légèrement relevées",
+                    "price": "13"
+                },
+                {
+                    "name": "Penne poulet à la crème et champignons",
+                    "price": "16"
+                }
+            ],
+            "supplements": [
+                {
+                    "name": "Supplément Poulet",
+                    "price": "+3 €"
+                }
+            ]
+        },
+        {
+            "name": "ACCOMPAGNEMENTS SUP.",
+            "items": [
+                {
+                    "name": "Frites",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Riz",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Pommes de terre sautées",
+                    "price": "4"
+                },
+                {
+                    "name": "Purée de pommes de terre maison",
+                    "price": "5"
+                },
+                {
+                    "name": "Légumes",
+                    "price": "4"
+                },
+                {
+                    "name": "Salade",
+                    "price": "3"
+                }
+            ]
+        },
+        {
+            "name": "DESSERTS",
+            "items": [
+                {
+                    "name": "Moelleux au chocolat",
+                    "price": "7"
+                },
+                {
+                    "name": "Cheesecake du jour",
+                    "price": "8"
+                },
+                {
+                    "name": "Tiramisu maison (café & spéculoos)",
+                    "price": "8"
+                },
+                {
+                    "name": "Baklawa servi avec une boule glace vanille",
+                    "price": "8"
+                },
+                {
+                    "name": "Glaces (3 boules selon suggestion)",
+                    "price": "7"
+                },
+                {
+                    "name": "Café ou Thé Gourmand & pâtisseries orientales",
+                    "price": "10"
+                }
+            ]
+        },
+        {
+            "name": "MENU ENFANTS",
+            "items": [
+                {
+                    "name": "Pâtes à la sauce tomate ou Burger avec frites, un Capri-Sun et une boule de glace",
+                    "price": "11"
+                }
+            ]
+        }
+    ]
+}

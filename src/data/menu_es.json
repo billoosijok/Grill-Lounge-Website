@@ -1,0 +1,334 @@
+{
+    "categories": [
+        {
+            "name": "ENTRANTES Y TAPAS",
+            "subcategories": [
+                {
+                    "name": "",
+                    "items": [
+                        {
+                            "name": "Muhammara",
+                            "price": "8",
+                            "description": "Crema de pimientos y nueces, ligeramente picante, pan tostado.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Hummus, servido con pan tostado",
+                            "price": "8",
+                            "description": "Cremoso y aromático, servido con pan tostado."
+                        },
+                        {
+                            "name": "Labneh y Feta batido",
+                            "price": "9",
+                            "description": "Cremoso, fresco y ligeramente salado, perfecto para compartir.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Puré de remolacha y semillas tostadas",
+                            "price": "7",
+                            "description": "Dulce y colorido, toque crujiente."
+                        },
+                        {
+                            "name": "Falafels y hummus",
+                            "price": "8",
+                            "description": "Bolas crujientes, corazón fundido."
+                        },
+                        {
+                            "name": "Burrata, tomates cherry y pistachos triturados",
+                            "price": "10",
+                            "description": "Cremosa, fresca y generosa."
+                        },
+                        {
+                            "name": "Carpaccio de ternera, alcaparras y parmesano",
+                            "price": "10",
+                            "description": "Finas láminas sazonadas, frescura y carácter."
+                        },
+                        {
+                            "name": "Champiñones al ajillo, salsa cremosa",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Queso de cabra empanado con panko",
+                            "price": "8",
+                            "description": "Servido con puré de remolacha y miel."
+                        },
+                        {
+                            "name": "Soujouk a la parrilla, miel, semillas de sésamo",
+                            "price": "6",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Alitas de pollo orientales",
+                            "price": "8",
+                            "description": "Marinada casera, a la parrilla y caramelizadas."
+                        },
+                        {
+                            "name": "Tiras de pollo empanadas, salsa sriracha mayo",
+                            "price": "9",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Camarones Panko, salsa de chile tailandés",
+                            "price": "9"
+                        },
+                        {
+                            "name": "Calamares a la romana, salsa alioli",
+                            "price": "8"
+                        },
+                        {
+                            "name": "Papas fritas estilo Grill Lounge",
+                            "price": "6"
+                        }
+                    ]
+                },
+                {
+                    "name": "PARA COMPARTIR",
+                    "description": "2 PERSONAS",
+                    "items": [
+                        {
+                            "name": "Tabla de Mezze",
+                            "price": "24",
+                            "description": "Hummus, Labneh y Feta batido, Puré de remolacha, Falafels, Calamares, Muhammara, Tiras de pollo empanadas, Pan.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "PARRILLADAS Y CARNES",
+            "subcategories": [
+                {
+                    "name": "TERNERA",
+                    "description": "Servido con ensalada y papas fritas + 1 salsa a elección",
+                    "items": [
+                        {
+                            "name": "Costilla de ternera 500g",
+                            "price": "29"
+                        },
+                        {
+                            "name": "Entrecot de ternera",
+                            "price": "24"
+                        },
+                        {
+                            "name": "Solomillo de ternera",
+                            "price": "22",
+                            "isNew": true
+                        }
+                    ]
+                },
+                {
+                    "name": "SALSAS",
+                    "description": "Si se toma como suplemento: 2.5",
+                    "items": [
+                        {
+                            "name": "Champiñones"
+                        },
+                        {
+                            "name": "Pimienta"
+                        },
+                        {
+                            "name": "Roquefort"
+                        },
+                        {
+                            "name": "Salsa Grill Lounge"
+                        },
+                        {
+                            "name": "Salsa cremosa de naranja"
+                        }
+                    ]
+                },
+                {
+                    "name": "PARRILLADAS EXCLUSIVAS",
+                    "description": "Servido con arroz + salsa Grill Lounge",
+                    "items": [
+                        {
+                            "name": "Mix de fajitas",
+                            "price": "21",
+                            "description": "Pimientos, cebollas, parrillada mixta de pollo y ternera marinados estilo fajita.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "4 Chuletas de cordero a la parrilla",
+                            "price": "25"
+                        },
+                        {
+                            "name": "2 Brochetas de pollo a la parrilla",
+                            "price": "16"
+                        },
+                        {
+                            "name": "2 Brochetas mixtas a la parrilla (carne + pollo)",
+                            "price": "18",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Trio Grill (2 brochetas mixtas + 2 mini Adana)",
+                            "price": "22",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Mix Grill",
+                            "price": "28",
+                            "description": "1 chuleta, 1 filete de pollo, 1 brocheta mixta de carne y pollo, alitas de pollo, 2 mini Adana, soujouk.",
+                            "isNew": true
+                        },
+                        {
+                            "name": "Jarrete de cordero confitado",
+                            "price": "25",
+                            "description": "Servido con puré de papas cremoso y su salsa Grill Lounge."
+                        }
+                    ]
+                },
+                {
+                    "name": "AVES Y PESCADOS",
+                    "items": [
+                        {
+                            "name": "Filetes de pollo a la parrilla",
+                            "price": "19",
+                            "description": "Papas salteadas con salsa de champiñones"
+                        },
+                        {
+                            "name": "Magret de pato a la parrilla",
+                            "price": "26",
+                            "description": "Papas salteadas, salsa cremosa de naranja"
+                        },
+                        {
+                            "name": "Pescado del día, arroz",
+                            "price": "23",
+                            "description": "Salsa cremosa de limón"
+                        }
+                    ]
+                },
+                {
+                    "name": "PARA COMPARTIR",
+                    "description": "2 PERSONAS",
+                    "items": [
+                        {
+                            "name": "King of Grill",
+                            "price": "49",
+                            "description": "2 chuletas, 2 filetes de pollo, 2 brochetas mixtas de carne y pollo, alitas de pollo, 4 mini Adanas, soujouks.",
+                            "isNew": true
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "HAMBURGUESAS EXCLUSIVAS",
+            "description": "Todas nuestras hamburguesas se sirven con papas fritas",
+            "items": [
+                {
+                    "name": "La Clásica Grill Lounge",
+                    "price": "15",
+                    "description": "Ternera a la parrilla, salsa sriracha mayo, pepinillos, cheddar, cebollas caramelizadas, ensalada, tomates."
+                },
+                {
+                    "name": "La Chicken Grill Lounge",
+                    "price": "14",
+                    "description": "Filetes de pollo a la parrilla, alioli casero, cheddar, cebollas rojas, ensalada, pepinillos, tomates."
+                }
+            ]
+        },
+        {
+            "name": "ENSALADAS",
+            "items": [
+                {
+                    "name": "Ensalada César Grill Lounge",
+                    "price": "17",
+                    "description": "Lechuga romana con su salsa césar, pollo a la parrilla, pan tostado, virutas de parmesano."
+                },
+                {
+                    "name": "Ensalada de Queso de Cabra Panko y Granada",
+                    "price": "15",
+                    "description": "Ensalada mixta, queso de cabra crujiente, tomates, pepinos, miel, nueces, granada, vinagreta ligeramente picante."
+                }
+            ]
+        },
+        {
+            "name": "PASTAS",
+            "items": [
+                {
+                    "name": "Penne a la Arrabiata ligeramente picantes",
+                    "price": "13"
+                },
+                {
+                    "name": "Penne de pollo con crema y champiñones",
+                    "price": "16"
+                }
+            ],
+            "supplements": [
+                {
+                    "name": "Suplemento de Pollo",
+                    "price": "+3 €"
+                }
+            ]
+        },
+        {
+            "name": "ACOMPAÑAMIENTOS EXTRA",
+            "items": [
+                {
+                    "name": "Papas fritas",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Arroz",
+                    "price": "3,5"
+                },
+                {
+                    "name": "Papas salteadas",
+                    "price": "4"
+                },
+                {
+                    "name": "Puré de papas casero",
+                    "price": "5"
+                },
+                {
+                    "name": "Verduras",
+                    "price": "4"
+                },
+                {
+                    "name": "Ensalada",
+                    "price": "3"
+                }
+            ]
+        },
+        {
+            "name": "POSTRES",
+            "items": [
+                {
+                    "name": "Volcán de chocolate",
+                    "price": "7"
+                },
+                {
+                    "name": "Cheesecake del día",
+                    "price": "8"
+                },
+                {
+                    "name": "Tiramisú casero (café y speculoos)",
+                    "price": "8"
+                },
+                {
+                    "name": "Baklawa servido con una bola de helado de vainilla",
+                    "price": "8"
+                },
+                {
+                    "name": "Helados (3 bolas según sugerencia)",
+                    "price": "7"
+                },
+                {
+                    "name": "Café o Té Gourmand y pasteles orientales",
+                    "price": "10"
+                }
+            ]
+        },
+        {
+            "name": "MENÚ INFANTIL",
+            "items": [
+                {
+                    "name": "Pasta con salsa de tomate o Hamburguesa con papas fritas, un Capri-Sun y una bola de helado",
+                    "price": "11"
+                }
+            ]
+        }
+    ]
+}
