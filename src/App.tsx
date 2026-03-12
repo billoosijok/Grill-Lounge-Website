@@ -5,6 +5,7 @@ import { theme } from "./utils/theme";
 import { useLanguage } from "./hooks/useLanguage";
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
+import { MenuRamadanPage } from './pages/MenuRamadanPage';
 
 function App() {
   const { lang, setLang } = useLanguage();
@@ -48,6 +49,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/menu" element={<MenuPage />} />
+          <Route path="/menu-ramadan" element={<MenuRamadanPage />} />
         </Routes>
       </div>
     </NextUIProvider>
