@@ -39,6 +39,9 @@ export const Header = () => {
                 <a href="/menu" className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/menu'); }}>
                     Menu
                 </a>
+                <a href="/menu-ramadan" className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/menu-ramadan'); }}>
+                    Ramadan
+                </a>
 
                 <button className="cta-button mobile-cta" onClick={handleReserve}>
                     {lang === 'fr' ? 'Réservez une table' : lang === 'es' ? 'Reserve una mesa' : 'Reserve a table'}
