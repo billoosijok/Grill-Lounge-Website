@@ -447,3 +447,29 @@
         margin-top: 10px;
     }
 }
+
+/* Special Treatment for Menu du Moment in Nav Bar */
+.menu-moment-highlight {
+    color: #d48a42 !important;
+    font-weight: bold;
+    transition: color var(--transition-speed);
+}
+
+.menu-moment-highlight:hover {
+    color: var(--accent-red) !important;
+}
+
+.menu-moment-highlight .pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #d48a42;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    transition: background-color var(--transition-speed);
+}
+
+.menu-moment-highlight:hover .pulse-dot {
+    background-color: var(--accent-red);
+}

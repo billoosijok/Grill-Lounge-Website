@@ -9,19 +9,19 @@ export const About = () => {
         fr: {
             subtitle: "À Propos de Nous",
             title: "Pourquoi Nous Sommes Les Meilleurs",
-            desc: "Situé à Narbonne, Grill Lounge Steakhouse est l'endroit idéal pour combler toutes vos envies gourmandes. Nous nous engageons à servir une cuisine de qualité dans un environnement agréable. Notre passion pour la préparation de viandes et de repas délectables fait de chaque visite une expérience unique.",
+            desc: "Situé à deux pas de la Gare SNCF de Narbonne, Grill Lounge Steakhouse est l'endroit idéal pour combler toutes vos envies gourmandes. Nous nous engageons à servir une cuisine de qualité dans un environnement agréable. Notre passion pour la préparation de viandes et de repas délectables fait de chaque visite une expérience unique.",
             badge: "Passions & Saveurs"
         },
         en: {
             subtitle: "About Us",
             title: "Why We Are The Best",
-            desc: "Located in Narbonne, Grill Lounge Steakhouse is the perfect place to satisfy all your culinary cravings. We are committed to serving quality food in a pleasant environment. Our passion for preparing delectable meats and meals makes every visit a unique experience.",
+            desc: "Located just a stone's throw from the Narbonne SNCF train station, Grill Lounge Steakhouse is the perfect place to satisfy all your culinary cravings. We are committed to serving quality food in a pleasant environment. Our passion for preparing delectable meats and meals makes every visit a unique experience.",
             badge: "Passion & Flavors"
         },
         es: {
             subtitle: "Sobre Nosotros",
             title: "Por Qué Somos Los Mejores",
-            desc: "Ubicado en Narbona, Grill Lounge Steakhouse es el lugar ideal para satisfacer todos tus antojos culinarios. Nos comprometemos a servir comida de calidad en un entorno agradable. Nuestra pasión por la preparación de carnes y comidas deliciosas hace de cada visita una experiencia única.",
+            desc: "Ubicado a un paso de la estación de tren SNCF de Narbona, Grill Lounge Steakhouse es el lugar ideal para satisfacer todos tus antojos culinarios. Nos comprometemos a servir comida de calidad en un entorno agradable. Nuestra pasión por la preparación de carnes y comidas deliciosas hace de cada visita una experiencia única.",
             badge: "Pasión y Sabores"
         }
     };

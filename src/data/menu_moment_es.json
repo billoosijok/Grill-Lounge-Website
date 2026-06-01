@@ -1,0 +1,47 @@
+{
+    "title": "Menú del Momento",
+    "price": "26",
+    "description": "Entrante + Plato + Postre a su elección",
+    "note": "Servido todos los días para almuerzo y cena excepto los domingos por la noche",
+    "categories": [
+        {
+            "name": "Entrantes",
+            "items": [
+                {
+                    "name": "Velouté de calabaza",
+                    "description": "Con trozos de castañas y crema batida a las hierbas."
+                },
+                {
+                    "name": "Tataki de ternera crujiente",
+                    "description": "Finas lonchas de ternera selladas, sésamo y vinagreta picante."
+                }
+            ]
+        },
+        {
+            "name": "Platos Principales",
+            "items": [
+                {
+                    "name": "Rumsteak a la brasa de leña",
+                    "description": "Puré de patatas casero a la trufa, verduras glaseadas y salsa de romero."
+                },
+                {
+                    "name": "Filete de salmón asado",
+                    "description": "Patatas machacadas al eneldo, espárragos verdes y emulsión de limón."
+                }
+            ]
+        },
+        {
+            "name": "Postres",
+            "items": [
+                {
+                    "name": "Tarta Tatin templada",
+                    "description": "Manzanas caramelizadas, hojaldre crujiente y helado de vainilla Bourbon."
+                },
+                {
+                    "name": "Volcán de chocolate fondant",
+                    "description": "Chocolate negro intenso con crema pastelera con aroma a pistacho."
+                }
+            ]
+        }
+    ]
+}

@@ -1,9 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { useLanguage } from '../hooks/useLanguage';
 import data from '../data.json';
 import { Icon } from './Icon';
 import './HomeLayout.css';
 
 export const Footer = () => {
+    const { lang } = useLanguage();
     return (
         <footer className="site-footer">
             <div className="footer-top">
@@ -14,7 +17,7 @@ export const Footer = () => {
                         src="/logo-black.png"
                     />
                     <p className="footer-text">
-                        Découvrez le goût authentique au Grill Lounge Steakhouse. Venez partager un moment inoubliable autour de nos spécialités.
+                        Découvrez le goût authentique au Grill Lounge Steakhouse, tout près de la Gare SNCF de Narbonne. Venez partager un moment inoubliable autour de nos spécialités.
                     </p>
                     <div style={{ display: 'flex', gap: '15px' }}>
                         {data.icons.map(({ link, icon, analyticsId }) => (
@@ -44,7 +47,7 @@ export const Footer = () => {
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                             </svg>
-                            <a href="tel:0468652742" style={{ color: 'inherit', textDecoration: 'none' }}>04 68 65 27 42</a>
+                            <Link to={`/${lang}/contact`} style={{ color: 'inherit', textDecoration: 'none' }}>04 68 65 27 42</Link>
                         </li>
                         <li style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -60,7 +63,7 @@ export const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Grill Lounge Steakhouse. Tous droits réservés.</p>
+                <p>&copy; {new Date().getFullYear()} Grill Lounge Steakhouse. Tous droits réservés. | SIRET : 93829663900017</p>
             </div>
         </footer>
     );

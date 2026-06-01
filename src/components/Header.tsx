@@ -10,7 +10,8 @@ export const Header = () => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const handleReserve = () => {
-        window.location.href = 'tel:0468652742';
+        closeMenu();
+        navigate(`/${lang}/contact`);
     };
 
     const toggleMenu = () => {
@@ -28,19 +29,23 @@ export const Header = () => {
                     className="header-logo"
                     alt="Grill Lounge Logo"
                     src="/logo-black.png"
-                    onClick={() => { closeMenu(); navigate('/'); }}
+                    onClick={() => { closeMenu(); navigate(`/${lang}`); }}
                 />
             </div>
 
             <nav className={`header-center ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
-                <a href="/" className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/'); }}>
+                <a href={`/${lang}`} className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate(`/${lang}`); }}>
                     {lang === 'fr' ? 'Accueil' : lang === 'es' ? 'Inicio' : 'Home'}
                 </a>
-                <a href="/menu" className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/menu'); }}>
+                <a href={`/${lang}/menu`} className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate(`/${lang}/menu`); }}>
                     Menu
                 </a>
-                <a href="/menu-ramadan" className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate('/menu-ramadan'); }}>
-                    Ramadan
+                <a href={`/${lang}/menu-moment`} className="header-link menu-moment-highlight" onClick={(e) => { e.preventDefault(); closeMenu(); navigate(`/${lang}/menu-moment`); }}>
+                    {lang === 'fr' ? 'Menu du Moment' : lang === 'es' ? 'Menú del Momento' : 'Special Menu'}
+                    <span className="pulse-dot" />
+                </a>
+                <a href={`/${lang}/contact`} className="header-link" onClick={(e) => { e.preventDefault(); closeMenu(); navigate(`/${lang}/contact`); }}>
+                    {lang === 'fr' ? 'Contact' : lang === 'es' ? 'Contacto' : 'Contact'}
                 </a>
 
                 <button className="cta-button mobile-cta" onClick={handleReserve}>
