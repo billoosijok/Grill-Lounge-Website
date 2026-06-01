@@ -1,47 +1,60 @@
 {
-    "title": "Menu du Moment",
-    "price": "26",
-    "description": "Formule Entrée + Plat + Dessert au choix",
-    "note": "Servi tous les jours midi et soir sauf dimanche soir",
-    "categories": [
-        {
-            "name": "Entrées",
-            "items": [
-                {
-                    "name": "Velouté de potimarron",
-                    "description": "Aux éclats de châtaignes et crème fouettée aux herbes."
-                },
-                {
-                    "name": "Tataki de bœuf croustillant",
-                    "description": "Fines tranches de bœuf saisies, sésame et vinaigrette acidulée."
-                }
-            ]
-        },
-        {
-            "name": "Plats",
-            "items": [
-                {
-                    "name": "Pavé de rumsteak grillé au feu de bois",
-                    "description": "Purée maison à la truffe, légumes glacés et jus corsé au romarin."
-                },
-                {
-                    "name": "Pavé de saumon rôti",
-                    "description": "Écrasé de pommes de terre à l'aneth, asperges vertes et émulsion citronnée."
-                }
-            ]
-        },
-        {
-            "name": "Desserts",
-            "items": [
-                {
-                    "name": "Tarte tatin tiède",
-                    "description": "Pommes caramélisées, pâte feuilletée croustillante et glace vanille Bourbon."
-                },
-                {
-                    "name": "Fondant au chocolat cœur coulant",
-                    "description": "Chocolat noir intense, crème anglaise parfumée à la pistache."
-                }
-            ]
-        }
+  "title": "Suggestions du Moment",
+  "section1": {
+    "title": "Plats du Moment",
+    "items": [
+      {
+        "name": "Lasagne aux fruits de mer",
+        "description": "Accompagnée d'une salade composée.",
+        "price": "14,50 €"
+      },
+      {
+        "name": "Salade burrata",
+        "description": "Mesclun, tomates cerises, basilic et abricots.",
+        "price": "12 €"
+      }
     ]
+  },
+  "section2": {
+    "title": "Suggestion du Week-end",
+    "categories": [
+      {
+        "name": "Assortiment Entrées",
+        "items": [
+          "Brick du moment croustillante",
+          "Houmous maison",
+          "Salade orientale fraîche"
+        ]
+      },
+      {
+        "name": "Plat",
+        "items": [
+          {
+            "name": "Couscous Royal maison",
+            "description": "Semoule fine, légumes mijotés, poulet, boulettes de viande de bœuf et pois chiches.",
+            "price": "15 €"
+          }
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          {
+            "name": "Café gourmand",
+            "description": "Assortiment de 2 douceurs maison et café."
+          }
+        ]
+      }
+    ],
+    "formulas": [
+      {
+        "name": "Entrée + Plat OU Plat + Dessert",
+        "price": "21 €"
+      },
+      {
+        "name": "Entrée + Plat + Dessert",
+        "price": "25 €"
+      }
+    ]
+  }
 }
