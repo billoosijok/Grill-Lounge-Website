@@ -1,14 +1,15 @@
 import { useEffect } from 'react';
 import { NextUIProvider } from '@nextui-org/react';
-import { Routes, Route, useLocation, useNavigate } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, Navigate, useParams } from "react-router-dom";
 import { theme } from "./utils/theme";
-import { useLanguage } from "./hooks/useLanguage";
+import { useLanguage, LanguageProvider } from "./hooks/useLanguage";
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
-import { MenuRamadanPage } from './pages/MenuRamadanPage';
+import { MenuMomentPage } from './pages/MenuMomentPage';
+import { ContactPage } from './pages/ContactPage';
 
-function App() {
-  const { lang, setLang } = useLanguage();
+function AppContent() {
+  const { lang } = useLanguage();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -23,35 +24,55 @@ function App() {
       window.scrollTo(0, 0);
     }
 
+    // Legacy redirects - adapted to include language
     if (location.pathname.match(/\/24/)) {
-      navigate('/reservez/31-12-2023')
+      navigate(`/${lang}/reservez/31-12-2023`);
       return;
     }
     if (location.pathname.match(/\/valentin/i)) {
-      navigate('/reservez/14-02-2025')
+      navigate(`/${lang}/reservez/14-02-2025`);
       return;
     }
     if (location.pathname.match(/\/avis/i)) {
       window.location.href = 'https://maps.app.goo.gl/Ag2oGZsLE964ojCC9';
       return;
     }
-    if (location.pathname.match(/\/en\/?/i)) {
-      setLang("en");
-    }
     if (location.pathname.match(/\/reservez\/?/)) {
-      window.location.href = 'tel:0468652742';
+      navigate(`/${lang}/contact`);
+      return;
     }
-  }, [location.pathname]);
+  }, [location.pathname, lang, navigate]);
 
   return (
+    <div className={"root-container"} style={{ minHeight: '100vh' }}>
+      <Routes>
+        <Route index element={<HomePage />} />
+        <Route path="menu" element={<MenuPage />} />
+        <Route path="menu-moment" element={<MenuMomentPage />} />
+        <Route path="contact" element={<ContactPage />} />
+        <Route path="*" element={<Navigate to={`/${lang}`} replace />} />
+      </Routes>
+    </div>
+  );
+}
+
+function App() {
+  return (
     <NextUIProvider theme={theme}>
-      <div className={"root-container"} style={{ minHeight: '100vh' }}>
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/menu" element={<MenuPage />} />
-          <Route path="/menu-ramadan" element={<MenuRamadanPage />} />
-        </Routes>
-      </div>
+      <Routes>
+        {/* Redirect root to default language */}
+        <Route path="/" element={<Navigate to="/fr" replace />} />
+        
+        {/* Language subpath routes */}
+        <Route path="/:lang/*" element={
+          <LanguageProvider>
+            <AppContent />
+          </LanguageProvider>
+        } />
+
+        {/* Catch-all for other paths: redirect to default lang */}
+        <Route path="*" element={<Navigate to="/fr" replace />} />
+      </Routes>
     </NextUIProvider>
   );
 }

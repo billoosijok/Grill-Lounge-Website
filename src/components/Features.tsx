@@ -32,7 +32,7 @@ export const Features = () => {
     return (
         <section className="features-section">
             {features.map((feature, idx) => (
-                <Link to={`/menu#${feature.id}`} key={idx} className="feature-card animate__animated animate__fadeInUp" style={{ animationDelay: `${idx * 0.1}s`, textDecoration: 'none', color: 'inherit', display: 'block' }}>
+                <Link to={`/${lang}/menu#${feature.id}`} key={idx} className="feature-card animate__animated animate__fadeInUp" style={{ animationDelay: `${idx * 0.1}s`, textDecoration: 'none', color: 'inherit', display: 'block' }}>
                     {feature.image ? (
                         <div className="feature-image-container">
                             <img src={feature.image} alt={feature.title} className="feature-image" />

@@ -1,6 +1,7 @@
-import {createContext, useContext, useMemo, useState} from "react";
+import {createContext, useContext, useMemo} from "react";
+import {useParams, useNavigate, useLocation} from "react-router-dom";
 
-type SupportedLanguages = 'fr'|'en'|'es';
+export type SupportedLanguages = 'fr'|'en'|'es';
 
 interface LanguageContextProps {
   lang: SupportedLanguages;
@@ -12,19 +13,34 @@ const LanguageContext = createContext<LanguageContextProps|undefined>(undefined)
 export const useLanguage = () => {
   const langContext = useContext(LanguageContext);
 
-  if (!langContext) throw new Error();
+  if (!langContext) throw new Error("useLanguage must be used within a LanguageProvider");
 
-  const {lang, setLang} =langContext
-
-  return useMemo(() => ({
-    lang, setLang
-  }),[lang, setLang])
+  return langContext;
 }
 
-export const LanguageProvider = ({children}) => {
-  const [lang, setLang] = useState<SupportedLanguages>('fr');
+export const LanguageProvider = ({children}: {children: React.ReactNode}) => {
+  const { lang: urlLang } = useParams<{lang: string}>();
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  return <LanguageContext.Provider value={{ lang, setLang }}>
+  const lang = (['fr', 'en', 'es'].includes(urlLang || '') ? urlLang : 'fr') as SupportedLanguages;
+
+  const setLang = (newLang: SupportedLanguages) => {
+    const pathParts = location.pathname.split('/').filter(Boolean);
+    // If the first part is a language, replace it
+    if (['fr', 'en', 'es'].includes(pathParts[0])) {
+      pathParts[0] = newLang;
+    } else {
+      pathParts.unshift(newLang);
+    }
+    navigate('/' + pathParts.join('/') + location.search + location.hash);
+  };
+
+  const value = useMemo(() => ({
+    lang, setLang
+  }), [lang, location.pathname, location.search, location.hash, navigate]);
+
+  return <LanguageContext.Provider value={value}>
           {children}
         </LanguageContext.Provider>
 }
