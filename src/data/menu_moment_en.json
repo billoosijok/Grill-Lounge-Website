@@ -1,47 +1,60 @@
 {
-    "title": "Menu of the Moment",
-    "price": "26",
-    "description": "Starter + Main + Dessert of your choice",
-    "note": "Served every day for lunch and dinner except Sunday evening",
-    "categories": [
-        {
-            "name": "Starters",
-            "items": [
-                {
-                    "name": "Pumpkin Velouté",
-                    "description": "With chestnut pieces and whipped herb cream."
-                },
-                {
-                    "name": "Crispy Beef Tataki",
-                    "description": "Seared thin slices of beef, sesame and tangy vinaigrette."
-                }
-            ]
-        },
-        {
-            "name": "Mains",
-            "items": [
-                {
-                    "name": "Wood-Fired Grilled Rumsteak",
-                    "description": "Homemade truffle mashed potatoes, glazed vegetables and rosemary jus."
-                },
-                {
-                    "name": "Roasted Salmon Fillet",
-                    "description": "Crushed potatoes with dill, green asparagus and lemon emulsion."
-                }
-            ]
-        },
-        {
-            "name": "Desserts",
-            "items": [
-                {
-                    "name": "Warm Tarte Tatin",
-                    "description": "Caramelized apples, crispy puff pastry and Bourbon vanilla ice cream."
-                },
-                {
-                    "name": "Lava Chocolate Cake",
-                    "description": "Intense dark chocolate with pistachio-scented custard."
-                }
-            ]
-        }
+  "title": "Suggestions of the Moment",
+  "section1": {
+    "title": "Dishes of the Moment",
+    "items": [
+      {
+        "name": "Seafood Lasagna",
+        "description": "Served with a side salad.",
+        "price": "14.50 €"
+      },
+      {
+        "name": "Burrata Salad",
+        "description": "Mesclun salad greens, cherry tomatoes, basil, and apricots.",
+        "price": "12 €"
+      }
     ]
+  },
+  "section2": {
+    "title": "Weekend Suggestion",
+    "categories": [
+      {
+        "name": "Assorted Starters",
+        "items": [
+          "Crispy brick pastry of the moment",
+          "Homemade hummus",
+          "Fresh oriental salad"
+        ]
+      },
+      {
+        "name": "Main",
+        "items": [
+          {
+            "name": "Homemade Royal Couscous",
+            "description": "Fine semolina, stewed vegetables, chicken, beef meatballs, and chickpeas.",
+            "price": "15 €"
+          }
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          {
+            "name": "Café Gourmand",
+            "description": "Selection of 2 homemade sweets served with coffee."
+          }
+        ]
+      }
+    ],
+    "formulas": [
+      {
+        "name": "Starter + Main OR Main + Dessert",
+        "price": "21 €"
+      },
+      {
+        "name": "Starter + Main + Dessert",
+        "price": "25 €"
+      }
+    ]
+  }
 }
