@@ -405,3 +405,144 @@ main>.links a.LinkItem {
     letter-spacing: 2px;
     border-top: 1px solid #e0e0e0;
 }
+
+/* Weekend formula pricing - mobile */
+@media (max-width: 600px) {
+    .weekend-formulas > div {
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+
+    .weekend-formulas > div > div {
+        min-width: unset !important;
+        width: 100% !important;
+        border-right: none !important;
+        padding-right: 0 !important;
+        padding: 14px 0 !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+        gap: 12px !important;
+    }
+
+    .weekend-formulas > div > div:last-child {
+        border-bottom: none !important;
+    }
+
+    .weekend-formulas > div > div > div:last-child {
+        font-size: 2.8em !important;
+    }
+
+    .weekend-formulas > div > div > div:first-child {
+        font-size: 0.85em !important;
+    }
+}
+
+/* --- Legal Page Styles --- */
+.legal-page-container {
+    background-color: var(--primary-bg);
+    color: var(--text-main);
+    min-height: 100vh;
+    padding: 0;
+    font-family: 'Alegreya', serif;
+}
+
+.legal-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.legal-back-button {
+    background: none;
+    border: none;
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.1em;
+    color: var(--accent-green);
+    cursor: pointer;
+    font-weight: bold;
+    padding: 0;
+    transition: color var(--transition-speed);
+}
+
+.legal-back-button:hover {
+    color: var(--accent-red);
+}
+
+.legal-article {
+    background: var(--white);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.legal-title {
+    color: var(--accent-green);
+    font-family: 'Outfit', sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 0 0 30px 0;
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--accent-red);
+    padding-bottom: 15px;
+}
+
+.legal-section {
+    margin-bottom: 30px;
+}
+
+.legal-section:last-of-type {
+    margin-bottom: 0;
+}
+
+.legal-section h2 {
+    color: var(--accent-green);
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.6em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.legal-section p {
+    color: var(--text-muted);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 0 15px 0;
+}
+
+.legal-section p:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section strong {
+    color: var(--text-main);
+}
+
+.legal-section ul {
+    color: var(--text-muted);
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin: 0 0 20px 20px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.legal-section li {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 600px) {
+    .legal-article {
+        padding: 25px 20px;
+    }
+    .legal-title {
+        font-size: 2em;
+    }
+}

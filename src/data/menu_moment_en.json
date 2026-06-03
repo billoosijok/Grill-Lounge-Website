@@ -28,11 +28,11 @@
       },
       {
         "name": "Main",
+        "price": "15 €",
         "items": [
           {
             "name": "Homemade Royal Couscous",
-            "description": "Fine semolina, stewed vegetables, chicken, beef meatballs, and chickpeas.",
-            "price": "15 €"
+            "description": "Fine semolina, stewed vegetables, chicken, beef meatballs, and chickpeas."
           }
         ]
       },

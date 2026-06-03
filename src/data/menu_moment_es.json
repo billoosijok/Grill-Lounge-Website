@@ -28,11 +28,11 @@
       },
       {
         "name": "Plato Principal",
+        "price": "15 €",
         "items": [
           {
             "name": "Cuscús Real casero",
-            "description": "Sémola fina, verduras estofadas, pollo, albóndigas de ternera y garbanzos.",
-            "price": "15 €"
+            "description": "Sémola fina, verduras estofadas, pollo, albóndigas de ternera y garbanzos."
           }
         ]
       },

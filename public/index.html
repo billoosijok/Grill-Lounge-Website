@@ -11,6 +11,22 @@
 
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/icon.png" />
 
+    <!-- Google Consent Mode v2 Default State -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      var consentChoice = localStorage.getItem('cookie-consent-choice');
+      var consentState = consentChoice === 'accepted' ? 'granted' : 'denied';
+
+      gtag('consent', 'default', {
+        'ad_storage': consentState,
+        'ad_user_data': consentState,
+        'ad_personalization': consentState,
+        'analytics_storage': consentState
+      });
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQYS58J1H6"></script>
     <script>

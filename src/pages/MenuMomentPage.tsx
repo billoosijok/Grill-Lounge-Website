@@ -110,12 +110,134 @@ export const MenuMomentPage = () => {
                         <div className="category-header" style={{
                             borderBottom: '1px solid rgba(255, 255, 255, 0.15)',
                             paddingBottom: '15px',
-                            marginBottom: '35px',
+                            marginBottom: '25px',
                             textAlign: 'center'
                         }}>
                             <h2 className="category-title" style={{ color: 'var(--white)', letterSpacing: '3px', fontWeight: 'bold', fontSize: '1.8em' }}>
                                 {menuData.section2.title.toUpperCase()}
                             </h2>
+                        </div>
+
+                        {/* Formula Pricing block - moved to top */}
+                        <div className="weekend-formulas" style={{ position: 'relative', zIndex: 1 }}>
+                            <div style={{ 
+                                display: 'flex', 
+                                width: '100%', 
+                                flexWrap: 'wrap',
+                                gap: '20px',
+                                justifyContent: 'center',
+                                alignItems: 'center'
+                            }}>
+                                {/* Formula 0 (Plat seul) */}
+                                <div style={{ 
+                                    flex: 1, 
+                                    minWidth: '160px',
+                                    display: 'flex', 
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '12px',
+                                    borderRight: '1px solid rgba(255, 255, 255, 0.15)',
+                                    paddingRight: '15px'
+                                }}>
+                                    <div style={{ 
+                                        fontSize: '0.95em', 
+                                        lineHeight: '1.4', 
+                                        fontWeight: '800', 
+                                        letterSpacing: '1px',
+                                        textAlign: 'right',
+                                        textTransform: 'uppercase',
+                                        fontFamily: "'Outfit', sans-serif"
+                                    }}>
+                                        <div>PLAT</div>
+                                    </div>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        alignItems: 'flex-start',
+                                        fontFamily: "'Outfit', sans-serif",
+                                        fontWeight: '900',
+                                        fontSize: '3.6em',
+                                        color: '#fff'
+                                    }}>
+                                        <span>15</span>
+                                        <span style={{ fontSize: '0.45em', marginTop: '8px', color: '#d48a42', marginLeft: '2px' }}>€</span>
+                                    </div>
+                                </div>
+
+                                {/* Formula 1 */}
+                                <div style={{ 
+                                    flex: 1, 
+                                    minWidth: '200px',
+                                    display: 'flex', 
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '12px',
+                                    borderRight: '1px solid rgba(255, 255, 255, 0.15)',
+                                    paddingRight: '15px'
+                                }}>
+                                    <div style={{ 
+                                        fontSize: '0.95em', 
+                                        lineHeight: '1.4', 
+                                        fontWeight: '800', 
+                                        letterSpacing: '1px',
+                                        textAlign: 'right',
+                                        textTransform: 'uppercase',
+                                        fontFamily: "'Outfit', sans-serif"
+                                    }}>
+                                        <div>ENTRÉE + PLAT</div>
+                                        <div style={{ color: '#d48a42', fontSize: '0.95em', margin: '2px 0' }}>OU</div>
+                                        <div>PLAT + DESSERT</div>
+                                    </div>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        alignItems: 'flex-start',
+                                        fontFamily: "'Outfit', sans-serif",
+                                        fontWeight: '900',
+                                        fontSize: '3.6em',
+                                        color: '#fff'
+                                    }}>
+                                        <span>21</span>
+                                        <span style={{ fontSize: '0.45em', marginTop: '8px', color: '#d48a42', marginLeft: '2px' }}>€</span>
+                                    </div>
+                                </div>
+
+                                {/* Formula 2 */}
+                                <div style={{ 
+                                    flex: 1, 
+                                    minWidth: '200px',
+                                    display: 'flex', 
+                                    alignItems: 'center',
+                                    justifyContent: 'center',
+                                    gap: '12px'
+                                }}>
+                                    <div style={{ 
+                                        fontSize: '0.95em', 
+                                        lineHeight: '1.4', 
+                                        fontWeight: '800', 
+                                        letterSpacing: '1px',
+                                        textAlign: 'right',
+                                        textTransform: 'uppercase',
+                                        fontFamily: "'Outfit', sans-serif"
+                                    }}>
+                                        <div>ENTRÉE</div>
+                                        <div>+ PLAT</div>
+                                        <div>+ DESSERT</div>
+                                    </div>
+                                    <div style={{ 
+                                        display: 'flex', 
+                                        alignItems: 'flex-start',
+                                        fontFamily: "'Outfit', sans-serif",
+                                        fontWeight: '900',
+                                        fontSize: '3.6em',
+                                        color: '#fff'
+                                    }}>
+                                        <span>25</span>
+                                        <span style={{ fontSize: '0.45em', marginTop: '8px', color: '#d48a42', marginLeft: '2px' }}>€</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* Divider Line */}
+                            <hr style={{ border: 'none', borderTop: '2px solid rgba(255, 255, 255, 0.2)', margin: '20px 0 30px 0' }} />
                         </div>
 
                         {/* Category contents */}
@@ -162,92 +284,6 @@ export const MenuMomentPage = () => {
                                     </div>
                                 </div>
                             ))}
-
-                            {/* Divider Line */}
-                            <hr style={{ border: 'none', borderTop: '2px solid rgba(255, 255, 255, 0.2)', margin: '20px 0 10px 0' }} />
-
-                            {/* Formula Pricing block matches image styling */}
-                            <div style={{ 
-                                display: 'flex', 
-                                width: '100%', 
-                                flexWrap: 'wrap',
-                                gap: '20px',
-                                justifyContent: 'space-between',
-                                alignItems: 'center'
-                            }}>
-                                {/* Formula 1 (Left) */}
-                                <div style={{ 
-                                    flex: 1, 
-                                    minWidth: '260px',
-                                    display: 'flex', 
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '15px',
-                                    borderRight: '1px solid rgba(255, 255, 255, 0.15)',
-                                    paddingRight: '15px'
-                                }}>
-                                    <div style={{ 
-                                        fontSize: '0.95em', 
-                                        lineHeight: '1.4', 
-                                        fontWeight: '800', 
-                                        letterSpacing: '1px',
-                                        textAlign: 'right',
-                                        textTransform: 'uppercase',
-                                        fontFamily: "'Outfit', sans-serif"
-                                    }}>
-                                        <div>ENTRÉE + PLAT</div>
-                                        <div style={{ color: '#d48a42', fontSize: '0.95em', margin: '2px 0' }}>OU</div>
-                                        <div>PLAT + DESSERT</div>
-                                    </div>
-                                    <div style={{ 
-                                        display: 'flex', 
-                                        alignItems: 'flex-start',
-                                        fontFamily: "'Outfit', sans-serif",
-                                        fontWeight: '900',
-                                        fontSize: '3.6em',
-                                        color: '#fff'
-                                    }}>
-                                        <span>21</span>
-                                        <span style={{ fontSize: '0.45em', marginTop: '8px', color: '#d48a42', marginLeft: '2px' }}>€</span>
-                                    </div>
-                                </div>
-
-                                {/* Formula 2 (Right) */}
-                                <div style={{ 
-                                    flex: 1, 
-                                    minWidth: '260px',
-                                    display: 'flex', 
-                                    alignItems: 'center',
-                                    justifyContent: 'center',
-                                    gap: '15px'
-                                }}>
-                                    <div style={{ 
-                                        fontSize: '0.95em', 
-                                        lineHeight: '1.4', 
-                                        fontWeight: '800', 
-                                        letterSpacing: '1px',
-                                        textAlign: 'right',
-                                        textTransform: 'uppercase',
-                                        fontFamily: "'Outfit', sans-serif"
-                                    }}>
-                                        <div>ENTRÉE</div>
-                                        <div>+ PLAT</div>
-                                        <div>+ DESSERT</div>
-                                    </div>
-                                    <div style={{ 
-                                        display: 'flex', 
-                                        alignItems: 'flex-start',
-                                        fontFamily: "'Outfit', sans-serif",
-                                        fontWeight: '900',
-                                        fontSize: '3.6em',
-                                        color: '#fff'
-                                    }}>
-                                        <span>25</span>
-                                        <span style={{ fontSize: '0.45em', marginTop: '8px', color: '#d48a42', marginLeft: '2px' }}>€</span>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </section>
 
