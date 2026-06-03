@@ -28,11 +28,11 @@
       },
       {
         "name": "Plat",
+        "price": "15 €",
         "items": [
           {
             "name": "Couscous Royal maison",
-            "description": "Semoule fine, légumes mijotés, poulet, boulettes de viande de bœuf et pois chiches.",
-            "price": "15 €"
+            "description": "Semoule fine, légumes mijotés, poulet, boulettes de viande de bœuf et pois chiches."
           }
         ]
       },

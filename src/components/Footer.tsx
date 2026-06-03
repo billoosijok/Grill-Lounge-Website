@@ -63,7 +63,35 @@ export const Footer = () => {
             </div>
 
             <div className="footer-bottom">
-                <p>&copy; {new Date().getFullYear()} Grill Lounge Steakhouse. Tous droits réservés. | SIRET : 93829663900017</p>
+                <p style={{ display: 'flex', flexDirection: 'column', gap: '10px', alignItems: 'center', justifyContent: 'center' }}>
+                    <span>
+                        &copy; {new Date().getFullYear()} Grill Lounge Steakhouse. Tous droits réservés. | SIRET : 93829663900017
+                    </span>
+                    <span className="footer-legal-links" style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        <Link to={`/${lang}/mentions-legales`} style={{ color: 'inherit', textDecoration: 'underline' }}>
+                            {lang === 'en' ? 'Legal Notice' : lang === 'es' ? 'Aviso legal' : 'Mentions légales'}
+                        </Link>
+                        <span>|</span>
+                        <Link to={`/${lang}/politique-confidentialite`} style={{ color: 'inherit', textDecoration: 'underline' }}>
+                            {lang === 'en' ? 'Privacy Policy' : lang === 'es' ? 'Política de privacidad' : 'Politique de confidentialité'}
+                        </Link>
+                        <span>|</span>
+                        <Link to={`/${lang}/politique-cookies`} style={{ color: 'inherit', textDecoration: 'underline' }}>
+                            {lang === 'en' ? 'Cookie Policy' : lang === 'es' ? 'Política de cookies' : 'Politique de cookies'}
+                        </Link>
+                        <span>|</span>
+                        <a 
+                            href="#cookies" 
+                            onClick={(e) => {
+                                e.preventDefault();
+                                window.dispatchEvent(new Event('show-cookie-consent'));
+                            }} 
+                            style={{ color: 'inherit', textDecoration: 'underline', cursor: 'pointer' }}
+                        >
+                            {lang === 'en' ? 'Manage Cookies' : lang === 'es' ? 'Gestionar cookies' : 'Gérer les cookies'}
+                        </a>
+                    </span>
+                </p>
             </div>
         </footer>
     );

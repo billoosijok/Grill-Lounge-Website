@@ -1,12 +1,14 @@
 import { useEffect } from 'react';
 import { NextUIProvider } from '@nextui-org/react';
-import { Routes, Route, useLocation, useNavigate, Navigate, useParams } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate, Navigate } from "react-router-dom";
 import { theme } from "./utils/theme";
 import { useLanguage, LanguageProvider } from "./hooks/useLanguage";
 import { HomePage } from './pages/HomePage';
 import { MenuPage } from './pages/MenuPage';
 import { MenuMomentPage } from './pages/MenuMomentPage';
 import { ContactPage } from './pages/ContactPage';
+import { LegalPage } from './pages/LegalPage';
+import { CookieConsent } from './components/CookieConsent';
 
 function AppContent() {
   const { lang } = useLanguage();
@@ -41,7 +43,7 @@ function AppContent() {
       navigate(`/${lang}/contact`);
       return;
     }
-  }, [location.pathname, lang, navigate]);
+  }, [location.pathname, location.hash, lang, navigate]);
 
   return (
     <div className={"root-container"} style={{ minHeight: '100vh' }}>
@@ -50,8 +52,12 @@ function AppContent() {
         <Route path="menu" element={<MenuPage />} />
         <Route path="menu-moment" element={<MenuMomentPage />} />
         <Route path="contact" element={<ContactPage />} />
+        <Route path="mentions-legales" element={<LegalPage type="mentions-legales" />} />
+        <Route path="politique-confidentialite" element={<LegalPage type="confidentialite" />} />
+        <Route path="politique-cookies" element={<LegalPage type="cookies" />} />
         <Route path="*" element={<Navigate to={`/${lang}`} replace />} />
       </Routes>
+      <CookieConsent />
     </div>
   );
 }
