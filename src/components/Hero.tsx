@@ -9,31 +9,25 @@ export const Hero = () => {
 
   const content = {
     fr: {
-      subtitle: "Braises, épices et passion",
-      title: "Des Saveurs Uniques pour une Expérience ",
-      highlight: "Inoubliable",
-      desc: "Plaisir gustatif avec nos spécialités de Steak, Burger, Pasta et Tapas à Narbonne, tout près de la Gare SNCF.",
-      cta1: "Voir le Menu",
-      cta2: "Nous Contacter",
-      badge: "Qualité Premium",
+      subtitle: "À 2 minutes de la Gare SNCF • Ouvert midi et soir",
+      title: "Steakhouse & Grillades à Narbonne",
+      desc: "Découvrez nos viandes halal premium saisies à la pierre de lave, nos burgers maison et nos tapas à partager dans une ambiance chaleureuse.",
+      cta1: "Réserver",
+      cta2: "Itinéraire",
     },
     en: {
-      subtitle: "Embers, spices and passion",
-      title: "Unique Flavors for an Unforgettable ",
-      highlight: "Experience",
-      desc: "Taste our amazing specialties including Steak, Burger, Pasta and Tapas in Narbonne, right next to the SNCF train station.",
-      cta1: "View Menu",
-      cta2: "Contact Us",
-      badge: "Premium Quality",
+      subtitle: "2 minutes from the SNCF Station • Open for lunch and dinner",
+      title: "Steakhouse & Grills in Narbonne",
+      desc: "Discover our premium halal meats seared on lava stone, our homemade burgers and our tapas to share in a warm atmosphere.",
+      cta1: "Book a Table",
+      cta2: "Directions",
     },
     es: {
-      subtitle: "Brasas, especias y pasión",
-      title: "Sabores Únicos para una Experiencia ",
-      highlight: "Inolvidable",
-      desc: "Disfruta del placer gustativo con nuestras especialidades de Steak, Burger, Pasta y Tapas en Narbona, al lado de la estación de tren SNCF.",
-      cta1: "Ver Menú",
-      cta2: "Contactar",
-      badge: "Calidad Premium",
+      subtitle: "A 2 minutos de la estación SNCF • Abierto mediodía y noche",
+      title: "Steakhouse y Parrillada en Narbona",
+      desc: "Descubra nuestras carnes halal premium hechas a la piedra de lava, nuestras hamburguesas caseras y nuestras tapas para compartir en un ambiente cálido.",
+      cta1: "Reservar",
+      cta2: "Cómo llegar",
     },
   };
 
@@ -44,21 +38,21 @@ export const Hero = () => {
       <div className="hero-content animate__animated animate__fadeInLeft">
         <div className="hero-subtitle">{text.subtitle}</div>
         <h1 className="hero-title">
-          {text.title} <span>{text.highlight}</span>
+          {text.title}
         </h1>
         <h2 className="hero-description">{text.desc}</h2>
 
         <div className="hero-buttons">
           <button
             className="cta-button"
-            onClick={() => navigate(`/${lang}/menu`)}
+            onClick={() => navigate(`/${lang}/contact`)}
           >
             {text.cta1}
           </button>
           <button
             className="cta-button"
             style={{ backgroundColor: "var(--accent-green)" }}
-            onClick={() => navigate(`/${lang}/contact`)}
+            onClick={() => window.open("https://goo.gl/maps/7hAnjQGf3SJPrkCo9", "_blank")}
           >
             {text.cta2}
           </button>
