@@ -3,6 +3,10 @@ import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
 import { Features } from '../components/Features';
 import { About } from '../components/About';
+import { MenuPreview } from '../components/MenuPreview';
+import { Reviews } from '../components/Reviews';
+import { MapSection } from '../components/MapSection';
+import { FAQ } from '../components/FAQ';
 import { Footer } from '../components/Footer';
 
 export const HomePage = () => {
@@ -13,6 +17,10 @@ export const HomePage = () => {
                 <Hero />
                 <Features />
                 <About />
+                <MenuPreview />
+                <Reviews />
+                <MapSection />
+                <FAQ />
             </div>
             <Footer />
         </div>

@@ -74,7 +74,8 @@
   font-size: 0.95rem;
   line-height: 1.5;
   color: rgba(255, 255, 255, 0.85);
-  font-family: 'Alegreya', serif;
+  font-family: 'Goudy Bookletter 1911', serif;
+  letter-spacing: normal !important;
 }
 
 .cookie-consent-actions {
