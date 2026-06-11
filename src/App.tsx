@@ -68,6 +68,20 @@ function App() {
       <Routes>
         {/* Redirect root to default language */}
         <Route path="/" element={<Navigate to="/fr" replace />} />
+
+        {/* Redirect old PDF paths to the digital menu page */}
+        <Route path="/resources/Menu.pdf" element={<Navigate to="/fr/menu" replace />} />
+        <Route path="/resources/menu.pdf" element={<Navigate to="/fr/menu" replace />} />
+        <Route path="/resources/Menu.pdf/" element={<Navigate to="/fr/menu" replace />} />
+        <Route path="/resources/menu.pdf/" element={<Navigate to="/fr/menu" replace />} />
+
+        {/* Redirect root-level paths (without language prefix) to default language (/fr) */}
+        <Route path="/menu" element={<Navigate to="/fr/menu" replace />} />
+        <Route path="/menu-moment" element={<Navigate to="/fr/menu-moment" replace />} />
+        <Route path="/contact" element={<Navigate to="/fr/contact" replace />} />
+        <Route path="/mentions-legales" element={<Navigate to="/fr/mentions-legales" replace />} />
+        <Route path="/politique-confidentialite" element={<Navigate to="/fr/politique-confidentialite" replace />} />
+        <Route path="/politique-cookies" element={<Navigate to="/fr/politique-cookies" replace />} />
         
         {/* Language subpath routes */}
         <Route path="/:lang/*" element={
