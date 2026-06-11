@@ -138,7 +138,7 @@ export const ContactPage = () => {
                             </div>
                             <div>
                                 <h3 style={{ margin: '0 0 5px 0', fontSize: '1.1em', fontWeight: 'bold', color: 'var(--text-main)' }}>{text.email}</h3>
-                                <a href="mailto:grilllounge.narbonne@gmail.com" style={{ margin: 0, color: 'var(--accent-green)', textDecoration: 'none', wordBreak: 'break-all' }}>grilllounge.narbonne@gmail.com</a>
+                                <a href="mailto:grilllounge.aude@gmail.com" style={{ margin: 0, color: 'var(--accent-green)', textDecoration: 'none', wordBreak: 'break-all' }}>grilllounge.aude@gmail.com</a>
                             </div>
                         </div>
 
