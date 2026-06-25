@@ -59,7 +59,8 @@ languages.forEach(lang => {
   });
 });
 
-// 4. Add legacy PDF redirect paths
+// 4. Add legacy/redirect paths
+paths.add('reservez');
 paths.add('resources/Menu.pdf');
 paths.add('resources/menu.pdf');
 
