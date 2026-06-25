@@ -88,40 +88,102 @@ if (fs.existsSync(sitemapPath)) {
   console.warn('Warning: sitemap.xml not found in output directory. Skipping dynamic route extraction.');
 }
 
-// 4. Generate HTML files and directories for each unique route path
+// 4. Define static redirect mapping for legacy/root-level paths to their correct canonical targets
+const redirectMap = {
+  'reservez': '/fr/contact',
+  'menu': '/fr/menu',
+  'menu-moment': '/fr/menu-moment',
+  'contact': '/fr/contact',
+  'mentions-legales': '/fr/mentions-legales',
+  'politique-confidentialite': '/fr/politique-confidentialite',
+  'politique-cookies': '/fr/politique-cookies',
+  'resources/Menu.pdf': '/fr/menu',
+  'resources/menu.pdf': '/fr/menu',
+};
+
+// 5. Generate HTML files and directories for each unique route path
 console.log(`Generating static files for ${paths.size} routes...`);
 
 for (const cleanPath of paths) {
   const ext = path.extname(cleanPath);
+  const redirectTarget = redirectMap[cleanPath];
   
-  if (ext) {
-    // Path has a file extension (e.g. .pdf), so we create directory/index.html
-    // to leverage GitHub Pages folder redirect without corrupting the file MIME type
-    const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
-    try {
-      fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
-      fs.copyFileSync(indexPath, targetIndexFile);
-      console.log(`Generated: ${targetIndexFile}`);
-    } catch (error) {
-      console.error(`Error generating folder route for ${cleanPath}:`, error);
+  if (redirectTarget) {
+    // Generate permanent SEO-friendly redirect HTML using 0-second meta-refresh and JS fallback
+    const redirectHtmlContent = `<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <link rel="canonical" href="https://grilllounge.fr${redirectTarget}">
+    <meta http-equiv="refresh" content="0; url=${redirectTarget}">
+  </head>
+  <body>
+    <p>Redirecting to <a href="${redirectTarget}">${redirectTarget}</a>...</p>
+    <script>
+      window.location.replace("${redirectTarget}");
+    </script>
+  </body>
+</html>`;
+
+    if (ext) {
+      const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
+      try {
+        fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
+        fs.writeFileSync(targetIndexFile, redirectHtmlContent);
+        console.log(`Generated permanent redirect: ${targetIndexFile} -> ${redirectTarget}`);
+      } catch (error) {
+        console.error(`Error generating redirect for ${cleanPath}:`, error);
+      }
+    } else {
+      const targetHtmlFile = path.join(outDir, `${cleanPath}.html`);
+      const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
+      
+      try {
+        // 1. Generate clean URL file (path.html)
+        fs.mkdirSync(path.dirname(targetHtmlFile), { recursive: true });
+        fs.writeFileSync(targetHtmlFile, redirectHtmlContent);
+        
+        // 2. Generate slash URL file (path/index.html)
+        fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
+        fs.writeFileSync(targetIndexFile, redirectHtmlContent);
+        
+        console.log(`Generated permanent redirect: ${targetHtmlFile} & ${targetIndexFile} -> ${redirectTarget}`);
+      } catch (error) {
+        console.error(`Error generating redirect for ${cleanPath}:`, error);
+      }
     }
   } else {
-    // Standard path without extension, generate both files to guarantee 200 OK for both slash and no-slash
-    const targetHtmlFile = path.join(outDir, `${cleanPath}.html`);
-    const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
-    
-    try {
-      // 1. Generate clean URL file (path.html)
-      fs.mkdirSync(path.dirname(targetHtmlFile), { recursive: true });
-      fs.copyFileSync(indexPath, targetHtmlFile);
+    // Standard path that actually hosts a site page (copy index.html to allow SPA routing)
+    if (ext) {
+      // Path has a file extension (e.g. .pdf), so we create directory/index.html
+      // to leverage GitHub Pages folder redirect without corrupting the file MIME type
+      const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
+      try {
+        fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
+        fs.copyFileSync(indexPath, targetIndexFile);
+        console.log(`Generated: ${targetIndexFile}`);
+      } catch (error) {
+        console.error(`Error generating folder route for ${cleanPath}:`, error);
+      }
+    } else {
+      // Standard path without extension, generate both files to guarantee 200 OK for both slash and no-slash
+      const targetHtmlFile = path.join(outDir, `${cleanPath}.html`);
+      const targetIndexFile = path.join(outDir, cleanPath, 'index.html');
       
-      // 2. Generate slash URL file (path/index.html)
-      fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
-      fs.copyFileSync(indexPath, targetIndexFile);
-      
-      console.log(`Generated: ${targetHtmlFile} & ${targetIndexFile}`);
-    } catch (error) {
-      console.error(`Error generating static routes for ${cleanPath}:`, error);
+      try {
+        // 1. Generate clean URL file (path.html)
+        fs.mkdirSync(path.dirname(targetHtmlFile), { recursive: true });
+        fs.copyFileSync(indexPath, targetHtmlFile);
+        
+        // 2. Generate slash URL file (path/index.html)
+        fs.mkdirSync(path.dirname(targetIndexFile), { recursive: true });
+        fs.copyFileSync(indexPath, targetIndexFile);
+        
+        console.log(`Generated: ${targetHtmlFile} & ${targetIndexFile}`);
+      } catch (error) {
+        console.error(`Error generating static routes for ${cleanPath}:`, error);
+      }
     }
   }
 }
