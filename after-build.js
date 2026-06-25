@@ -30,18 +30,38 @@ try {
 }
 
 // Define the set of unique paths to pre-generate
-const paths = new Set([
-  // Root-level paths for language redirects
+const languages = ['fr', 'es', 'en'];
+const basePaths = [
   'menu',
   'menu-moment',
   'contact',
   'mentions-legales',
   'politique-confidentialite',
   'politique-cookies',
-  // Legacy PDF redirect paths
-  'resources/Menu.pdf',
-  'resources/menu.pdf',
-]);
+];
+
+const paths = new Set();
+
+// 1. Add language root paths (fr, es, en)
+languages.forEach(lang => {
+  paths.add(lang);
+});
+
+// 2. Add root-level paths (without language prefix)
+basePaths.forEach(p => {
+  paths.add(p);
+});
+
+// 3. Add localized sub-paths (e.g. fr/menu, es/menu, en/menu)
+languages.forEach(lang => {
+  basePaths.forEach(p => {
+    paths.add(`${lang}/${p}`);
+  });
+});
+
+// 4. Add legacy PDF redirect paths
+paths.add('resources/Menu.pdf');
+paths.add('resources/menu.pdf');
 
 // 3. Extract paths dynamically from sitemap.xml
 if (fs.existsSync(sitemapPath)) {
