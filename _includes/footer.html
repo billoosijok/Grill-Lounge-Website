@@ -1,0 +1,81 @@
+{% assign t = site.data.translations %}
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-column">
+            <img class="footer-logo" alt="Grill Lounge Logo" src="/logo-black.png" />
+            <p class="footer-text">
+                {{ t.footer[page.lang].desc }}
+            </p>
+            <div style="display: flex; gap: 15px;">
+                <a href="https://instagram.com/the_grill_lounge" target="_blank" rel="noopener noreferrer" class="social-icon-link" onclick="gtag('event', 'instagram_click')" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include icons/instagram.html %}
+                </a>
+                <a href="https://www.facebook.com/people/Grill-Lounge/100091425234364" target="_blank" rel="noopener noreferrer" class="social-icon-link" onclick="gtag('event', 'facebook_click')" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include icons/facebook.html %}
+                </a>
+                <a href="https://tiktok.com/@the_grill_lounge" target="_blank" rel="noopener noreferrer" class="social-icon-link" onclick="gtag('event', 'tiktok_click')" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include icons/tiktok.html %}
+                </a>
+                <a href="tel:0955000298" class="social-icon-link" onclick="gtag('event', 'phone_click')" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include icons/phone.html %}
+                </a>
+                <a href="mailto:grilllounge.aude@gmail.com" class="social-icon-link" onclick="gtag('event', 'email_click')" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include icons/email.html %}
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-title">Contact</h3>
+            <ul class="footer-links" style="color: #a0a0a0; line-height: 2; list-style: none; padding: 0;">
+                <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>5 Av. Pierre Semard, 11100 Narbonne</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <a href="/{{ page.lang }}/contact/" style="color: inherit; text-decoration: none;">04 68 65 27 42</a>
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>{{ t.footer[page.lang].hours_val }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p style="display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center;">
+            <span>
+                &copy; <span id="current-year"></span> Grill Lounge Steakhouse. Tous droits réservés. | SIRET : 93829663900017
+            </span>
+            <span class="footer-legal-links" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <a href="/{{ page.lang }}/mentions-legales/" style="color: inherit; text-decoration: underline;">
+                    {{ t.footer[page.lang].legal_notice }}
+                </a>
+                <span>|</span>
+                <a href="/{{ page.lang }}/politique-confidentialite/" style="color: inherit; text-decoration: underline;">
+                    {{ t.footer[page.lang].privacy_policy }}
+                </a>
+                <span>|</span>
+                <a href="/{{ page.lang }}/politique-cookies/" style="color: inherit; text-decoration: underline;">
+                    {{ t.footer[page.lang].cookie_policy }}
+                </a>
+                <span>|</span>
+                <a href="#cookies" id="manage-cookies-link" style="color: inherit; text-decoration: underline; cursor: pointer;">
+                    {{ t.footer[page.lang].manage_cookies }}
+                </a>
+            </span>
+        </p>
+    </div>
+</footer>

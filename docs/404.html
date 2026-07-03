@@ -1,1 +1,117 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"/><link rel="icon" href="/favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillant"/><link rel="apple-touch-icon" href="/icon.png"/><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[];var consentChoice=localStorage.getItem("cookie-consent-choice"),consentState="accepted"===consentChoice?"granted":"denied";gtag("consent","default",{ad_storage:consentState,ad_user_data:consentState,ad_personalization:consentState,analytics_storage:consentState})</script><script async src="https://www.googletagmanager.com/gtag/js?id=G-DQYS58J1H6"></script><script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-DQYS58J1H6")</script><title>Grill Lounge</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet"><script defer="defer" src="/static/js/main.ad4c847c.js"></script><link href="/static/css/main.e2f87053.css" rel="stylesheet"></head><body><div id="root"></div></body></html>
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <!-- Title and Description are set dynamically per page/language -->
+    <title>404 - Page Not Found</title>
+    <meta name="description" content="Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillante" />
+
+    <link rel="apple-touch-icon" href="/icon.png" />
+
+    <!-- Google Consent Mode v2 Default State -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      var consentChoice = localStorage.getItem('cookie-consent-choice');
+      var consentState = consentChoice === 'accepted' ? 'granted' : 'denied';
+
+      gtag('consent', 'default', {
+        'ad_storage': consentState,
+        'ad_user_data': consentState,
+        'ad_personalization': consentState,
+        'analytics_storage': consentState
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DQYS58J1H6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-DQYS58J1H6');
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/main.css" />
+  </head>
+  <body>
+    <div id="root">
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center; font-family: 'Outfit', sans-serif; padding: 20px; background-color: var(--primary-bg); color: var(--text-main);">
+    <h1 style="font-size: 6em; color: var(--accent-red); margin: 0; font-weight: 800;">404</h1>
+    <h2 id="error-title" style="font-size: 2em; margin: 10px 0 20px 0; color: var(--accent-green);">Page Introuvable</h2>
+    <p id="error-desc" style="font-size: 1.2em; color: var(--text-muted); max-width: 500px; line-height: 1.6; margin-bottom: 40px;">
+        Désolé, la page que vous recherchez n'existe pas ou a été déplacée.
+    </p>
+    <a id="error-home-btn" href="/fr/" class="cta-button" style="text-decoration: none; padding: 12px 30px; font-size: 1.1em;">
+        Retour à l'accueil
+    </a>
+</div>
+
+<script>
+    // Simple script to customize text based on path language prefix
+    var pathname = window.location.pathname;
+    var titleEl = document.getElementById('error-title');
+    var descEl = document.getElementById('error-desc');
+    var btnEl = document.getElementById('error-home-btn');
+
+    if (pathname.indexOf('/en/') === 0) {
+        titleEl.textContent = 'Page Not Found';
+        descEl.textContent = "Sorry, the page you are looking for does not exist or has been moved.";
+        btnEl.textContent = 'Back to Home';
+        btnEl.href = '/en/';
+    } else if (pathname.indexOf('/es/') === 0) {
+        titleEl.textContent = 'Página no encontrada';
+        descEl.textContent = "Lo sentimos, la página que busca no existe o ha sido trasladada.";
+        btnEl.textContent = 'Volver al inicio';
+        btnEl.href = '/es/';
+    }
+</script>
+
+    </div>
+
+    <!-- Cookie Consent Banner Include -->
+    
+<div 
+  id="cookie-consent-banner" 
+  class="cookie-consent-container"
+  role="dialog"
+  aria-labelledby="cookie-title"
+  aria-describedby="cookie-desc"
+  style="display: none;"
+>
+  <div class="cookie-consent-content">
+    <div class="cookie-consent-text-section">
+      <h4 id="cookie-title" class="cookie-consent-title"></h4>
+      <p id="cookie-desc" class="cookie-consent-desc"></p>
+    </div>
+    <div class="cookie-consent-actions">
+      <button 
+        class="cookie-btn cookie-btn-decline" 
+        id="cookie-decline-btn"
+      >
+        
+      </button>
+      <button 
+        class="cookie-btn cookie-btn-accept" 
+        id="cookie-accept-btn"
+      >
+        
+      </button>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Vanilla Javascript Logic -->
+    <script src="/assets/js/main.js"></script>
+  </body>
+</html>

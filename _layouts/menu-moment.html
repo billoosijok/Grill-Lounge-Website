@@ -1,0 +1,162 @@
+---
+layout: default
+---
+{% assign t = site.data.translations %}
+{% assign menu_data = site.data.menu_moment[page.lang] %}
+
+<div class="menu-page-container animate__animated animate__fadeIn">
+    {% include header.html %}
+
+    <main class="menu-content" style="margin-top: 40px; max-width: 800px; width: 100%; margin-left: auto; margin-right: auto; padding: 0 15px;">
+        <!-- Suggestions du Moment title -->
+        <div class="menu-title-section" style="text-align: center; margin-bottom: 40px;">
+            <span style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.95em; color: var(--accent-red); font-weight: bold; display: block; margin-bottom: 10px;">
+                {{ t.menu_moment_page[page.lang].chef_suggestion }}
+            </span>
+            <h1 class="menu-main-title" style="font-size: 3em; color: var(--accent-green); margin: 0;">
+                {{ menu_data.title }}
+            </h1>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 40px;">
+            
+            <!-- SECTION 1: Plats du Moment -->
+            <section class="menu-category" style="padding: 35px; border: 1px solid rgba(25, 67, 70, 0.08); box-shadow: var(--card-shadow); border-radius: 16px; background-color: #fff;">
+                <div class="category-header" style="border-bottom: 2px solid var(--accent-red); padding-bottom: 12px; margin-bottom: 25px; text-align: center;">
+                    <h2 class="category-title" style="color: var(--accent-green); letter-spacing: 2px; font-weight: bold; font-size: 1.8em;">
+                        {{ menu_data.section1.title | upcase }}
+                    </h2>
+                </div>
+
+                <div class="category-content" style="display: flex; flex-direction: column; gap: 30px;">
+                    {% for item in menu_data.section1.items %}
+                    <div class="menu-item" style="{% unless forloop.last %}border-bottom: 1px dashed #eee; padding-bottom: 20px;{% endunless %}">
+                        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 10px;">
+                            <strong class="item-name" style="font-size: 1.35em; color: var(--text-main); font-family: 'Outfit', sans-serif;">
+                                {{ item.name }}
+                            </strong>
+                            <span style="font-size: 1.25em; color: var(--accent-red); font-weight: bold; font-family: 'Outfit', sans-serif;">
+                                {{ item.price }}
+                            </span>
+                        </div>
+                        {% if item.description %}
+                        <p class="item-description" style="font-size: 1.05em; color: var(--text-muted); font-style: italic; margin-top: 6px; line-height: 1.5;">
+                            {{ item.description }}
+                        </p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+            <!-- SECTION 2: Suggestion du Week-end (Set Formula) -->
+            <section class="menu-category" style="padding: 40px 35px 35px 35px; box-shadow: 0 10px 30px rgba(25, 67, 70, 0.15); border-radius: 16px; background-color: var(--accent-green); color: var(--white); position: relative; overflow: hidden;">
+                <!-- Decorative background gradient -->
+                <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 60%); pointer-events: none;"></div>
+
+                <div class="category-header" style="border-bottom: 1px solid rgba(255, 255, 255, 0.15); padding-bottom: 15px; margin-bottom: 25px; text-align: center;">
+                    <h2 class="category-title" style="color: var(--white); letter-spacing: 3px; font-weight: bold; font-size: 1.8em;">
+                        {{ menu_data.section2.title | upcase }}
+                    </h2>
+                </div>
+
+                <!-- Formula Pricing block -->
+                <div class="weekend-formulas" style="position: relative; z-index: 1;">
+                    <div style="display: flex; width: 100%; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center;">
+                        <!-- Formula 0 (Plat seul) -->
+                        <div style="flex: 1; min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 12px; border-right: 1px solid rgba(25, 255, 255, 0.15); padding-right: 15px;">
+                            <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                                <div>PLAT</div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
+                                <span>15</span>
+                                <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
+                            </div>
+                        </div>
+
+                        <!-- Formula 1 (Entrée + Plat OU Plat + Dessert) -->
+                        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 12px; border-right: 1px solid rgba(25, 255, 255, 0.15); padding-right: 15px;">
+                            <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                                <div>ENTRÉE + PLAT</div>
+                                <div style="color: #d48a42; font-size: 0.95em; margin: 2px 0;">OU</div>
+                                <div>PLAT + DESSERT</div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
+                                <span>21</span>
+                                <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
+                            </div>
+                        </div>
+
+                        <!-- Formula 2 (Entrée + Plat + Dessert) -->
+                        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 12px;">
+                            <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
+                                <div>ENTRÉE</div>
+                                <div>+ PLAT</div>
+                                <div>+ DESSERT</div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
+                                <span>25</span>
+                                <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divider Line -->
+                    <hr style="border: none; border-top: 2px solid rgba(255, 255, 255, 0.2); margin: 20px 0 30px 0;" />
+                </div>
+
+                <!-- Category contents -->
+                <div class="category-content" style="display: flex; flex-direction: column; gap: 35px; position: relative; z-index: 1;">
+                    {% for category in menu_data.section2.categories %}
+                    <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
+                        <h3 style="color: #d48a42; font-size: 1.2em; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; margin-bottom: 15px;">
+                            | {{ category.name }}
+                        </h3>
+                        
+                        <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; align-items: center;">
+                            {% for item in category.items %}
+                            <!-- check if item is string or object -->
+                            {% if item.name %}
+                            <div style="max-width: 600px; width: 100%;">
+                                <div style="font-size: 1.25em; font-weight: bold; display: flex; justify-content: center; align-items: center; gap: 8px; flex-wrap: wrap;">
+                                    <span>{{ item.name }}</span>
+                                    {% if item.price %}
+                                    <span style="color: #d48a42; font-size: 0.95em;">({{ item.price }})</span>
+                                    {% endif %}
+                                </div>
+                                {% if item.description %}
+                                <p style="color: #ccc; font-style: italic; margin-top: 6px; font-size: 1.05em; line-height: 1.5;">
+                                    {{ item.description }}
+                                </p>
+                                {% endif %}
+                            </div>
+                            {% else %}
+                            <div style="font-size: 1.2em; font-weight: 500;">
+                                - {{ item }}
+                            </div>
+                            {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Call-to-action bottom box -->
+        <div style="text-align: center; margin-top: 50px; padding: 30px; background-color: #fff; border-radius: 12px; border: 1px solid rgba(0,0,0,0.05); box-shadow: var(--card-shadow);">
+            <p style="font-size: 1.2em; color: var(--accent-green); font-weight: bold; margin: 0 0 10px 0;">
+                {{ t.menu_moment_page[page.lang].allergy_title }}
+            </p>
+            <p style="color: var(--text-muted); margin: 0 0 20px 0;">
+                {{ t.menu_moment_page[page.lang].allergy_desc }}
+            </p>
+            <a href="/{{ page.lang }}/contact/" class="cta-button" style="display: inline-block; text-decoration: none;">
+                {{ t.menu_moment_page[page.lang].cta_reserve }}
+            </a>
+        </div>
+    </main>
+
+    {% include footer.html %}
+</div>

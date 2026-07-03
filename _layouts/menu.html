@@ -1,0 +1,100 @@
+---
+layout: default
+---
+{% assign t = site.data.translations %}
+{% assign menu_data = site.data.menu[page.lang] %}
+
+<div class="menu-page-container animate__animated animate__fadeIn">
+    {% include header.html %}
+
+    <main class="menu-content" style="margin-top: 40px;">
+        <div class="menu-title-section" style="text-align: center; margin-bottom: 40px;">
+            <h1 class="menu-main-title">MENU</h1>
+            <p class="menu-subtitle">{{ t.menu_page[page.lang].subtitle }}</p>
+        </div>
+
+        {% for category in menu_data.categories %}
+        {% assign cat_id = category.name | downcase | replace: ' & ', '-' | replace: ' ', '-' | replace: 'é', 'e' | replace: 'è', 'e' | replace: 'ê', 'e' | replace: 'à', 'a' | replace: 'ç', 'c' %}
+        
+        <section id="{{ cat_id }}" class="menu-category">
+            <div class="category-header" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2 class="category-title">{{ category.name }}</h2>
+                    {% if category.description %}
+                    <p class="category-desc">{{ category.description }}</p>
+                    {% endif %}
+                </div>
+                <span class="category-toggle-icon">▼</span>
+            </div>
+
+            <div class="category-content animate__animated animate__fadeIn animate__faster" style="display: none;">
+                {% if category.subcategories %}
+                <div class="menu-subcategories">
+                    {% for sub in category.subcategories %}
+                    <div class="menu-subcategory">
+                        <h3 class="subcategory-title">{{ sub.name }}</h3>
+                        {% if sub.description %}
+                        <p class="subcategory-desc">{{ sub.description }}</p>
+                        {% endif %}
+                        
+                        <div class="menu-items {% if sub.name == 'SAUCES' %}menu-items-compact{% endif %}">
+                            {% for item in sub.items %}
+                            <div class="menu-item">
+                                <div class="menu-item-header">
+                                    {% if item.isNew %}
+                                    <span class="badge-new">NEW</span>
+                                    {% endif %}
+                                    <strong class="item-name">{{ item.name }}</strong>
+                                    {% if item.price %}
+                                    <span class="price-separator"> - </span>
+                                    <span class="item-price">{{ item.price }}</span>
+                                    {% endif %}
+                                </div>
+                                {% if item.description %}
+                                <p class="item-description">{{ item.description }}</p>
+                                {% endif %}
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="menu-items">
+                    {% for item in category.items %}
+                    <div class="menu-item">
+                        <div class="menu-item-header">
+                            {% if item.isNew %}
+                            <span class="badge-new">NEW</span>
+                            {% endif %}
+                            <strong class="item-name">{{ item.name }}</strong>
+                            {% if item.price %}
+                            <span class="price-separator"> - </span>
+                            <span class="item-price">{{ item.price }}</span>
+                            {% endif %}
+                        </div>
+                        {% if item.description %}
+                        <p class="item-description">{{ item.description }}</p>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if category.supplements %}
+                <div class="menu-supplements">
+                    {% for sup in category.supplements %}
+                    <div class="supplement-item">
+                        <span class="supplement-name">{{ sup.name }}: </span>
+                        <span class="supplement-price">{{ sup.price }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        {% endfor %}
+    </main>
+
+    {% include footer.html %}
+</div>

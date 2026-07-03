@@ -1,0 +1,24 @@
+title: Grill Lounge
+email: grilllounge.aude@gmail.com
+description: "Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillante."
+url: "https://grilllounge.fr"
+
+destination: docs
+markdown: kramdown
+highlighter: rouge
+
+exclude:
+  - package.json
+  - yarn.lock
+  - tsconfig.json
+  - node_modules/
+  - src/
+  - .yarn/
+  - .yarnrc.yml
+  - .git/
+  - .gitignore
+  - after-build.js
+  - after-build.sh
+  - golive.sh
+  - README.md
+  - vendor/

@@ -1,0 +1,30 @@
+{% assign t = site.data.translations %}
+<div 
+  id="cookie-consent-banner" 
+  class="cookie-consent-container"
+  role="dialog"
+  aria-labelledby="cookie-title"
+  aria-describedby="cookie-desc"
+  style="display: none;"
+>
+  <div class="cookie-consent-content">
+    <div class="cookie-consent-text-section">
+      <h4 id="cookie-title" class="cookie-consent-title">{{ t.cookie_consent[page.lang].title }}</h4>
+      <p id="cookie-desc" class="cookie-consent-desc">{{ t.cookie_consent[page.lang].desc }}</p>
+    </div>
+    <div class="cookie-consent-actions">
+      <button 
+        class="cookie-btn cookie-btn-decline" 
+        id="cookie-decline-btn"
+      >
+        {{ t.cookie_consent[page.lang].decline }}
+      </button>
+      <button 
+        class="cookie-btn cookie-btn-accept" 
+        id="cookie-accept-btn"
+      >
+        {{ t.cookie_consent[page.lang].accept }}
+      </button>
+    </div>
+  </div>
+</div>

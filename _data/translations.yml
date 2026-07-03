@@ -1,0 +1,416 @@
+# Translations for Grill Lounge website
+
+langs:
+  fr:
+    name: "Français"
+    icon: "france"
+  en:
+    name: "English"
+    icon: "united-kingdom"
+  es:
+    name: "Español"
+    icon: "espana"
+
+header:
+  fr:
+    home: "Accueil"
+    menu: "Menu"
+    menu_moment: "Menu du Moment"
+    contact: "Contact"
+    reserve: "Réservez une table"
+  en:
+    home: "Home"
+    menu: "Menu"
+    menu_moment: "Special Menu"
+    contact: "Contact"
+    reserve: "Reserve a table"
+  es:
+    home: "Inicio"
+    menu: "Menú"
+    menu_moment: "Menú del Momento"
+    contact: "Contacto"
+    reserve: "Reserve una mesa"
+
+hero:
+  fr:
+    title: "Restaurant Grill Lounge à Narbonne"
+    label1: "Le restaurant de grillades"
+    label2: "LE GOÛT DE L’ EXCELLENCE"
+    label3: "à deux minutes de la Gare"
+    desc: "Viandes premium grillées à la pierre de lave, burgers maison, spécialités orientales et couscous traditionnel."
+    reviews: "Plus de 700 avis Google"
+    bullets:
+      - emoji: "🥩"
+        text: "Viandes Premium"
+      - emoji: "🔥"
+        text: "Cuisson à la pierre de lave"
+      - emoji: "🍔"
+        text: "Burgers Maison"
+      - emoji: "📍"
+        text: "À 2 minutes de la Gare SNCF"
+    cta_reserve: "Réservez une table"
+    cta_menu: "Voir le Menu"
+    cta_directions: "Obtenir l'itinéraire"
+  en:
+    title: "Grill Lounge Restaurant in Narbonne"
+    label1: "The grill restaurant"
+    label2: "THE TASTE OF EXCELLENCE"
+    label3: "two minutes from the Station"
+    desc: "Premium meats grilled on lava stone, homemade burgers, oriental specialties, and traditional couscous."
+    reviews: "More than 700 Google reviews"
+    bullets:
+      - emoji: "🥩"
+        text: "Premium Meats"
+      - emoji: "🔥"
+        text: "Lava stone cooking"
+      - emoji: "🍔"
+        text: "Homemade Burgers"
+      - emoji: "📍"
+        text: "2 minutes from the SNCF Station"
+    cta_reserve: "Book a table"
+    cta_menu: "View Menu"
+    cta_directions: "Get directions"
+  es:
+    title: "Restaurante Grill Lounge en Narbona"
+    label1: "El restaurante de parrilla"
+    label2: "EL SABOR DE LA EXCELENCIA"
+    label3: "a dos minutes de la Estación"
+    desc: "Carnes premium cocinadas a la piedra de lava, hamburguesas caseras, especialidades orientales y cuscús tradicional."
+    reviews: "Más de 700 reseñas de Google"
+    bullets:
+      - emoji: "🥩"
+        text: "Carnes Premium"
+      - emoji: "🔥"
+        text: "Cocción a la piedra de lava"
+      - emoji: "🍔"
+        text: "Hamburguesas Caseras"
+      - emoji: "📍"
+        text: "A 2 minutos de la Estación SNCF"
+    cta_reserve: "Reservar mesa"
+    cta_menu: "Ver el Menú"
+    cta_directions: "Cómo llegar"
+
+features:
+  fr:
+    title: "Nos spécialités"
+    items:
+      - id: "grillades-viandes"
+        image: "/Magret.JPG"
+        title: "Grillades & Viandes Premium"
+        desc: "Entrecôte, côte de bœuf, brochettes, côtelettes d'agneau, souris d'agneau confite, Mix Grill…"
+        url: "/menu#grillades-viandes"
+        btnText: "Découvrir nos Grillades"
+      - id: "burgers-signatures"
+        image: "/Burger.jpg"
+        title: "Burgers Maison"
+        desc: "Préparés à la commande avec des ingrédients frais, sauces maison et pain moelleux"
+        url: "/menu#burgers-signatures"
+        btnText: "Voir nos Burgers"
+      - id: "couscous"
+        image: "/couscous.jpg"
+        title: "Couscous Maison"
+        desc: "Chaque week-end, retrouvez notre couscous maison préparé dans la tradition,"
+        url: "/menu-moment"
+        btnText: "Découvrir le Menu du Moment"
+  en:
+    title: "Our Specialties"
+    items:
+      - id: "grillades-viandes"
+        image: "/Magret.JPG"
+        title: "Premium Grills & Meats"
+        desc: "Ribeye steak, prime rib, skewers, lamb chops, braised lamb shank, Mix Grill..."
+        url: "/menu#grillades-viandes"
+        btnText: "Discover our Grills"
+      - id: "burgers-signatures"
+        image: "/Burger.jpg"
+        title: "Homemade Burgers"
+        desc: "Prepared to order with fresh ingredients, homemade sauces, and soft buns"
+        url: "/menu#burgers-signatures"
+        btnText: "See our Burgers"
+      - id: "couscous"
+        image: "/couscous.jpg"
+        title: "Homemade Couscous"
+        desc: "Every weekend, enjoy our traditional homemade couscous prepared in the pure tradition,"
+        url: "/menu-moment"
+        btnText: "Discover the Special Menu"
+  es:
+    title: "Nuestras Especialidades"
+    items:
+      - id: "grillades-viandes"
+        image: "/Magret.JPG"
+        title: "Parrilladas y Carnes Premium"
+        desc: "Entrecot, chuletón, brochetas, chuletas de cordero, jarrete de cordero confitado, Mix Grill..."
+        url: "/menu#grillades-viandes"
+        btnText: "Descubrir nuestras Parrilladas"
+      - id: "burgers-signatures"
+        image: "/Burger.jpg"
+        title: "Hamburguesas Caseras"
+        desc: "Preparadas al momento con ingredientes frescos, salsas caseras y pan tierno"
+        url: "/menu#burgers-signatures"
+        btnText: "Ver nuestras Hamburguesas"
+      - id: "couscous"
+        image: "/couscous.jpg"
+        title: "Cuscús Casero"
+        desc: "Cada fin de semana, disfrute de nuestro cuscús casero preparado según la tradición,"
+        url: "/menu-moment"
+        btnText: "Descubrir el Menú del Momento"
+
+about:
+  fr:
+    halal_title: "Restaurant Halal à Narbonne"
+    halal_desc1: "Toutes nos viandes sont 100 % halal et sélectionnées avec le plus grand soin."
+    halal_desc2: "Notre cuisine associe les saveurs des grillades traditionnelles, de la cuisine orientale et des recettes modernes afin de satisfaire tous les gourmands."
+    brand_title: "GRILL LOUNGE"
+    brand_subtitle: "VOTRE RESTAURANT À NARBONNE"
+    brand_desc1: "Situé au 5 Avenue Pierre Semard, toutes nos viandes sont 100 % halal et sélectionnées avec le plus grand soin."
+    brand_desc2: "Notre cuisine associe les saveurs des grillades traditionnelles, de la cuisine orientale et des recettes modernes."
+    cta: "DÉCOUVRIR NOTRE RESTAURANT"
+  en:
+    halal_title: "Halal Restaurant in Narbonne"
+    halal_desc1: "All our meats are 100% halal and selected with the utmost care."
+    halal_desc2: "Our cuisine combines the flavors of traditional grills, oriental cuisine, and modern recipes to satisfy all food lovers."
+    brand_title: "GRILL LOUNGE"
+    brand_subtitle: "YOUR RESTAURANT IN IN NARBONNE"
+    brand_desc1: "Located at 5 Avenue Pierre Semard, all our meats are 100% halal and selected with the utmost care."
+    brand_desc2: "Our cuisine combines the flavors of traditional grills, oriental cuisine, and modern recipes."
+    cta: "DISCOVER OUR RESTAURANT"
+  es:
+    halal_title: "Restaurante Halal en Narbona"
+    halal_desc1: "Todas nuestras carnes son 100% halal y seleccionadas con el mayor cuidado."
+    halal_desc2: "Nuestra cocina combina los sabores de las parrilladas tradicionales, la cocina oriental y recetas modernas para satisfacer a todos los paladares."
+    brand_title: "GRILL LOUNGE"
+    brand_subtitle: "SU RESTAURANTE EN NARBONA"
+    brand_desc1: "Situado en 5 Avenue Pierre Semard, todas nuestras carnes son 100% halal y seleccionadas con el mayor cuidado."
+    brand_desc2: "Nuestra cocina combina los sabores de las parrilladas tradicionales, la cocina oriental y recetas modernas."
+    cta: "DESCUBRIR NUESTRO RESTAURANTE"
+
+reviews:
+  fr:
+    subtitle: "Plus de 700 clients nous ont déjà laissé un avis sur Google."
+    title: "Ils nous font confiance"
+    cta: "Voir tous les avis Google"
+    verified: "Avis Vérifié"
+    items:
+      - name: "Client Google"
+        comment: "Cuisine savoureuse, service rapide et accueil chaleureux."
+        rating: 5
+        date: "Google Maps"
+      - name: "Client Google"
+        comment: "Des grillades excellentes, des portions généreuses et une équipe au top."
+        rating: 5
+        date: "Google Maps"
+      - name: "Client Google"
+        comment: "L'une des meilleures adresses de Narbonne pour manger halal."
+        rating: 5
+        date: "Google Maps"
+  en:
+    subtitle: "More than 700 customers have already left us a review on Google."
+    title: "They Trust Us"
+    cta: "View all Google Reviews"
+    verified: "Verified Review"
+    items:
+      - name: "Google Customer"
+        comment: "Tasty food, fast service, and warm welcome."
+        rating: 5
+        date: "Google Maps"
+      - name: "Google Customer"
+        comment: "Excellent grills, generous portions, and a top-notch team."
+        rating: 5
+        date: "Google Maps"
+      - name: "Google Customer"
+        comment: "One of the best places in Narbonne for halal dining."
+        rating: 5
+        date: "Google Maps"
+  es:
+    subtitle: "Más de 700 clientes ya nos han dejado una reseña en Google."
+    title: "Confían en Nosotros"
+    cta: "Ver todas las reseñas de Google"
+    verified: "Opinión Verificada"
+    items:
+      - name: "Cliente Google"
+        comment: "Comida sabrosa, servicio rápido y bienvenida cálida."
+        rating: 5
+        date: "Google Maps"
+      - name: "Cliente Google"
+        comment: "Excelentes parrilladas, porciones generosas y un equipo excelente."
+        rating: 5
+        date: "Google Maps"
+      - name: "Cliente Google"
+        comment: "Una de las mejores direcciones de Narbona para comer halal."
+        rating: 5
+        date: "Google Maps"
+
+bottom_cta:
+  fr:
+    title: "Une adresse incontournable à Narbonne"
+    desc: "Que vous recherchiez un restaurant de grillades, un burger maison, un couscous traditionnel ou simplement un endroit chaleureux, Notre équipe vous réserve un accueil convivial et une expérience que vous aurez envie de renouveler."
+    cta_book: "Réserver une table"
+    cta_call: "Nous appeler"
+    cta_map: "Obtenir l'itinéraire"
+  en:
+    title: "A Must-Visit Address in Narbonne"
+    desc: "Whether you are looking for a grill restaurant, a homemade burger, traditional couscous, or simply a warm place, our team promises a friendly welcome and an experience you will want to repeat."
+    cta_book: "Book a Table"
+    cta_call: "Call Us"
+    cta_map: "Get Directions"
+  es:
+    title: "Una Dirección Imprescindible en Narbona"
+    desc: "Tanto si busca un restaurante de parrillada, una hamburguesa casera, un cuscús tradicional o simplemente un lugar cálido, nuestro equipo le reserva una acogida cordial y una experiencia que querrá repetir."
+    cta_book: "Reservar mesa"
+    cta_call: "Llamarnos"
+    cta_map: "Cómo llegar"
+
+map_section:
+  fr:
+    subtitle: "Localisation"
+    title: "Où nous trouver ?"
+    desc: "Notre restaurant est idéalement situé en face de la gare de Narbonne, parfait pour un repas savoureux sur place ou à emporter."
+    address_label: "Adresse"
+    hours_label: "Horaires"
+    phone_label: "Téléphone"
+    cta: "Obtenir l'itinéraire"
+  en:
+    subtitle: "Location"
+    title: "Where to find us?"
+    desc: "Our restaurant is ideally located right across the Narbonne train station, perfect for a tasty dine-in or takeout meal."
+    address_label: "Address"
+    hours_label: "Hours"
+    phone_label: "Phone"
+    cta: "Get directions"
+  es:
+    subtitle: "Ubicación"
+    title: "¿Dónde encontrarnos?"
+    desc: "Nuestro restaurante está idealmente situado frente a la estación de tren de Narbona, perfecto para una comida deliciosa allí o para llevar."
+    address_label: "Dirección"
+    hours_label: "Horario"
+    phone_label: "Teléfono"
+    cta: "Cómo llegar"
+
+faq:
+  fr:
+    subtitle: "Des questions ?"
+    title: "Questions Fréquentes"
+    items:
+      - q: "Est-ce que vos viandes sont Halal ?"
+        a: "Oui, 100 % de nos viandes sont certifiées Halal. Nous mettons un point d'honneur à offrir une transparence totale à nos clients."
+      - q: "Proposez-vous des options végétariennes ?"
+        a: "Absolument. Notre carte comprend des entrées et tapas à partager végétariennes, ainsi que des salades et des suggestions du chef adaptées."
+      - q: "Est-il possible de commander à emporter ?"
+        a: "Oui, tous nos plats (grillades, burgers, salades, etc.) sont disponibles sur place et à emporter."
+      - q: "Faut-il réserver une table ?"
+        a: "La réservation est vivement conseillée, particulièrement les week-ends pour déguster notre couscous traditionnel ou en soirée. Vous pouvez réserver directement en nous contactant."
+      - q: "Comment accéder au restaurant depuis la gare ?"
+        a: "Le restaurant est situé au 5 Avenue Pierre Semard, à seulement 2 minutes à pied de la gare SNCF de Narbonne. Idéal pour manger rapidement avant ou après votre train."
+  en:
+    subtitle: "Any questions?"
+    title: "Frequently Asked Questions"
+    items:
+      - q: "Is your meat Halal?"
+        a: "Yes, 100% of our meats are certified Halal. We make it a priority to offer complete transparency to our customers."
+      - q: "Do you offer vegetarian options?"
+        a: "Absolutely. Our menu includes vegetarian starters and tapas to share, as well as adapted salads and chef's suggestions."
+      - q: "Is takeout available?"
+        a: "Yes, all our dishes (grills, burgers, salads, etc.) are available for dine-in and takeout."
+      - q: "Do I need to book a table?"
+        a: "Booking is highly recommended, especially on weekends to enjoy our traditional couscous or during busy evenings. You can book directly by contacting us."
+      - q: "How do I access the restaurant from the train station?"
+        a: "The restaurant is located at 5 Avenue Pierre Semard, just a 2-minute walk from the Narbonne SNCF station. Ideal for a quick bite before or after your train."
+  es:
+    subtitle: "¿Preguntas?"
+    title: "Preguntas Frecuentes"
+    items:
+      - q: "¿Sus carnes son Halal?"
+        a: "Sí, el 100 % de nuestras carnes están certificadas como Halal. Hacemos que sea una prioridad ofrecer total transparencia a nuestros clientes."
+      - q: "¿Ofrecen opciones vegetarianas?"
+        a: "Absolutamente. Nuestra carta incluye entrantes y tapas para compartir vegetarianas, así como ensaladas y sugerencias adaptadas."
+      - q: "¿Se puede pedir para llevar?"
+        a: "Sí, todos nuestros platos (parrilladas, hamburguesas, ensaladas, etc.) están disponibles para consumir aquí o para llevar."
+      - q: "¿Es necesario reservar mesa?"
+        a: "Se recomienda encarecidamente reservar, sobre todo los fines de semana para disfrutar de nuestro cuscús tradicional o por la noche. Puede reservar directamente contactando con nosotros."
+      - q: "¿Cómo llegar al restaurante desde la estación?"
+        a: "El restaurante está situado en el 5 Avenue Pierre Semard, a solo 2 minutos a pie de la estación de tren SNCF de Narbona. Ideal para comer rápido antes o después de su tren."
+
+footer:
+  fr:
+    desc: "Découvrez le goût authentique au Grill Lounge Steakhouse, tout près de la Gare SNCF de Narbonne. Venez partager un moment inoubliable autour de nos spécialités."
+    hours_val: "Lundi - Dimanche: 12h00 - 15h00, 18h00 - 23h00"
+    legal_notice: "Mentions légales"
+    privacy_policy: "Politique de confidentialité"
+    cookie_policy: "Politique de cookies"
+    manage_cookies: "Gérer les cookies"
+  en:
+    desc: "Discover authentic taste at Grill Lounge Steakhouse, right near the Narbonne SNCF train station. Come and share an unforgettable moment around our specialties."
+    hours_val: "Monday - Sunday: 12:00 PM - 3:00 PM, 6:00 PM - 11:00 PM"
+    legal_notice: "Legal Notice"
+    privacy_policy: "Privacy Policy"
+    cookie_policy: "Cookie Policy"
+    manage_cookies: "Manage Cookies"
+  es:
+    desc: "Descubra el sabor auténtico en Grill Lounge Steakhouse, muy cerca de la estación de tren SNCF de Narbona. Venga a compartir un momento inolvidable con nuestras especialidades."
+    hours_val: "Lunes - Domingo: 12:00 - 15:00, 18:00 - 23:00"
+    legal_notice: "Aviso legal"
+    privacy_policy: "Política de privacidad"
+    cookie_policy: "Política de cookies"
+    manage_cookies: "Gestionar cookies"
+
+cookie_consent:
+  fr:
+    title: "Gestion des cookies"
+    desc: "Nous utilisons des cookies pour optimiser votre expérience, analyser notre trafic et mesurer l'efficacité de nos campagnes. Vous pouvez choisir d'accepter tous les cookies ou de continuer sans accepter."
+    accept: "Accepter tout"
+    decline: "Continuer sans accepter"
+  en:
+    title: "Cookie Preferences"
+    desc: "We use cookies to optimize your experience, analyze our traffic, and measure the effectiveness of our campaigns. You can choose to accept all cookies or continue without accepting."
+    accept: "Accept All"
+    decline: "Decline All"
+  es:
+    title: "Preferencias de cookies"
+    desc: "Utilizamos cookies para optimizar su experiencia, analizar nuestro tráfico y medir la efectividad de nuestras campañas. Puede optar por aceptar todas las cookies o continuar sin aceptar."
+    accept: "Aceptar todo"
+    decline: "Rechazar todo"
+
+menu_page:
+  fr:
+    subtitle: "Braises, épices et passion"
+  en:
+    subtitle: "Embers, spices and passion"
+  es:
+    subtitle: "Brasas, especias y pasión"
+
+menu_moment_page:
+  fr:
+    chef_suggestion: "Suggestion du Chef"
+    allergy_title: "Une envie particulière ou des allergies ?"
+    allergy_desc: "N’hésitez pas à le signaler à notre équipe lors de votre commande."
+    cta_reserve: "Réservez votre table"
+  en:
+    chef_suggestion: "Chef's Suggestion"
+    allergy_title: "Special request or allergies?"
+    allergy_desc: "Do not hesitate to inform our staff when placing your order."
+    cta_reserve: "Reserve your table"
+  es:
+    chef_suggestion: "Sugerencia del Chef"
+    allergy_title: "¿Alguna petición especial o alergia?"
+    allergy_desc: "No dude en informar a nuestro equipo al realizar su pedido."
+    cta_reserve: "Reserve su mesa"
+
+contact_page:
+  fr:
+    title: "Contactez-nous"
+    subtitle: "Une question, une envie ou une réservation ? Notre équipe est à votre écoute."
+    info_title: "Nos Coordonnées"
+    map_title: "Nous trouver à Narbonne"
+    hours_val: "Lundi - Dimanche : 12h00 - 15h00, 18h00 - 23h00"
+  en:
+    title: "Contact Us"
+    subtitle: "A question, a request, or a reservation? Our team is here to help."
+    info_title: "Our Contact Info"
+    map_title: "Find us in Narbonne"
+    hours_val: "Monday - Sunday: 12:00 PM - 3:00 PM, 6:00 PM - 11:00 PM"
+  es:
+    title: "Contacto"
+    subtitle: "¿Una pregunta, un antojo o una reserva? Nuestro equipo está a su servicio."
+    info_title: "Nuestros Datos"
+    map_title: "Encuéntranos en Narbona"
+    hours_val: "Lunes - Domingo: 12:00 - 15:00, 18:00 - 23:00"

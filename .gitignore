@@ -3,3 +3,7 @@
 
 **/node_modules
 **/lib
+
+# Ruby & Jekyll local bundles
+/vendor/
+/.bundle/
