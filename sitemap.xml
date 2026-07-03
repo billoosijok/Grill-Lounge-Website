@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Homepage -->
+  <url>
+    <loc>https://grilllounge.fr/fr/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/" />
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Menu -->
+  <url>
+    <loc>https://grilllounge.fr/fr/menu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/menu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/menu/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Menu Moment -->
+  <url>
+    <loc>https://grilllounge.fr/fr/menu-moment/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu-moment/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/menu-moment/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu-moment/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/menu-moment/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/menu-moment/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/menu-moment/" />
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://grilllounge.fr/fr/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/contact/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/contact/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Mentions Légales -->
+  <url>
+    <loc>https://grilllounge.fr/fr/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/mentions-legales/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/mentions-legales/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/mentions-legales/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Politique de Confidentialité -->
+  <url>
+    <loc>https://grilllounge.fr/fr/politique-confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/politique-confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/politique-confidentialite/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-confidentialite/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-confidentialite/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <!-- Politique de Cookies -->
+  <url>
+    <loc>https://grilllounge.fr/fr/politique-cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/en/politique-cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://grilllounge.fr/es/politique-cookies/</loc>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/politique-cookies/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/politique-cookies/" />
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

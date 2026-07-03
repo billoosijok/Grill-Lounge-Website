@@ -1,0 +1,61 @@
+---
+layout: default
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign T = site.data.translations[lang].menu %}
+{% assign menuData = site.data.menu[lang] %}
+<div class="menu-page-container animate__animated animate__fadeIn">
+    {% include header.html %}
+
+    <main class="menu-content" style="margin-top: 40px;">
+        <div class="menu-title-section" style="text-align: center; margin-bottom: 40px;">
+            <h1 class="menu-main-title">{{ T.title }}</h1>
+            <p class="menu-subtitle">{{ T.subtitle }}</p>
+        </div>
+
+        {% for category in menuData.categories %}
+        <section id="{{ category.id }}" class="menu-category">
+            <div class="category-header" style="cursor: pointer; display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                    <h2 class="category-title">{{ category.name }}</h2>
+                    {% if category.description %}<p class="category-desc">{{ category.description }}</p>{% endif %}
+                </div>
+                <span class="category-toggle-icon">▼</span>
+            </div>
+
+            <div class="category-content" hidden>
+                {% if category.subcategories %}
+                <div class="menu-subcategories">
+                    {% for sub in category.subcategories %}
+                    <div class="menu-subcategory">
+                        <h3 class="subcategory-title">{{ sub.name }}</h3>
+                        {% if sub.description %}<p class="subcategory-desc">{{ sub.description }}</p>{% endif %}
+                        <div class="menu-items{% if sub.name == 'SAUCES' %} menu-items-compact{% endif %}">
+                            {% for item in sub.items %}{% include menu-item.html item=item %}{% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="menu-items">
+                    {% for item in category.items %}{% include menu-item.html item=item %}{% endfor %}
+                </div>
+                {% endif %}
+
+                {% if category.supplements %}
+                <div class="menu-supplements">
+                    {% for sup in category.supplements %}
+                    <div class="supplement-item">
+                        <span class="supplement-name">{{ sup.name }}: </span>
+                        <span class="supplement-price">{{ sup.price }}</span>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        {% endfor %}
+    </main>
+
+    {% include footer.html %}
+</div>

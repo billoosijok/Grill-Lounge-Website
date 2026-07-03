@@ -1,0 +1,67 @@
+# Per-language, per-page <title> and <meta description>. Mirrors after-build.js pageMetadata.
+fr:
+  home:
+    title: Grill Lounge - Steakhouse & Grillades à Narbonne
+    description: Découvrez nos viandes halal premium saisies à la pierre de lave, nos burgers maison et nos tapas à partager dans une ambiance chaleureuse.
+  menu:
+    title: Notre Menu - Grill Lounge Narbonne
+    description: Consultez notre carte de viandes grillées, burgers maison, entrées à partager, salades fraîches et desserts.
+  menu-moment:
+    title: Menu du Moment - Grill Lounge Narbonne
+    description: Découvrez nos suggestions et plats du moment à Narbonne. Formules midi et suggestions du chef renouvelées régulièrement.
+  contact:
+    title: Contact & Réservation - Grill Lounge Narbonne
+    description: Réservez votre table au Grill Lounge à Narbonne. Retrouvez notre adresse, numéro de téléphone, horaires et formulaire de contact.
+  mentions-legales:
+    title: Mentions Légales - Grill Lounge
+    description: Mentions légales et informations éditeur pour le site web officiel du restaurant Grill Lounge à Narbonne.
+  politique-confidentialite:
+    title: Politique de Confidentialité - Grill Lounge
+    description: Politique de confidentialité et de protection des données personnelles pour le site du restaurant Grill Lounge.
+  politique-cookies:
+    title: Politique de Cookies - Grill Lounge
+    description: Informations sur l'utilisation et la gestion des cookies sur le site du restaurant Grill Lounge à Narbonne.
+en:
+  home:
+    title: Grill Lounge - Steakhouse & Grills in Narbonne
+    description: Discover our premium halal meats seared on lava stone, our homemade burgers and our tapas to share in a warm atmosphere.
+  menu:
+    title: Our Menu - Grill Lounge Narbonne
+    description: Browse our menu featuring grilled meats, homemade burgers, shared appetizers, fresh salads, and delicious desserts.
+  menu-moment:
+    title: Seasonal Menu - Grill Lounge Narbonne
+    description: Discover our latest seasonal suggestions and chef specials in Narbonne. Lunch deals and special menus updated regularly.
+  contact:
+    title: Contact & Booking - Grill Lounge Narbonne
+    description: Book a table at Grill Lounge in Narbonne. Find our address, phone number, opening hours, and contact form.
+  mentions-legales:
+    title: Legal Notice - Grill Lounge
+    description: Legal notice and publisher information for the official website of the Grill Lounge restaurant in Narbonne.
+  politique-confidentialite:
+    title: Privacy Policy - Grill Lounge
+    description: Privacy policy and personal data protection information for the Grill Lounge restaurant website.
+  politique-cookies:
+    title: Cookie Policy - Grill Lounge
+    description: Information about the use and management of cookies on the Grill Lounge restaurant website in Narbonne.
+es:
+  home:
+    title: Grill Lounge - Steakhouse y Parrillada en Narbona
+    description: Descubra nuestras carnes halal premium hechas a la piedra de lava, nuestras hamburguesas caseras y nuestras tapas para compartir en un ambiente cálido.
+  menu:
+    title: Nuestro Menú - Grill Lounge Narbona
+    description: Explore nuestra variada carta de carnes a la parrilla, hamburguesas caseras, entrantes para compartir, ensaladas y postres.
+  menu-moment:
+    title: Menú del Momento - Grill Lounge Narbona
+    description: Descubra nuestras sugerencias de temporada y platos especiales en Narbona. Menús de mediodía actualizados periódicamente.
+  contact:
+    title: Contacto y Reservas - Grill Lounge Narbona
+    description: Reserve su mesa en el Grill Lounge de Narbona. Encuentre nuestra dirección, teléfono, horarios y formulario de contacto.
+  mentions-legales:
+    title: Aviso Legal - Grill Lounge
+    description: Aviso legal e información del editor para el sitio web oficial del restaurante Grill Lounge en Narbona.
+  politique-confidentialite:
+    title: Política de Privacidad - Grill Lounge
+    description: Política de privacidad e información sobre protección de datos personales del sitio web del restaurante Grill Lounge.
+  politique-cookies:
+    title: Política de Cookies - Grill Lounge
+    description: Información sobre el uso y gestión de cookies en el sitio web del restaurante Grill Lounge en Narbona.

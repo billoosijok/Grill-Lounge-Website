@@ -1,0 +1,49 @@
+title: Grill Lounge
+description: Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillant
+url: "https://grilllounge.fr"
+lang: fr
+
+# Google Analytics measurement id (loaded with consent mode)
+ga_id: G-DQYS58J1H6
+
+# Supported languages (order matters for the picker)
+languages:
+  - code: fr
+    label: Français
+    flag: france
+  - code: en
+    label: English
+    flag: united-kingdom
+  - code: es
+    label: Espanõl
+    flag: espana
+
+# Social links (footer)
+social:
+  - icon: instagram
+    link: https://instagram.com/the_grill_lounge
+    analyticsId: instagram_click
+  - icon: facebook
+    link: https://www.facebook.com/people/Grill-Lounge/100091425234364
+    analyticsId: facebook_click
+  - icon: tiktok
+    link: https://tiktok.com/@the_grill_lounge
+    analyticsId: tiktok_click
+  - icon: phone
+    link: "tel:0955000298"
+    analyticsId: phone_click
+  - icon: email
+    link: "mailto:grilllounge.aude@gmail.com"
+    analyticsId: email_click
+
+# Contact / map
+maps_url: https://goo.gl/maps/7hAnjQGf3SJPrkCo9
+reviews_url: https://maps.app.goo.gl/Ag2oGZsLE964ojCC9
+maps_embed: "https://maps.google.com/maps?q=5%20Av.%20Pierre%20Semard,%2011100%20Narbonne&t=&z=16&ie=UTF8&iwloc=&output=embed"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle

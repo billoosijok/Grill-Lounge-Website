@@ -1,0 +1,19 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang].cookie %}
+<div id="cookie-consent-banner"
+     class="cookie-consent-container animate-slide-up"
+     role="dialog"
+     aria-labelledby="cookie-title"
+     aria-describedby="cookie-desc"
+     hidden>
+    <div class="cookie-consent-content">
+        <div class="cookie-consent-text-section">
+            <h4 id="cookie-title" class="cookie-consent-title">{{ t.title }}</h4>
+            <p id="cookie-desc" class="cookie-consent-desc">{{ t.desc }}</p>
+        </div>
+        <div class="cookie-consent-actions">
+            <button class="cookie-btn cookie-btn-decline" data-consent="declined">{{ t.decline }}</button>
+            <button class="cookie-btn cookie-btn-accept" data-consent="accepted">{{ t.accept }}</button>
+        </div>
+    </div>
+</div>

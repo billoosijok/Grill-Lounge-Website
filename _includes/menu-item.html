@@ -1,0 +1,9 @@
+{% assign item = include.item %}
+<div class="menu-item">
+    <div class="menu-item-header">
+        {% if item.isNew %}<span class="badge-new">NEW</span>{% endif %}
+        <strong class="item-name">{{ item.name }}</strong>
+        {% if item.price %}<span class="price-separator"> - </span><span class="item-price">{{ item.price }}</span>{% endif %}
+    </div>
+    {% if item.description %}<p class="item-description">{{ item.description }}</p>{% endif %}
+</div>

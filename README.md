@@ -1,46 +1,78 @@
-# Getting Started with Create React App
+# Grill Lounge — grilllounge.fr
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Static website for **Grill Lounge**, a steakhouse in Narbonne, built with
+[Jekyll](https://jekyllrb.com/). The site is trilingual (French, English,
+Spanish) and is served from GitHub Pages.
 
-## Available Scripts
+This project was previously a Create React App single‑page app; it has been
+fully re‑implemented in Jekyll while keeping the **exact same design,
+animations and interactions**.
 
-In the project directory, you can run:
+## Project structure
 
-### `npm start`
+```
+_config.yml            Site configuration, language list, social links, contact
+Gemfile                Uses the github-pages gem (matches GitHub Pages)
+_data/
+  translations.yml     All UI strings, keyed by language (fr / en / es)
+  meta.yml             Per-page <title> and <meta description> per language
+  menu/{fr,en,es}.json Full food menu (with pre-computed category anchor ids)
+  menu_moment/*.json   "Menu du Moment" (chef's suggestions) per language
+_layouts/
+  default.html         <head>, analytics, fonts, cookie banner, scripts
+  home.html            Home page (hero, features, about, reviews, CTA, map, FAQ)
+  menu.html            Collapsible menu page
+  menu-moment.html     Seasonal / weekend formula page
+  contact.html         Contact + map page
+  legal.html           Legal notice / privacy / cookies (French content)
+  redirect.html        Meta-refresh redirect used by legacy URLs
+_includes/             header, footer, cookie-consent + each home section
+assets/
+  css/style.css        All styles (original index.css + HomeLayout.css + cookie)
+  js/main.js           All interactions (menu toggle, lang picker, carousel,
+                       FAQ accordion, collapsible menu + hash scroll, cookies)
+  img/, resources/     Images, flags and menu PDFs
+fr/ en/ es/            One folder per language with the 7 pages each
+menu/ contact/ …       Root-level redirect stubs → default language
+CNAME, robots.txt, sitemap.xml
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### URLs
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Every page exists under a language prefix, e.g. `/fr/`, `/en/menu/`,
+`/es/contact/`. Requests without a language prefix (`/menu`, `/contact`, …)
+and legacy paths (`/reservez`, `/24`, `/valentin`, `/avis`, old PDF links)
+redirect to their French equivalents, matching the behaviour of the old app.
 
-### `npm test`
+## Local development
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Requires Ruby and Bundler.
 
-### `npm run build`
+```bash
+bundle install
+bundle exec jekyll serve
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Then open <http://localhost:4000/fr/>.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment (GitHub Pages)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The site is a standard Jekyll project built from the repository **root**.
 
-### `npm run eject`
+In the repository settings → **Pages**, set the source to
+**Deploy from a branch**, branch `main`, folder **`/ (root)`**. GitHub Pages
+will run Jekyll automatically (the `CNAME` file keeps the `grilllounge.fr`
+custom domain).
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+> Note: the site previously deployed from the `/docs` folder. That folder and
+> the old React build have been removed, so the Pages source must point to the
+> repository root instead of `/docs`.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Editing content
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Text / translations:** `_data/translations.yml`
+- **Menu items:** `_data/menu/<lang>.json`
+- **Menu du Moment:** `_data/menu_moment/<lang>.json`
+- **Page titles & SEO descriptions:** `_data/meta.yml`
+- **Styles:** `assets/css/style.css`
+- **Behaviour:** `assets/js/main.js`

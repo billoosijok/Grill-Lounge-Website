@@ -1,0 +1,36 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang].hero %}
+<section class="hero-section">
+  <div class="hero-content animate__animated animate__fadeInLeft">
+    <div class="hero-labels">
+      <span class="hero-label-item label-highlight">{{ t.label1 }}</span>
+      <span class="hero-label-item label-emphasis">{{ t.label2 }}</span>
+      <span class="hero-label-item label-sub">{{ t.label3 }}</span>
+    </div>
+    <h1 class="hero-title">{{ t.title }}</h1>
+    <p class="hero-description">{{ t.desc }}</p>
+
+    <div class="hero-trust-badge">
+      <span class="star-icon">⭐</span> {{ t.googleReviews }}
+    </div>
+
+    <div class="hero-bullets-container">
+      {% for bullet in t.bullets %}
+        <span class="hero-bullet-item">
+          <span class="bullet-emoji">{{ bullet.emoji }}</span> {{ bullet.text }}
+        </span>
+        {% unless forloop.last %}<span class="bullet-divider">•</span>{% endunless %}
+      {% endfor %}
+    </div>
+
+    <div class="hero-buttons">
+      <a class="cta-button" href="/{{ lang }}/contact/">{{ t.cta1 }}</a>
+      <a class="cta-button" style="background-color: var(--accent-green);" href="/{{ lang }}/menu/">{{ t.cta2 }}</a>
+      <a class="cta-button" style="background-color: var(--accent-red); opacity: 0.9;" href="{{ site.maps_url }}" target="_blank" rel="noopener">{{ t.cta3 }}</a>
+    </div>
+  </div>
+
+  <div class="hero-image-container animate__animated animate__fadeInRight">
+    <img src="/assets/img/Souris.JPG" alt="Grill Lounge Specialty" class="hero-main-image" />
+  </div>
+</section>

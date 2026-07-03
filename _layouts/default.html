@@ -1,0 +1,61 @@
+---
+---
+{% assign lang = page.lang | default: site.lang %}
+{% assign meta = site.data.meta[lang][page.page_key] %}
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/assets/img/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ meta.description | default: site.description }}" />
+
+    <link rel="apple-touch-icon" href="/assets/img/icon.png" />
+
+    <!-- Google Consent Mode v2 Default State -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+
+      var consentChoice = localStorage.getItem('cookie-consent-choice');
+      var consentState = consentChoice === 'accepted' ? 'granted' : 'denied';
+
+      gtag('consent', 'default', {
+        'ad_storage': consentState,
+        'ad_user_data': consentState,
+        'ad_personalization': consentState,
+        'analytics_storage': consentState
+      });
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', '{{ site.ga_id }}');
+    </script>
+
+    <title>{{ meta.title | default: site.title }}</title>
+
+    {% for l in site.languages %}
+    <link rel="alternate" hreflang="{{ l.code }}" href="{{ site.url }}/{{ l.code }}/{% if page.page_key != 'home' %}{{ page.page_key }}/{% endif %}" />
+    {% endfor %}
+    <link rel="alternate" hreflang="x-default" href="{{ site.url }}/fr/{% if page.page_key != 'home' %}{{ page.page_key }}/{% endif %}" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+  </head>
+  <body>
+    <div class="root-container" style="min-height: 100vh;">
+      {{ content }}
+    </div>
+    {% include cookie-consent.html %}
+    <script src="/assets/js/main.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,348 @@
+# All UI strings, keyed by language. Mirrors the original React content objects.
+fr:
+  nav:
+    home: Accueil
+    menu: Menu
+    menu_moment: Menu du Moment
+    contact: Contact
+    reserve: Réservez une table
+  hero:
+    title: Restaurant Grill Lounge à Narbonne
+    label1: Le restaurant de grillades
+    label2: "LE GOÛT DE L’ EXCELLENCE"
+    label3: à deux minutes de la Gare
+    desc: Viandes premium grillées à la pierre de lave, burgers maison, spécialités orientales et couscous traditionnel.
+    googleReviews: Plus de 700 avis Google
+    bullets:
+      - { emoji: "🥩", text: "Viandes Premium" }
+      - { emoji: "🔥", text: "Cuisson à la pierre de lave" }
+      - { emoji: "🍔", text: "Burgers Maison" }
+      - { emoji: "📍", text: "À 2 minutes de la Gare SNCF" }
+    cta1: Réserver une table
+    cta2: Voir le Menu
+    cta3: Obtenir l'itinéraire
+  features:
+    title: Nos spécialités
+    items:
+      - { image: "Magret.JPG", title: "Grillades & Viandes Premium", desc: "Entrecôte, côte de bœuf, brochettes, côtelettes d'agneau, souris d'agneau confite, Mix Grill…", url: "/menu/#grillades-viandes", btnText: "Découvrir nos Grillades" }
+      - { image: "Burger.jpg", title: "Burgers Maison", desc: "Préparés à la commande avec des ingrédients frais, sauces maison et pain moelleux", url: "/menu/#burgers-signatures", btnText: "Voir nos Burgers" }
+      - { image: "couscous.jpg", title: "Couscous Maison", desc: "Chaque week-end, retrouvez notre couscous maison préparé dans la tradition,", url: "/menu-moment/", btnText: "Découvrir le Menu du Moment" }
+  about:
+    halal_title: Restaurant Halal à Narbonne
+    halal_desc1: Toutes nos viandes sont 100 % halal et sélectionnées avec le plus grand soin.
+    halal_desc2: Notre cuisine associe les saveurs des grillades traditionnelles, de la cuisine orientale et des recettes modernes afin de satisfaire tous les gourmands.
+    brand_title: GRILL LOUNGE
+    brand_subtitle: VOTRE RESTAURANT À NARBONNE
+    brand_desc1: Situé au 5 Avenue Pierre Semard, toutes nos viandes sont 100 % halal et sélectionnées avec le plus grand soin.
+    brand_desc2: Notre cuisine associe les saveurs des grillades traditionnelles, de la cuisine orientale et des recettes modernes..
+    brand_cta: DÉCOUVRIR NOTRE RESTAURANT
+  reviews:
+    subtitle: Plus de 700 clients nous ont déjà laissé un avis sur Google.
+    title: Ils nous font confiance
+    cta: Voir tous les avis Google
+    verified: Avis Vérifié
+    items:
+      - { name: "Client Google", comment: "Cuisine savoureuse, service rapide et accueil chaleureux.", rating: 5, date: "Google Maps" }
+      - { name: "Client Google", comment: "Des grillades excellentes, des portions généreuses et une équipe au top.", rating: 5, date: "Google Maps" }
+      - { name: "Client Google", comment: "L'une des meilleures adresses de Narbonne pour manger halal.", rating: 5, date: "Google Maps" }
+  bottom_cta:
+    title: Une adresse incontournable à Narbonne
+    desc: Que vous recherchiez un restaurant de grillades, un burger maison, un couscous traditionnel ou simplement un endroit chaleureux, Notre équipe vous réserve un accueil convivial et une expérience que vous aurez envie de renouveler.
+    ctaBook: Réserver une table
+    ctaCall: Nous appeler
+    ctaMap: Obtenir l'itinéraire
+  map:
+    subtitle: Localisation
+    title: Où nous trouver ?
+    desc: Notre restaurant est idéalement situé en face de la gare de Narbonne, parfait pour un repas savoureux sur place ou à emporter.
+    addressLabel: Adresse
+    addressValue: 5 Av. Pierre Semard, 11100 Narbonne
+    hoursLabel: Horaires
+    hoursValue: "Lundi - Dimanche : 12h00 - 15h00, 18h00 - 23h00"
+    phoneLabel: Téléphone
+    phoneValue: 04 68 65 27 42
+    cta: Obtenir l'itinéraire
+  faq:
+    subtitle: Des questions ?
+    title: Questions Fréquentes
+    items:
+      - { q: "Est-ce que vos viandes sont Halal ?", a: "Oui, 100 % de nos viandes sont certifiées Halal. Nous mettons un point d'honneur à offrir une transparence totale à nos clients." }
+      - { q: "Proposez-vous des options végétariennes ?", a: "Absolument. Notre carte comprend des entrées et tapas à partager végétariennes, ainsi que des salades et des suggestions du chef adaptées." }
+      - { q: "Est-il possible de commander à emporter ?", a: "Oui, tous nos plats (grillades, burgers, salades, etc.) sont disponibles sur place et à emporter." }
+      - { q: "Faut-il réserver une table ?", a: "La réservation est vivement conseillée, particulièrement les week-ends pour déguster notre couscous traditionnel ou en soirée. Vous pouvez réserver directement en nous contactant." }
+      - { q: "Comment accéder au restaurant depuis la gare ?", a: "Le restaurant est situé au 5 Avenue Pierre Semard, à seulement 2 minutes à pied de la gare SNCF de Narbonne. Idéal pour manger rapidement avant ou après votre train." }
+  contact:
+    title: Contactez-nous
+    subtitle: Une question, une envie ou une réservation ? Notre équipe est à votre écoute.
+    infoTitle: Nos Coordonnées
+    address: Adresse
+    phone: Téléphone
+    email: Email
+    hours: Horaires d'ouverture
+    hoursVal: "Lundi - Dimanche : 12h00 - 15h00, 18h00 - 23h00"
+    mapTitle: Nous trouver à Narbonne
+  menu:
+    title: MENU
+    subtitle: Braises, épices et passion
+  moment:
+    chef: Suggestion du Chef
+    plat: PLAT
+    formula1_line1: ENTRÉE + PLAT
+    formula1_or: OU
+    formula1_line2: PLAT + DESSERT
+    formula2_line1: ENTRÉE
+    formula2_line2: + PLAT
+    formula2_line3: + DESSERT
+    allergies_title: Une envie particulière ou des allergies ?
+    allergies_desc: N’hésitez pas à le signaler à notre équipe lors de votre commande.
+    allergies_cta: Réservez votre table
+  footer:
+    text: Découvrez le goût authentique au Grill Lounge Steakhouse, tout près de la Gare SNCF de Narbonne. Venez partager un moment inoubliable autour de nos spécialités.
+    contactTitle: Contact
+    address: 5 Av. Pierre Semard, 11100 Narbonne
+    phone: 04 68 65 27 42
+    hours: "Lundi - Dimanche: 12h00 - 15h00, 18h00 - 23h00"
+    rights: Tous droits réservés.
+    legal: Mentions légales
+    privacy: Politique de confidentialité
+    cookies: Politique de cookies
+    manageCookies: Gérer les cookies
+  cookie:
+    title: Gestion des cookies
+    desc: "Nous utilisons des cookies pour optimiser votre expérience, analyser notre trafic et mesurer l'efficacité de nos campagnes. Vous pouvez choisir d'accepter tous les cookies ou de continuer sans accepter."
+    accept: Accepter tout
+    decline: Continuer sans accepter
+  legal:
+    back: ← Retour à l'accueil
+
+en:
+  nav:
+    home: Home
+    menu: Menu
+    menu_moment: Special Menu
+    contact: Contact
+    reserve: Reserve a table
+  hero:
+    title: Grill Lounge Restaurant in Narbonne
+    label1: The grill restaurant
+    label2: THE TASTE OF EXCELLENCE
+    label3: two minutes from the Station
+    desc: Premium meats grilled on lava stone, homemade burgers, oriental specialties, and traditional couscous.
+    googleReviews: More than 700 Google reviews
+    bullets:
+      - { emoji: "🥩", text: "Premium Meats" }
+      - { emoji: "🔥", text: "Lava stone cooking" }
+      - { emoji: "🍔", text: "Homemade Burgers" }
+      - { emoji: "📍", text: "2 minutes from the SNCF Station" }
+    cta1: Book a table
+    cta2: View Menu
+    cta3: Get directions
+  features:
+    title: Our Specialties
+    items:
+      - { image: "Magret.JPG", title: "Premium Grills & Meats", desc: "Ribeye steak, prime rib, skewers, lamb chops, braised lamb shank, Mix Grill...", url: "/menu/#grills-meats", btnText: "Discover our Grills" }
+      - { image: "Burger.jpg", title: "Homemade Burgers", desc: "Prepared to order with fresh ingredients, homemade sauces, and soft buns", url: "/menu/#signature-burgers", btnText: "See our Burgers" }
+      - { image: "couscous.jpg", title: "Homemade Couscous", desc: "Every weekend, enjoy our traditional homemade couscous prepared in the pure tradition,", url: "/menu-moment/", btnText: "Discover the Special Menu" }
+  about:
+    halal_title: Halal Restaurant in Narbonne
+    halal_desc1: All our meats are 100% halal and selected with the utmost care.
+    halal_desc2: Our cuisine combines the flavors of traditional grills, oriental cuisine, and modern recipes to satisfy all food lovers.
+    brand_title: GRILL LOUNGE
+    brand_subtitle: YOUR RESTAURANT IN NARBONNE
+    brand_desc1: Located at 5 Avenue Pierre Semard, all our meats are 100% halal and selected with the utmost care.
+    brand_desc2: Our cuisine combines the flavors of traditional grills, oriental cuisine, and modern recipes.
+    brand_cta: DISCOVER OUR RESTAURANT
+  reviews:
+    subtitle: More than 700 customers have already left us a review on Google.
+    title: They Trust Us
+    cta: View all Google Reviews
+    verified: Verified Review
+    items:
+      - { name: "Google Customer", comment: "Tasty food, fast service, and warm welcome.", rating: 5, date: "Google Maps" }
+      - { name: "Google Customer", comment: "Excellent grills, generous portions, and a top-notch team.", rating: 5, date: "Google Maps" }
+      - { name: "Google Customer", comment: "One of the best places in Narbonne for halal dining.", rating: 5, date: "Google Maps" }
+  bottom_cta:
+    title: A Must-Visit Address in Narbonne
+    desc: Whether you are looking for a grill restaurant, a homemade burger, traditional couscous, or simply a warm place, our team promises a friendly welcome and an experience you will want to repeat.
+    ctaBook: Book a Table
+    ctaCall: Call Us
+    ctaMap: Get Directions
+  map:
+    subtitle: Location
+    title: Where to find us?
+    desc: Our restaurant is ideally located right across the Narbonne train station, perfect for a tasty dine-in or takeout meal.
+    addressLabel: Address
+    addressValue: 5 Av. Pierre Semard, 11100 Narbonne
+    hoursLabel: Hours
+    hoursValue: "Monday - Sunday: 12:00 PM - 3:00 PM, 6:00 PM - 11:00 PM"
+    phoneLabel: Phone
+    phoneValue: 04 68 65 27 42
+    cta: Get directions
+  faq:
+    subtitle: Any questions?
+    title: Frequently Asked Questions
+    items:
+      - { q: "Is your meat Halal?", a: "Yes, 100% of our meats are certified Halal. We make it a priority to offer complete transparency to our customers." }
+      - { q: "Do you offer vegetarian options?", a: "Absolutely. Our menu includes vegetarian starters and tapas to share, as well as adapted salads and chef's suggestions." }
+      - { q: "Is takeout available?", a: "Yes, all our dishes (grills, burgers, salads, etc.) are available for dine-in and takeout." }
+      - { q: "Do I need to book a table?", a: "Booking is highly recommended, especially on weekends to enjoy our traditional couscous or during busy evenings. You can book directly by contacting us." }
+      - { q: "How do I access the restaurant from the train station?", a: "The restaurant is located at 5 Avenue Pierre Semard, just a 2-minute walk from the Narbonne SNCF station. Ideal for a quick bite before or after your train." }
+  contact:
+    title: Contact Us
+    subtitle: A question, a request, or a reservation? Our team is here to help.
+    infoTitle: Our Contact Info
+    address: Address
+    phone: Phone
+    email: Email
+    hours: Opening Hours
+    hoursVal: "Monday - Sunday: 12:00 PM - 3:00 PM, 6:00 PM - 11:00 PM"
+    mapTitle: Find us in Narbonne
+  menu:
+    title: MENU
+    subtitle: Braises, épices et passion
+  moment:
+    chef: Chef's Suggestion
+    plat: PLAT
+    formula1_line1: ENTRÉE + PLAT
+    formula1_or: OU
+    formula1_line2: PLAT + DESSERT
+    formula2_line1: ENTRÉE
+    formula2_line2: + PLAT
+    formula2_line3: + DESSERT
+    allergies_title: Special request or allergies?
+    allergies_desc: Do not hesitate to inform our staff when placing your order.
+    allergies_cta: Reserve your table
+  footer:
+    text: Découvrez le goût authentique au Grill Lounge Steakhouse, tout près de la Gare SNCF de Narbonne. Venez partager un moment inoubliable autour de nos spécialités.
+    contactTitle: Contact
+    address: 5 Av. Pierre Semard, 11100 Narbonne
+    phone: 04 68 65 27 42
+    hours: "Lundi - Dimanche: 12h00 - 15h00, 18h00 - 23h00"
+    rights: Tous droits réservés.
+    legal: Legal Notice
+    privacy: Privacy Policy
+    cookies: Cookie Policy
+    manageCookies: Manage Cookies
+  cookie:
+    title: Cookie Preferences
+    desc: "We use cookies to optimize your experience, analyze our traffic, and measure the effectiveness of our campaigns. You can choose to accept all cookies or continue without accepting."
+    accept: Accept All
+    decline: Decline All
+  legal:
+    back: ← Back to Home
+
+es:
+  nav:
+    home: Inicio
+    menu: Menu
+    menu_moment: Menú del Momento
+    contact: Contacto
+    reserve: Reserve una mesa
+  hero:
+    title: Restaurante Grill Lounge en Narbona
+    label1: El restaurante de parrilla
+    label2: EL SABOR DE LA EXCELENCIA
+    label3: a dos minutos de la Estación
+    desc: Carnes premium cocinadas a la piedra de lava, hamburguesas caseras, especialidades orientales y cuscús tradicional.
+    googleReviews: Más de 700 reseñas de Google
+    bullets:
+      - { emoji: "🥩", text: "Carnes Premium" }
+      - { emoji: "🔥", text: "Cocción a la piedra de lava" }
+      - { emoji: "🍔", text: "Hamburguesas Caseras" }
+      - { emoji: "📍", text: "A 2 minutos de la Estación SNCF" }
+    cta1: Reservar mesa
+    cta2: Ver el Menú
+    cta3: Cómo llegar
+  features:
+    title: Nuestras Especialidades
+    items:
+      - { image: "Magret.JPG", title: "Parrilladas y Carnes Premium", desc: "Entrecot, chuletón, brochetas, chuletas de cordero, jarrete de cordero confitado, Mix Grill...", url: "/menu/#parrilladas-y-carnes", btnText: "Descubrir nuestras Parrilladas" }
+      - { image: "Burger.jpg", title: "Hamburguesas Caseras", desc: "Preparadas al momento con ingredientes frescos, salsas caseras y pan tierno", url: "/menu/#hamburguesas-exclusivas", btnText: "Ver nuestras Hamburguesas" }
+      - { image: "couscous.jpg", title: "Cuscús Casero", desc: "Cada fin de semana, disfrute de nuestro cuscús casero preparado según la tradición,", url: "/menu-moment/", btnText: "Descubrir el Menú del Momento" }
+  about:
+    halal_title: Restaurante Halal en Narbona
+    halal_desc1: Todas nuestras carnes son 100% halal y seleccionadas con el mayor cuidado.
+    halal_desc2: Nuestra cocina combina los sabores de las parrilladas tradicionales, la cocina oriental y recetas modernas para satisfacer a todos los paladares.
+    brand_title: GRILL LOUNGE
+    brand_subtitle: SU RESTAURANTE EN NARBONA
+    brand_desc1: Situado en 5 Avenue Pierre Semard, todas nuestras carnes son 100% halal y seleccionadas con el mayor cuidado.
+    brand_desc2: Nuestra cocina combina los sabores de las parrilladas tradicionales, la cocina oriental y recetas modernas.
+    brand_cta: DESCUBRIR NUESTRO RESTAURANTE
+  reviews:
+    subtitle: Más de 700 clientes ya nos han dejado una reseña en Google.
+    title: Confían en Nosotros
+    cta: Ver todas las reseñas de Google
+    verified: Opinión Verificada
+    items:
+      - { name: "Cliente Google", comment: "Comida sabrosa, servicio rápido y bienvenida cálida.", rating: 5, date: "Google Maps" }
+      - { name: "Cliente Google", comment: "Excelentes parrilladas, porciones generosas y un equipo excelente.", rating: 5, date: "Google Maps" }
+      - { name: "Cliente Google", comment: "Una de las mejores direcciones de Narbona para comer halal.", rating: 5, date: "Google Maps" }
+  bottom_cta:
+    title: Una Dirección Imprescindible en Narbona
+    desc: Tanto si busca un restaurante de parrillada, una hamburguesa casera, un cuscús tradicional o simplemente un lugar cálido, nuestro equipo le reserva una acogida cordial y una experiencia que querrá repetir.
+    ctaBook: Reservar mesa
+    ctaCall: Llamarnos
+    ctaMap: Cómo llegar
+  map:
+    subtitle: Ubicación
+    title: ¿Dónde encontrarnos?
+    desc: Nuestro restaurante está idealmente situado frente a la estación de tren de Narbona, perfecto para una comida deliciosa allí o para llevar.
+    addressLabel: Dirección
+    addressValue: 5 Av. Pierre Semard, 11100 Narbonne
+    hoursLabel: Horario
+    hoursValue: "Lunes - Domingo: 12:00 - 15:00, 18:00 - 23:00"
+    phoneLabel: Teléfono
+    phoneValue: 04 68 65 27 42
+    cta: Cómo llegar
+  faq:
+    subtitle: ¿Preguntas?
+    title: Preguntas Frecuentes
+    items:
+      - { q: "¿Sus carnes son Halal?", a: "Sí, el 100 % de nuestras carnes están certificadas como Halal. Hacemos que sea una prioridad ofrecer total transparencia a nuestros clientes." }
+      - { q: "¿Ofrecen opciones vegetarianas?", a: "Absolutamente. Nuestra carta incluye entrantes y tapas para compartir vegetarianas, así como ensaladas y sugerencias adaptadas." }
+      - { q: "¿Se puede pedir para llevar?", a: "Sí, todos nuestros platos (parrilladas, hamburguesas, ensaladas, etc.) están disponibles para consumir aquí o para llevar." }
+      - { q: "¿Es necesario reservar mesa?", a: "Se recomienda encarecidamente reservar, sobre todo los fines de semana para disfrutar de nuestro cuscús tradicional o por la noche. Puede reservar directamente contactando con nosotros." }
+      - { q: "¿Cómo llegar al restaurante desde la estación?", a: "El restaurante está situado en el 5 Avenue Pierre Semard, a solo 2 minutos a pie de la estación de tren SNCF de Narbona. Ideal para comer rápido antes o después de su tren." }
+  contact:
+    title: Contacto
+    subtitle: ¿Una pregunta, un antojo o una reserva? Nuestro equipo está a su servicio.
+    infoTitle: Nuestros Datos
+    address: Dirección
+    phone: Teléfono
+    email: Email
+    hours: Horario de apertura
+    hoursVal: "Lunes - Domingo: 12:00 - 15:00, 18:00 - 23:00"
+    mapTitle: Encuéntranos en Narbona
+  menu:
+    title: MENU
+    subtitle: Braises, épices et passion
+  moment:
+    chef: Sugerencia del Chef
+    plat: PLAT
+    formula1_line1: ENTRÉE + PLAT
+    formula1_or: OU
+    formula1_line2: PLAT + DESSERT
+    formula2_line1: ENTRÉE
+    formula2_line2: + PLAT
+    formula2_line3: + DESSERT
+    allergies_title: ¿Alguna petición especial o alergia?
+    allergies_desc: No dude en informar a nuestro equipo al realizar su pedido.
+    allergies_cta: Reserve su mesa
+  footer:
+    text: Découvrez le goût authentique au Grill Lounge Steakhouse, tout près de la Gare SNCF de Narbonne. Venez partager un moment inoubliable autour de nos spécialités.
+    contactTitle: Contact
+    address: 5 Av. Pierre Semard, 11100 Narbonne
+    phone: 04 68 65 27 42
+    hours: "Lundi - Dimanche: 12h00 - 15h00, 18h00 - 23h00"
+    rights: Tous droits réservés.
+    legal: Aviso legal
+    privacy: Política de privacidad
+    cookies: Política de cookies
+    manageCookies: Gestionar cookies
+  cookie:
+    title: Preferencias de cookies
+    desc: "Utilizamos cookies para optimizar su experiencia, analizar nuestro tráfico y medir la efectividad de nuestras campañas. Puede optar por aceptar todas las cookies o continuar sin aceptar."
+    accept: Aceptar todo
+    decline: Rechazar todo
+  legal:
+    back: ← Volver al inicio

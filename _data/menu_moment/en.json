@@ -1,0 +1,60 @@
+{
+  "title": "Suggestions of the Moment",
+  "section1": {
+    "title": "Dishes of the Moment",
+    "items": [
+      {
+        "name": "Seafood Lasagna",
+        "description": "Served with a side salad.",
+        "price": "14.50 €"
+      },
+      {
+        "name": "Burrata Salad",
+        "description": "Mesclun salad greens, cherry tomatoes, basil, and apricots.",
+        "price": "12 €"
+      }
+    ]
+  },
+  "section2": {
+    "title": "Weekend Suggestion",
+    "categories": [
+      {
+        "name": "Assorted Starters",
+        "items": [
+          "Crispy brick pastry of the moment",
+          "Homemade hummus",
+          "Fresh oriental salad"
+        ]
+      },
+      {
+        "name": "Main",
+        "price": "15 €",
+        "items": [
+          {
+            "name": "Homemade Royal Couscous",
+            "description": "Fine semolina, stewed vegetables, chicken, beef meatballs, and chickpeas."
+          }
+        ]
+      },
+      {
+        "name": "Dessert",
+        "items": [
+          {
+            "name": "Café Gourmand",
+            "description": "Selection of 2 homemade sweets served with coffee."
+          }
+        ]
+      }
+    ],
+    "formulas": [
+      {
+        "name": "Starter + Main OR Main + Dessert",
+        "price": "21 €"
+      },
+      {
+        "name": "Starter + Main + Dessert",
+        "price": "25 €"
+      }
+    ]
+  }
+}

@@ -1,0 +1,60 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang] %}
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-column">
+            <img class="footer-logo" alt="Grill Lounge Logo" src="/assets/img/logo-black.png" />
+            <p class="footer-text">{{ t.footer.text }}</p>
+            <div style="display: flex; gap: 15px;">
+                {% for s in site.social %}
+                <a href="{{ s.link }}" onclick="if(window.gtag){gtag('event','{{ s.analyticsId }}')}" style="color: white; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;">
+                    {% include social-icon.html icon=s.icon %}
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h3 class="footer-title">{{ t.footer.contactTitle }}</h3>
+            <ul class="footer-links" style="color: #a0a0a0; line-height: 2;">
+                <li style="display: flex; align-items: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                    </svg>
+                    <span>{{ t.footer.address }}</span>
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                    <a href="/{{ lang }}/contact/" style="color: inherit; text-decoration: none;">{{ t.footer.phone }}</a>
+                </li>
+                <li style="display: flex; align-items: center; gap: 10px;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                    <span>{{ t.footer.hours }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p style="display: flex; flex-direction: column; gap: 10px; align-items: center; justify-content: center;">
+            <span>&copy; {{ site.time | date: "%Y" }} Grill Lounge Steakhouse. {{ t.footer.rights }} | SIRET : 93829663900017</span>
+            <span class="footer-legal-links" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+                <a href="/{{ lang }}/mentions-legales/" style="color: inherit; text-decoration: underline;">{{ t.footer.legal }}</a>
+                <span>|</span>
+                <a href="/{{ lang }}/politique-confidentialite/" style="color: inherit; text-decoration: underline;">{{ t.footer.privacy }}</a>
+                <span>|</span>
+                <a href="/{{ lang }}/politique-cookies/" style="color: inherit; text-decoration: underline;">{{ t.footer.cookies }}</a>
+                <span>|</span>
+                <a href="#cookies" class="manage-cookies-link" style="color: inherit; text-decoration: underline; cursor: pointer;">{{ t.footer.manageCookies }}</a>
+            </span>
+        </p>
+    </div>
+</footer>

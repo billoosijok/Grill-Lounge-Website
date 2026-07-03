@@ -1,0 +1,29 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang].about %}
+<section class="about-section">
+    <div class="about-images animate__animated animate__zoomIn">
+        <img src="/assets/img/collage-1.JPG" alt="Restaurant interior" class="about-img" />
+        <img src="/assets/img/collage-2.JPG" alt="Steak dish" class="about-img" style="transform: translateY(30px);" />
+        <img src="/assets/img/collage-3.JPG" alt="Burger" class="about-img" />
+        <img src="/assets/img/couscous.jpg" alt="Couscous" class="about-img" style="transform: translateY(30px);" />
+    </div>
+
+    <div class="about-content animate__animated animate__fadeInRight" style="display: flex; flex-direction: column; gap: 40px;">
+        <div class="about-block">
+            <h2 class="section-title" style="font-size: 2.2em; margin-bottom: 15px;">{{ t.halal_title }}</h2>
+            <p class="about-desc" style="font-weight: bold; color: var(--accent-red); margin-bottom: 10px;">{{ t.halal_desc1 }}</p>
+            <p class="about-desc" style="margin: 0;">{{ t.halal_desc2 }}</p>
+        </div>
+
+        <div style="height: 1px; background-color: rgba(25, 67, 70, 0.15); width: 80%;"></div>
+
+        <div class="about-block">
+            <div class="section-subtitle" style="font-size: 1.6em; font-weight: bold; font-style: normal; color: var(--accent-green); font-family: 'Outfit', sans-serif; margin-bottom: 5px;">{{ t.brand_title }}</div>
+            <h3 style="font-size: 1.2em; color: var(--text-muted); margin-bottom: 20px; letter-spacing: 1px;">{{ t.brand_subtitle }}</h3>
+            <p class="about-desc" style="font-weight: bold; color: var(--accent-green); margin-bottom: 10px;">{{ t.brand_desc1 }}</p>
+            <p class="about-desc" style="margin-bottom: 30px;">{{ t.brand_desc2 }}</p>
+
+            <a class="cta-button" href="/{{ lang }}/contact/" style="padding: 12px 30px; font-size: 1em; display: inline-block;">{{ t.brand_cta }}</a>
+        </div>
+    </div>
+</section>

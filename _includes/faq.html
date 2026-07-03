@@ -1,0 +1,20 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang].faq %}
+<section class="faq-section" style="background-color: var(--primary-bg); padding: 80px 5%; text-align: center;">
+    <div class="section-subtitle">{{ t.subtitle }}</div>
+    <h2 class="section-title" style="margin-bottom: 50px;">{{ t.title }}</h2>
+
+    <div class="faq-container" style="max-width: 800px; margin: 0 auto; text-align: left; display: flex; flex-direction: column; gap: 20px;">
+        {% for faq in t.items %}
+        <div class="faq-item" style="background-color: var(--white); border-radius: 12px; box-shadow: var(--card-shadow); overflow: hidden; transition: all 0.3s ease; border: 1px solid rgba(0, 0, 0, 0.02);">
+            <button class="faq-question" style="width: 100%; background: none; border: none; padding: 22px 28px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; text-align: left; outline: none;">
+                <span class="faq-q-text" style="font-size: 1.15em; font-weight: bold; color: var(--accent-green); font-family: 'Outfit', sans-serif; transition: color var(--transition-speed);">{{ faq.q }}</span>
+                <span class="faq-toggle" style="font-size: 1.4em; color: var(--accent-green); transition: transform 0.3s ease; transform: rotate(0deg); line-height: 1;">+</span>
+            </button>
+            <div class="faq-answer" style="max-height: 0px; opacity: 0; overflow: hidden; transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); padding: 0 28px;">
+                <p style="margin: 0; color: var(--text-muted); font-size: 1.05em; line-height: 1.6; padding-bottom: 25px;">{{ faq.a }}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

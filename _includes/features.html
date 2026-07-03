@@ -1,0 +1,21 @@
+{% assign lang = page.lang | default: site.lang %}
+{% assign t = site.data.translations[lang].features %}
+<section class="specialties-section" style="padding: 60px 5% 80px 5%; text-align: center; background-color: var(--white);">
+    <h2 class="section-title" style="margin-bottom: 40px;">{{ t.title }}</h2>
+    <div class="features-section" style="padding: 0; background: none;">
+        {% for feature in t.items %}
+        <a href="/{{ lang }}{{ feature.url }}" class="feature-card animate__animated animate__fadeInUp" style="animation-delay: {{ forloop.index0 | times: 0.1 }}s; display: flex; flex-direction: column; height: auto; min-height: 420px; justify-content: space-between; text-decoration: none; color: inherit;">
+            <div>
+                <div class="feature-image-container">
+                    <img src="/assets/img/{{ feature.image }}" alt="{{ feature.title }}" class="feature-image" />
+                </div>
+                <h3 class="feature-title" style="font-size: 1.35em; margin: 15px 20px 10px 20px; font-weight: bold;">{{ feature.title }}</h3>
+                <p class="feature-desc" style="margin: 0 20px 20px 20px; font-size: 0.95em; min-height: 60px;">{{ feature.desc }}</p>
+            </div>
+            <div style="padding: 0 20px 30px 20px;">
+                <span class="cta-button" style="width: 100%; font-size: 0.95em; padding: 10px 15px; display: block; box-sizing: border-box;">{{ feature.btnText }}</span>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</section>

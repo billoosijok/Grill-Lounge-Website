@@ -1,5 +1,15 @@
-
 .idea/
 
-**/node_modules
-**/lib
+# Jekyll
+_site/
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+
+# Ruby / Bundler
+vendor/
+.bundle/
+Gemfile.lock
+
+# OS
+.DS_Store
