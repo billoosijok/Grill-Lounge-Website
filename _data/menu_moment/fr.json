@@ -1,59 +1,47 @@
 {
   "title": "Suggestions du Moment",
   "section1": {
-    "title": "Plats du Moment",
+    "title": "Plat de la semaine",
     "items": [
       {
-        "name": "Lasagne aux fruits de mer",
-        "description": "Accompagnée d'une salade composée.",
-        "price": "14,50 €"
-      },
-      {
-        "name": "Salade burrata",
-        "description": "Mesclun, tomates cerises, basilic et abricots.",
-        "price": "12 €"
+        "name": "Trio de grillades",
+        "description": "Brochette de poulet, Adana kebab, Côtelettes d’agneau. Accompagnements : Riz ou salade, Sauce Grill Lounge.",
+        "price": "15 €"
       }
     ]
   },
   "section2": {
-    "title": "Suggestion du Week-end",
+    "title": "Formule de la semaine",
     "categories": [
       {
-        "name": "Assortiment Entrées",
+        "name": "Entrée",
+        "price": "8 €",
         "items": [
-          "Brick du moment croustillante",
-          "Houmous maison",
-          "Salade orientale fraîche"
+          {
+            "name": "Tajine au four façon tunisienne",
+            "description": "Œuf, pommes de terre et épices traditionnelles."
+          }
         ]
       },
       {
         "name": "Plat",
-        "price": "15 €",
+        "price": "18 €",
         "items": [
           {
-            "name": "Couscous Royal maison",
-            "description": "Semoule fine, légumes mijotés, poulet, boulettes de viande de bœuf et pois chiches."
+            "name": "Couscous traditionnel",
+            "description": "Semoule, légumes de saison, brochette de poulet, kefta et Merguez."
           }
         ]
       },
       {
         "name": "Dessert",
+        "price": "7 €",
         "items": [
           {
-            "name": "Café gourmand",
-            "description": "Assortiment de 2 douceurs maison et café."
+            "name": "Roulé au caramel",
+            "description": "Nappage de sauce spéculoos."
           }
         ]
-      }
-    ],
-    "formulas": [
-      {
-        "name": "Entrée + Plat OU Plat + Dessert",
-        "price": "21 €"
-      },
-      {
-        "name": "Entrée + Plat + Dessert",
-        "price": "25 €"
       }
     ]
   }

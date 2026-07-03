@@ -1,59 +1,47 @@
 {
   "title": "Suggestions of the Moment",
   "section1": {
-    "title": "Dishes of the Moment",
+    "title": "Dish of the week",
     "items": [
       {
-        "name": "Seafood Lasagna",
-        "description": "Served with a side salad.",
-        "price": "14.50 €"
-      },
-      {
-        "name": "Burrata Salad",
-        "description": "Mesclun salad greens, cherry tomatoes, basil, and apricots.",
-        "price": "12 €"
+        "name": "Grill Trio",
+        "description": "Chicken skewer, Adana kebab, lamb chops. Served with rice or salad, and Grill Lounge sauce.",
+        "price": "15 €"
       }
     ]
   },
   "section2": {
-    "title": "Weekend Suggestion",
+    "title": "Weekly Formula",
     "categories": [
       {
-        "name": "Assorted Starters",
+        "name": "Starter",
+        "price": "8 €",
         "items": [
-          "Crispy brick pastry of the moment",
-          "Homemade hummus",
-          "Fresh oriental salad"
+          {
+            "name": "Tunisian-style baked Tajine",
+            "description": "Egg, potatoes, and traditional spices."
+          }
         ]
       },
       {
-        "name": "Main",
-        "price": "15 €",
+        "name": "Main Course",
+        "price": "18 €",
         "items": [
           {
-            "name": "Homemade Royal Couscous",
-            "description": "Fine semolina, stewed vegetables, chicken, beef meatballs, and chickpeas."
+            "name": "Traditional Couscous",
+            "description": "Semolina, seasonal vegetables, chicken skewer, kefta, and Merguez."
           }
         ]
       },
       {
         "name": "Dessert",
+        "price": "7 €",
         "items": [
           {
-            "name": "Café Gourmand",
-            "description": "Selection of 2 homemade sweets served with coffee."
+            "name": "Caramel Roll",
+            "description": "Speculoos sauce topping."
           }
         ]
-      }
-    ],
-    "formulas": [
-      {
-        "name": "Starter + Main OR Main + Dessert",
-        "price": "21 €"
-      },
-      {
-        "name": "Starter + Main + Dessert",
-        "price": "25 €"
       }
     ]
   }

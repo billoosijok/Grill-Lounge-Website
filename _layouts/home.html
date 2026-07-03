@@ -19,13 +19,13 @@ layout: default
                 <p class="hero-description">{{ t.hero[page.lang].desc }}</p>
 
                 <div class="hero-trust-badge">
-                    <span class="star-icon">⭐</span> {{ t.hero[page.lang].reviews }}
+                    <span class="star-icon" style="color: #ffb400; font-size: 1.25em; line-height: 1;">★</span> {{ t.hero[page.lang].reviews }}
                 </div>
 
                 <div class="hero-bullets-container">
                     {% for bullet in t.hero[page.lang].bullets %}
                     <span class="hero-bullet-item">
-                        <span class="bullet-emoji">{{ bullet.emoji }}</span> {{ bullet.text }}
+                        {{ bullet }}
                     </span>
                     {% unless forloop.last %}
                     <span class="bullet-divider">•</span>

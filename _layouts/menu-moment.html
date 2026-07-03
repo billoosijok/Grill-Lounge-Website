@@ -60,57 +60,38 @@ layout: default
                     </h2>
                 </div>
 
+                {% if menu_data.section2.formulas %}
                 <!-- Formula Pricing block -->
                 <div class="weekend-formulas" style="position: relative; z-index: 1;">
                     <div style="display: flex; width: 100%; flex-wrap: wrap; gap: 20px; justify-content: center; align-items: center;">
-                        <!-- Formula 0 (Plat seul) -->
-                        <div style="flex: 1; min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 12px; border-right: 1px solid rgba(25, 255, 255, 0.15); padding-right: 15px;">
+                        {% for formula in menu_data.section2.formulas %}
+                        <div style="flex: 1; min-width: 160px; display: flex; align-items: center; justify-content: center; gap: 12px; {% unless forloop.last %}border-right: 1px solid rgba(255, 255, 255, 0.15); padding-right: 15px;{% endunless %}">
                             <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
-                                <div>PLAT</div>
+                                {% assign parts = formula.name | split: " OU " %}
+                                {% for part in parts %}
+                                    <div>{{ part }}</div>
+                                    {% unless forloop.last %}<div style="color: #d48a42; font-size: 0.95em; margin: 2px 0;">OU</div>{% endunless %}
+                                {% endfor %}
                             </div>
                             <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
-                                <span>15</span>
+                                <span>{{ formula.price | replace: " €", "" | replace: "€", "" | strip }}</span>
                                 <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
                             </div>
                         </div>
-
-                        <!-- Formula 1 (Entrée + Plat OU Plat + Dessert) -->
-                        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 12px; border-right: 1px solid rgba(25, 255, 255, 0.15); padding-right: 15px;">
-                            <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
-                                <div>ENTRÉE + PLAT</div>
-                                <div style="color: #d48a42; font-size: 0.95em; margin: 2px 0;">OU</div>
-                                <div>PLAT + DESSERT</div>
-                            </div>
-                            <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
-                                <span>21</span>
-                                <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
-                            </div>
-                        </div>
-
-                        <!-- Formula 2 (Entrée + Plat + Dessert) -->
-                        <div style="flex: 1; min-width: 200px; display: flex; align-items: center; justify-content: center; gap: 12px;">
-                            <div style="font-size: 0.95em; line-height: 1.4; font-weight: 800; letter-spacing: 1px; text-align: right; text-transform: uppercase; font-family: 'Outfit', sans-serif;">
-                                <div>ENTRÉE</div>
-                                <div>+ PLAT</div>
-                                <div>+ DESSERT</div>
-                            </div>
-                            <div style="display: flex; align-items: flex-start; font-family: 'Outfit', sans-serif; font-weight: 900; font-size: 3.6em; color: #fff;">
-                                <span>25</span>
-                                <span style="font-size: 0.45em; color: #d48a42; margin-left: 2px;">€</span>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
 
                     <!-- Divider Line -->
                     <hr style="border: none; border-top: 2px solid rgba(255, 255, 255, 0.2); margin: 20px 0 30px 0;" />
                 </div>
+                {% endif %}
 
                 <!-- Category contents -->
                 <div class="category-content" style="display: flex; flex-direction: column; gap: 35px; position: relative; z-index: 1;">
                     {% for category in menu_data.section2.categories %}
                     <div style="display: flex; flex-direction: column; align-items: center; text-align: center;">
                         <h3 style="color: #d48a42; font-size: 1.2em; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; margin-bottom: 15px;">
-                            | {{ category.name }}
+                            | {{ category.name }} {% if category.price %}- {{ category.price }}{% endif %}
                         </h3>
                         
                         <div style="display: flex; flex-direction: column; gap: 15px; width: 100%; align-items: center;">

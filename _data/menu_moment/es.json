@@ -1,59 +1,47 @@
 {
   "title": "Sugerencias del Momento",
   "section1": {
-    "title": "Platos del Momento",
+    "title": "Plato de la semana",
     "items": [
       {
-        "name": "Lasaña de marisco",
-        "description": "Acompañada de ensalada mixta.",
-        "price": "14,50 €"
-      },
-      {
-        "name": "Ensalada de burrata",
-        "description": "Mezclum de lechugas, tomates cherry, albahaca y albaricoques.",
-        "price": "12 €"
+        "name": "Trío de parrilla",
+        "description": "Brocheta de pollo, Adana kebab, chuletas de cordero. Acompañado de arroz o ensalada, y salsa Grill Lounge.",
+        "price": "15 €"
       }
     ]
   },
   "section2": {
-    "title": "Sugerencia del Fin de Semana",
+    "title": "Fórmula de la semana",
     "categories": [
       {
-        "name": "Surtido de Entrantes",
+        "name": "Entrante",
+        "price": "8 €",
         "items": [
-          "Brick del momento crujiente",
-          "Hummus casero",
-          "Ensalada oriental fresca"
+          {
+            "name": "Tajine al horno al estilo tunecino",
+            "description": "Huevo, patatas y especias tradicionales."
+          }
         ]
       },
       {
-        "name": "Plato Principal",
-        "price": "15 €",
+        "name": "Plato",
+        "price": "18 €",
         "items": [
           {
-            "name": "Cuscús Real casero",
-            "description": "Sémola fina, verduras estofadas, pollo, albóndigas de ternera y garbanzos."
+            "name": "Cuscús tradicional",
+            "description": "Sémola, verduras de temporada, brocheta de pollo, kefta y Merguez."
           }
         ]
       },
       {
         "name": "Postre",
+        "price": "7 €",
         "items": [
           {
-            "name": "Café Gourmand",
-            "description": "Surtido de 2 dulces caseros acompañados de café."
+            "name": "Rollo de caramelo",
+            "description": "Cobertura de salsa speculoos."
           }
         ]
-      }
-    ],
-    "formulas": [
-      {
-        "name": "Entrante + Plato O Plato + Postre",
-        "price": "21 €"
-      },
-      {
-        "name": "Entrante + Plato + Postre",
-        "price": "25 €"
       }
     ]
   }
