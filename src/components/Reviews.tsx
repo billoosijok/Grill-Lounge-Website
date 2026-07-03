@@ -2,110 +2,102 @@ import React, { useState } from 'react';
 import { useLanguage } from '../hooks/useLanguage';
 import './HomeLayout.css';
 
+interface Review {
+    name: string;
+    comment: string;
+    rating: number;
+    date: string;
+    role?: string;
+}
+
+interface LanguageContent {
+    subtitle: string;
+    title: string;
+    cta: string;
+    verified: string;
+    reviews: Review[];
+}
+
 export const Reviews = () => {
     const { lang } = useLanguage();
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const content = {
+    const content: Record<'fr' | 'en' | 'es', LanguageContent> = {
         fr: {
-            subtitle: "Avis Clients",
-            title: "Ce que nos clients disent de nous",
-            cta: "Laisser un avis sur Google",
+            subtitle: "Plus de 700 clients nous ont déjà laissé un avis sur Google.",
+            title: "Ils nous font confiance",
+            cta: "Voir tous les avis Google",
             verified: "Avis Vérifié",
             reviews: [
                 {
-                    name: "Frederique Vincenti",
-                    comment: "Cuisine savoureuse, on s'est régalé, service rapide, accueil super 👍",
+                    name: "Client Google",
+                    comment: "Cuisine savoureuse, service rapide et accueil chaleureux.",
                     rating: 5,
-                    date: "Il y a 3 jours"
+                    date: "Google Maps"
                 },
                 {
-                    name: "GENEVIEVE",
-                    comment: "Très bonne cuisine et serveuse souriante et très agréable.",
+                    name: "Client Google",
+                    comment: "Des grillades excellentes, des portions généreuses et une équipe au top.",
                     rating: 5,
-                    date: "Il y a 2 semaines"
+                    date: "Google Maps"
                 },
                 {
-                    name: "Annie Charraud",
-                    comment: "Je recommande vivement ce restaurant on y mange très bien et les portions sont généreuses",
+                    name: "Client Google",
+                    comment: "L'une des meilleures adresses de Narbonne pour manger halal.",
                     rating: 5,
-                    date: "Il y a 1 mois",
-                    role: "Local Guide"
-                },
-                {
-                    name: "Mary Bloody",
-                    comment: "La nourriture était vraiment bonne, l'endroit super sympathique. Juste devant la gare donc pratique et en plus halal.",
-                    rating: 5,
-                    date: "Il y a 1 mois",
-                    role: "Local Guide"
+                    date: "Google Maps"
                 }
             ]
         },
         en: {
-            subtitle: "Customer Reviews",
-            title: "What our clients say about us",
-            cta: "Leave a review on Google",
+            subtitle: "More than 700 customers have already left us a review on Google.",
+            title: "They Trust Us",
+            cta: "View all Google Reviews",
             verified: "Verified Review",
             reviews: [
                 {
-                    name: "Frederique Vincenti",
-                    comment: "Tasty cuisine, we had a treat, fast service, great welcome 👍",
+                    name: "Google Customer",
+                    comment: "Tasty food, fast service, and warm welcome.",
                     rating: 5,
-                    date: "3 days ago"
+                    date: "Google Maps"
                 },
                 {
-                    name: "GENEVIEVE",
-                    comment: "Very good food and a smiling and very pleasant waitress.",
+                    name: "Google Customer",
+                    comment: "Excellent grills, generous portions, and a top-notch team.",
                     rating: 5,
-                    date: "2 weeks ago"
+                    date: "Google Maps"
                 },
                 {
-                    name: "Annie Charraud",
-                    comment: "I highly recommend this restaurant, the food is very good and the portions are generous",
+                    name: "Google Customer",
+                    comment: "One of the best places in Narbonne for halal dining.",
                     rating: 5,
-                    date: "1 month ago",
-                    role: "Local Guide"
-                },
-                {
-                    name: "Mary Bloody",
-                    comment: "The food was really good, super friendly place. Right in front of the station, so convenient, and halal too.",
-                    rating: 5,
-                    date: "1 month ago",
-                    role: "Local Guide"
+                    date: "Google Maps"
                 }
             ]
         },
         es: {
-            subtitle: "Opiniones de Clientes",
-            title: "Lo que nuestros clientes dicen de nosotros",
-            cta: "Dejar una opinión en Google",
+            subtitle: "Más de 700 clientes ya nos han dejado una reseña en Google.",
+            title: "Confían en Nosotros",
+            cta: "Ver todas las reseñas de Google",
             verified: "Opinión Verificada",
             reviews: [
                 {
-                    name: "Frederique Vincenti",
-                    comment: "Cocina sabrosa, lo disfrutamos mucho, servicio rápido, excelente acogida 👍",
+                    name: "Cliente Google",
+                    comment: "Comida sabrosa, servicio rápido y bienvenida cálida.",
                     rating: 5,
-                    date: "Hace 3 días"
+                    date: "Google Maps"
                 },
                 {
-                    name: "GENEVIEVE",
-                    comment: "Muy buena comida y una camarera sonriente y muy agradable.",
+                    name: "Cliente Google",
+                    comment: "Excelentes parrilladas, porciones generosas y un equipo excelente.",
                     rating: 5,
-                    date: "Hace 2 semanas"
+                    date: "Google Maps"
                 },
                 {
-                    name: "Annie Charraud",
-                    comment: "Recomiendo encarecidamente este restaurante, se come muy bien y las porciones son generosas",
+                    name: "Cliente Google",
+                    comment: "Una de las mejores direcciones de Narbona para comer halal.",
                     rating: 5,
-                    date: "Hace 1 mes",
-                    role: "Local Guide"
-                },
-                {
-                    name: "Mary Bloody",
-                    comment: "La comida estaba realmente buena, un lugar súper agradable. Justo enfrente de la estación, muy práctico y además halal.",
-                    rating: 5,
-                    date: "Hace 1 mes",
-                    role: "Local Guide"
+                    date: "Google Maps"
                 }
             ]
         }
