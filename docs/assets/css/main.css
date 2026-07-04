@@ -1229,20 +1229,46 @@ main > .links a.LinkItem {
 @media (max-width: 900px) {
     .hero-labels {
         align-items: center;
+        gap: 4px;
+        margin-bottom: 15px;
+    }
+    
+    .label-highlight {
+        font-size: 1.2em;
+    }
+    
+    .label-emphasis {
+        font-size: 1.8em;
+    }
+    
+    .label-sub {
+        font-size: 1.1em;
+    }
+    
+    .hero-title {
+        font-size: 2.6em;
+        margin-bottom: 15px;
+    }
+    
+    .hero-description {
+        font-size: 1.1em;
+        margin-bottom: 25px;
     }
     
     .hero-bullets-container {
         justify-content: center;
+        font-size: 0.9em;
+        gap: 6px;
     }
     
     .bullet-divider {
-        display: none;
+        display: inline;
     }
     
     .hero-bullet-item {
-        width: 100%;
+        width: auto;
         justify-content: center;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
     
     .bottom-cta-buttons {
@@ -1250,6 +1276,76 @@ main > .links a.LinkItem {
         align-items: stretch;
         max-width: 320px;
         margin: 30px auto 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-labels {
+        gap: 3px;
+        margin-bottom: 12px;
+    }
+    
+    .label-highlight {
+        font-size: 1.1em;
+    }
+    
+    .label-emphasis {
+        font-size: 1.5em;
+    }
+    
+    .label-sub {
+        font-size: 1.0em;
+    }
+    
+    .hero-title {
+        font-size: 2.0em;
+        margin-bottom: 12px;
+    }
+    
+    .hero-description {
+        font-size: 1.0em;
+        margin-bottom: 20px;
+    }
+    
+    .hero-bullets-container {
+        font-size: 0.8em;
+        gap: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-labels {
+        gap: 2px;
+        margin-bottom: 10px;
+    }
+    
+    .label-highlight {
+        font-size: 0.95em;
+    }
+    
+    .label-emphasis {
+        font-size: 1.3em;
+        letter-spacing: 1px;
+    }
+    
+    .label-sub {
+        font-size: 0.9em;
+    }
+    
+    .hero-title {
+        font-size: 1.7em;
+        margin-bottom: 10px;
+    }
+    
+    .hero-description {
+        font-size: 0.92em;
+        margin-bottom: 15px;
+    }
+    
+    .hero-bullets-container {
+        font-size: 0.72em;
+        gap: 3px;
+        letter-spacing: -0.2px;
     }
 }.cookie-consent-container {
   position: fixed;

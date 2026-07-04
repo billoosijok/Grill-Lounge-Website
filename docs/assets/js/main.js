@@ -116,6 +116,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------
     // 4. REVIEWS CAROUSEL SLIDER
     // ----------------------------------------------------
+    const allReviewCards = Array.from(document.querySelectorAll('.review-card'));
+    if (allReviewCards.length > 5) {
+        // Shuffle and keep only 5 reviews
+        const shuffled = allReviewCards.sort(() => 0.5 - Math.random());
+        const discard = shuffled.slice(5);
+        discard.forEach(card => card.remove());
+    }
+
     const reviewCards = document.querySelectorAll('.review-card');
     const prevBtn = document.getElementById('reviews-prev-btn');
     const nextBtn = document.getElementById('reviews-next-btn');

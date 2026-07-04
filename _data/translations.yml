@@ -179,16 +179,52 @@ reviews:
     cta: "Voir tous les avis Google"
     verified: "Avis Vérifié"
     items:
-      - name: "Client Google"
-        comment: "Cuisine savoureuse, service rapide et accueil chaleureux."
+      - name: "Aurelie 34"
+        comment: "Super restaurant ,qualité ,quantité ,menu variés .service au top,tjrs bien reçu avec le sourire et très accueillant.je recommande"
         rating: 5
         date: "Google Maps"
-      - name: "Client Google"
-        comment: "Des grillades excellentes, des portions généreuses et une équipe au top."
+      - name: "Diara Traore"
+        comment: "Petit resto cosy juste en face de la gare . Facilités pour se garer lorsqu'on vient en voiture. Mention spéciale à Yasmine , la serveuse qui nous a bien accueilli mes et moi."
         rating: 5
         date: "Google Maps"
-      - name: "Client Google"
-        comment: "L'une des meilleures adresses de Narbonne pour manger halal."
+      - name: "j Bbv"
+        comment: "En famîle endroit sympa nous avons très bien mangé je recommande +++ La serveuse très sympathique !"
+        rating: 5
+        date: "Google Maps"
+      - name: "Quentin"
+        comment: "Super sympa, on a bien mangé pour des prix abordables, la cuisine était excellente et généreuse, et clim !"
+        rating: 5
+        date: "Google Maps"
+      - name: "Francis et Annemarie Emery"
+        comment: "Toutes sortes de plats delicieux et un service chaleureux. De très bons goûts"
+        rating: 5
+        date: "Google Maps"
+      - name: "Sandy"
+        comment: "Très accueillant cuisine excellente. Ils faut venir."
+        rating: 5
+        date: "Google Maps"
+      - name: "Stephane Trotin"
+        comment: "Un très bon restaurant. Très bonne cuisine. Je recommande."
+        rating: 5
+        date: "Google Maps"
+      - name: "Jerome Luflade"
+        comment: "Arrivé un peu tard en service du midi, très bien mangé, bien reçu et bien servis"
+        rating: 5
+        date: "Google Maps"
+      - name: "carla checa"
+        comment: "Merci beaucoup de nous avoir attendus avant la fermeture de la cuisine, service exceptionnel"
+        rating: 5
+        date: "Google Maps"
+      - name: "Ana Cuevas"
+        comment: "Très bien, je recommande vivement d'y aller"
+        rating: 5
+        date: "Google Maps"
+      - name: "henri marie"
+        comment: "Une soirée exceptionnelle passée avec le boss Anthony et toute l équipe, merci pour tout"
+        rating: 5
+        date: "Google Maps"
+      - name: "Imad"
+        comment: "Très bon restaurant la viande était délicieuse."
         rating: 5
         date: "Google Maps"
   en:
@@ -197,16 +233,52 @@ reviews:
     cta: "View all Google Reviews"
     verified: "Verified Review"
     items:
-      - name: "Google Customer"
-        comment: "Tasty food, fast service, and warm welcome."
+      - name: "Aurelie 34"
+        comment: "Super restaurant, quality, quantity, varied menu. Top service, always well received with a smile and very welcoming. I recommend"
         rating: 5
         date: "Google Maps"
-      - name: "Google Customer"
-        comment: "Excellent grills, generous portions, and a top-notch team."
+      - name: "Diara Traore"
+        comment: "Cosy little restaurant right in front of the station. Easy parking when coming by car. Special mention to Yasmine, the waitress who welcomed us warmly."
         rating: 5
         date: "Google Maps"
-      - name: "Google Customer"
-        comment: "One of the best places in Narbonne for halal dining."
+      - name: "j Bbv"
+        comment: "A nice place as a family, we ate very well, I highly recommend +++ The waitress was very friendly!"
+        rating: 5
+        date: "Google Maps"
+      - name: "Quentin"
+        comment: "Super friendly, we ate well for affordable prices, the food was excellent and generous, and air conditioning!"
+        rating: 5
+        date: "Google Maps"
+      - name: "Francis et Annemarie Emery"
+        comment: "All kinds of delicious dishes and warm service. Very good taste"
+        rating: 5
+        date: "Google Maps"
+      - name: "Sandy"
+        comment: "Very welcoming, excellent cuisine. You must visit."
+        rating: 5
+        date: "Google Maps"
+      - name: "Stephane Trotin"
+        comment: "A very good restaurant. Very good food. I recommend."
+        rating: 5
+        date: "Google Maps"
+      - name: "Jerome Luflade"
+        comment: "Arrived a bit late for the lunch service, ate very well, well received and well served"
+        rating: 5
+        date: "Google Maps"
+      - name: "carla checa"
+        comment: "Thank you very much for waiting for us before closing the kitchen, exceptional service"
+        rating: 5
+        date: "Google Maps"
+      - name: "Ana Cuevas"
+        comment: "Very good, highly recommended to go"
+        rating: 5
+        date: "Google Maps"
+      - name: "henri marie"
+        comment: "An exceptional evening spent with the boss Anthony and all the team, thank you for everything"
+        rating: 5
+        date: "Google Maps"
+      - name: "Imad"
+        comment: "Very good restaurant, the meat was delicious."
         rating: 5
         date: "Google Maps"
   es:
@@ -215,16 +287,52 @@ reviews:
     cta: "Ver todas las reseñas de Google"
     verified: "Opinión Verificada"
     items:
-      - name: "Cliente Google"
-        comment: "Comida sabrosa, servicio rápido y bienvenida cálida."
+      - name: "Aurelie 34"
+        comment: "Súper restaurante, calidad, cantidad, menú variado. Servicio al top, siempre bien recibido con una sonrisa y muy acogedor. Lo recomiendo"
         rating: 5
         date: "Google Maps"
-      - name: "Cliente Google"
-        comment: "Excelentes parrilladas, porciones generosas y un equipo excelente."
+      - name: "Diara Traore"
+        comment: "Pequeño restaurante acogedor justo en frente de la estación. Facilidad para aparcar al venir en coche. Mención especial a Yasmine, la camarera que nos recibió muy bien."
         rating: 5
         date: "Google Maps"
-      - name: "Cliente Google"
-        comment: "Una de las mejores direcciones de Narbona para comer halal."
+      - name: "j Bbv"
+        comment: "Un lugar agradable en familia, comimos muy bien, lo recomiendo mucho +++ ¡La camarera muy simpática!"
+        rating: 5
+        date: "Google Maps"
+      - name: "Quentin"
+        comment: "Súper agradable, comimos bien a precios asequibles, la cocina era excelente y generosa, ¡y aire acondicionado!"
+        rating: 5
+        date: "Google Maps"
+      - name: "Francis et Annemarie Emery"
+        comment: "Todo tipo de platos deliciosos y un servicio cálido. Muy buen gusto"
+        rating: 5
+        date: "Google Maps"
+      - name: "Sandy"
+        comment: "Muy acogedor, excelente cocina. Hay que venir."
+        rating: 5
+        date: "Google Maps"
+      - name: "Stephane Trotin"
+        comment: "Un restaurante muy bueno. Muy buena cocina. Lo recomiendo."
+        rating: 5
+        date: "Google Maps"
+      - name: "Jerome Luflade"
+        comment: "Llegamos un poco tarde para el servicio de mediodía, comimos muy bien, bien recibidos y bien servidos"
+        rating: 5
+        date: "Google Maps"
+      - name: "carla checa"
+        comment: "Muchas gracias nos han esperado antes de cerrar cocina, el servicio excepcional"
+        rating: 5
+        date: "Google Maps"
+      - name: "Ana Cuevas"
+        comment: "Muy bueno, muy recomendable para ir"
+        rating: 5
+        date: "Google Maps"
+      - name: "henri marie"
+        comment: "Una noche excepcional pasada con el jefe Anthony y todo el equipo, gracias por todo"
+        rating: 5
+        date: "Google Maps"
+      - name: "Imad"
+        comment: "Muy buen restaurante, la carne estaba deliciosa."
         rating: 5
         date: "Google Maps"
 
