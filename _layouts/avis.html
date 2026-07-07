@@ -1,0 +1,400 @@
+---
+layout: default
+---
+{% assign t = site.data.translations.avis_page[page.lang] %}
+
+<style>
+    .avis-page {
+        background-color: var(--primary-bg);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        box-sizing: border-box;
+        color: var(--text-main);
+        font-family: 'Goudy Bookletter 1911', serif;
+    }
+
+    .avis-card {
+        width: 100%;
+        max-width: 440px;
+        background-color: var(--white);
+        border: 1px solid rgba(0, 0, 0, 0.03);
+        border-radius: 16px;
+        box-shadow: var(--card-shadow);
+        padding: 40px 28px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .avis-logo {
+        max-width: 200px;
+        margin: 0 auto 25px auto;
+        display: block;
+    }
+
+    .avis-step {
+        display: none;
+    }
+
+    .avis-step.active {
+        display: block;
+        animation: avisFadeIn 0.3s ease both;
+    }
+
+    @keyframes avisFadeIn {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .avis-title {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.7em;
+        color: var(--accent-green);
+        margin: 0 0 10px 0;
+    }
+
+    .avis-subtitle {
+        color: var(--text-muted);
+        font-size: 1.05em;
+        line-height: 1.5;
+        margin: 0 0 25px 0;
+    }
+
+    .avis-stars {
+        display: flex;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .avis-star-btn {
+        background: none;
+        border: none;
+        padding: 4px;
+        cursor: pointer;
+        transition: transform 0.15s;
+    }
+
+    .avis-star-btn:hover {
+        transform: scale(1.12);
+    }
+
+    .avis-star-btn svg {
+        width: 46px;
+        height: 46px;
+        color: rgba(0, 0, 0, 0.12);
+        transition: color 0.15s;
+        display: block;
+    }
+
+    .avis-star-btn.filled svg {
+        color: #ffb400;
+    }
+
+    .avis-form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: left;
+    }
+
+    .avis-input,
+    .avis-textarea {
+        font-family: "Outfit", sans-serif;
+        font-size: 1em;
+        color: var(--text-main);
+        background-color: var(--primary-bg);
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 12px 14px;
+        width: 100%;
+        box-sizing: border-box;
+        outline: none;
+        transition: border-color var(--transition-speed);
+    }
+
+    .avis-input:focus,
+    .avis-textarea:focus {
+        border-color: var(--accent-green);
+    }
+
+    .avis-textarea {
+        resize: vertical;
+        min-height: 110px;
+    }
+
+    .avis-error {
+        display: none;
+        color: var(--accent-red);
+        font-size: 0.95em;
+        margin: 0;
+        text-align: left;
+    }
+
+    .avis-error.visible {
+        display: block;
+    }
+
+    .avis-submit-btn {
+        font-family: "Outfit", sans-serif;
+        background-color: var(--accent-red);
+        color: var(--white);
+        padding: 13px 24px;
+        border-radius: 30px;
+        font-weight: bold;
+        font-size: 1.1em;
+        border: none;
+        cursor: pointer;
+        transition: background-color var(--transition-speed);
+    }
+
+    .avis-submit-btn:hover {
+        background-color: var(--accent-green);
+    }
+
+    .avis-submit-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+
+    .avis-spinner {
+        width: 42px;
+        height: 42px;
+        margin: 40px auto;
+        border: 4px solid rgba(0, 0, 0, 0.08);
+        border-top-color: var(--accent-red);
+        border-radius: 50%;
+        animation: avisSpin 0.8s linear infinite;
+    }
+
+    @keyframes avisSpin {
+        to { transform: rotate(360deg); }
+    }
+
+    .avis-check-circle {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 25px auto;
+        border-radius: 50%;
+        border: 2px solid var(--accent-green);
+        background-color: rgba(25, 67, 70, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: avisPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    @keyframes avisPop {
+        from { transform: scale(0); }
+        to { transform: scale(1); }
+    }
+
+    .avis-check-circle svg {
+        width: 40px;
+        height: 40px;
+        color: var(--accent-green);
+    }
+</style>
+
+<div class="avis-page animate__animated animate__fadeIn">
+    <div class="avis-card">
+        <a href="/{{ page.lang }}/">
+            <img class="avis-logo" alt="Grill Lounge Logo" src="/logo-black.png" />
+        </a>
+
+        <!-- Loading: waiting on the public config (Google review URL) -->
+        <div class="avis-step active" id="avis-step-loading">
+            <div class="avis-spinner"></div>
+        </div>
+
+        <!-- Step 1: rate -->
+        <div class="avis-step" id="avis-step-rate">
+            <h1 class="avis-title">{{ t.prompt_title }}</h1>
+            <p class="avis-subtitle">{{ t.prompt_subtitle }}</p>
+            <div class="avis-stars" id="avis-rate-stars"></div>
+        </div>
+
+        <!-- Positive rating: redirecting to Google -->
+        <div class="avis-step" id="avis-step-redirecting">
+            <div class="avis-stars" id="avis-redirect-stars" style="margin-bottom: 25px;"></div>
+            <p class="avis-subtitle" style="margin: 0;">{{ t.redirecting }}</p>
+        </div>
+
+        <!-- Negative rating: private feedback form -->
+        <div class="avis-step" id="avis-step-feedback">
+            <h1 class="avis-title">{{ t.feedback_title }}</h1>
+            <p class="avis-subtitle">{{ t.feedback_subtitle }}</p>
+            <form class="avis-form" id="avis-feedback-form" novalidate>
+                <textarea class="avis-textarea" id="avis-text" placeholder="{{ t.feedback_placeholder }}" aria-label="{{ t.feedback_title }}"></textarea>
+                <input class="avis-input" id="avis-email" type="email" placeholder="{{ t.feedback_email }}" aria-label="{{ t.feedback_email }}" />
+                <p class="avis-error" id="avis-error"></p>
+                <button class="avis-submit-btn" id="avis-submit" type="submit">{{ t.feedback_submit }}</button>
+            </form>
+        </div>
+
+        <!-- Thanks -->
+        <div class="avis-step" id="avis-step-thanks">
+            <div class="avis-check-circle">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+            </div>
+            <h1 class="avis-title">{{ t.thanks_title }}</h1>
+            <p class="avis-subtitle" style="margin: 0;">{{ t.thanks_message }}</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        var API_BASE = "https://dishtributer.com/api";
+        var API_HEADERS = {
+            "Content-Type": "application/json",
+            "x-api-key": "dt_QVQvdN7Gf9nHrUSitreJgqkz4s4BF34i"
+        };
+        var FALLBACK_GOOGLE_URL = "https://g.page/r/CfOqWTWPG1QYEBM/review";
+        // Ratings at or above this threshold are routed to the public Google
+        // page; anything below is captured privately.
+        var POSITIVE_THRESHOLD = 4;
+
+        var LABELS = {
+            errorRequired: {{ t.error_required | jsonify }},
+            errorGeneric: {{ t.error_generic | jsonify }},
+            sending: {{ t.feedback_sending | jsonify }},
+            submit: {{ t.feedback_submit | jsonify }}
+        };
+
+        var STAR_PATH = "M12 2.5l2.9 6.18 6.6.79-4.9 4.6 1.3 6.73L12 17.77l-5.9 3.03 1.3-6.73-4.9-4.6 6.6-.79z";
+
+        var googleUrl = FALLBACK_GOOGLE_URL;
+        var rating = 0;
+
+        function showStep(name) {
+            document.querySelectorAll(".avis-step").forEach(function (el) {
+                el.classList.remove("active");
+            });
+            document.getElementById("avis-step-" + name).classList.add("active");
+        }
+
+        function starSvg() {
+            return '<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linejoin="round"><path d="' + STAR_PATH + '"/></svg>';
+        }
+
+        function paintStars(container, count) {
+            container.querySelectorAll(".avis-star-btn").forEach(function (btn, i) {
+                btn.classList.toggle("filled", i < count);
+            });
+        }
+
+        // Build the interactive rating stars
+        var rateStars = document.getElementById("avis-rate-stars");
+        for (var i = 1; i <= 5; i++) {
+            (function (value) {
+                var btn = document.createElement("button");
+                btn.type = "button";
+                btn.className = "avis-star-btn";
+                btn.setAttribute("aria-label", value + " / 5");
+                btn.innerHTML = starSvg();
+                btn.addEventListener("mouseenter", function () {
+                    paintStars(rateStars, value);
+                });
+                btn.addEventListener("click", function () {
+                    selectRating(value);
+                });
+                rateStars.appendChild(btn);
+            })(i);
+        }
+        rateStars.addEventListener("mouseleave", function () {
+            paintStars(rateStars, rating);
+        });
+
+        function selectRating(value) {
+            rating = value;
+            if (value >= POSITIVE_THRESHOLD) {
+                var redirectStars = document.getElementById("avis-redirect-stars");
+                redirectStars.innerHTML = "";
+                for (var j = 1; j <= 5; j++) {
+                    var star = document.createElement("span");
+                    star.className = "avis-star-btn" + (j <= value ? " filled" : "");
+                    star.innerHTML = starSvg();
+                    redirectStars.appendChild(star);
+                }
+                showStep("redirecting");
+                setTimeout(function () {
+                    window.location.assign(googleUrl || FALLBACK_GOOGLE_URL);
+                }, 900);
+            } else {
+                showStep("feedback");
+                document.getElementById("avis-text").focus();
+            }
+        }
+
+        // Pre-fetch the Google review link so a positive rating redirects instantly.
+        fetch(API_BASE + "/public/config", { headers: API_HEADERS })
+            .then(function (res) { return res.ok ? res.json() : null; })
+            .then(function (data) {
+                var url = data && data.reviewsConfig && data.reviewsConfig.googleReviewUrl;
+                if (url) googleUrl = url;
+            })
+            .catch(function (err) {
+                console.error("Failed to load config, using default redirect:", err);
+            })
+            .finally(function () {
+                showStep("rate");
+            });
+
+        // Private feedback submission
+        var form = document.getElementById("avis-feedback-form");
+        var textEl = document.getElementById("avis-text");
+        var emailEl = document.getElementById("avis-email");
+        var errorEl = document.getElementById("avis-error");
+        var submitBtn = document.getElementById("avis-submit");
+
+        function setError(message) {
+            errorEl.textContent = message || "";
+            errorEl.classList.toggle("visible", !!message);
+        }
+
+        textEl.addEventListener("input", function () {
+            setError(null);
+        });
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault();
+            var text = textEl.value.trim();
+            if (!text) {
+                setError(LABELS.errorRequired);
+                return;
+            }
+            setError(null);
+            submitBtn.disabled = true;
+            submitBtn.textContent = LABELS.sending;
+
+            var payload = { starCount: rating, text: text };
+            var email = emailEl.value.trim();
+            if (email) payload.customerEmail = email;
+
+            fetch(API_BASE + "/public/reviews", {
+                method: "POST",
+                headers: API_HEADERS,
+                body: JSON.stringify(payload)
+            })
+                .then(function (res) {
+                    if (!res.ok) {
+                        return res.json().catch(function () { return {}; }).then(function (body) {
+                            throw new Error(body.error || LABELS.errorGeneric);
+                        });
+                    }
+                    showStep("thanks");
+                })
+                .catch(function (err) {
+                    setError(err && err.message ? err.message : LABELS.errorGeneric);
+                })
+                .finally(function () {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = LABELS.submit;
+                });
+        });
+    })();
+</script>

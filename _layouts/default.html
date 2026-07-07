@@ -8,6 +8,7 @@
     <!-- Title and Description are set dynamically per page/language -->
     <title>{{ page.title | default: 'Grill Lounge' }}</title>
     <meta name="description" content="{{ page.description | default: 'Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillante' }}" />
+    {% if page.noindex %}<meta name="robots" content="noindex, nofollow" />{% endif %}
 
     <link rel="apple-touch-icon" href="/icon.png" />
 
@@ -49,7 +50,7 @@
     </div>
 
     <!-- Cookie Consent Banner Include -->
-    {% include cookie-consent.html %}
+    {% unless page.hide_cookie_banner %}{% include cookie-consent.html %}{% endunless %}
 
     <!-- Vanilla Javascript Logic -->
     <script src="/assets/js/main.js"></script>
