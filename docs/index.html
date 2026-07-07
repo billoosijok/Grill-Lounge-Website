@@ -6,14 +6,19 @@
     <link rel="canonical" href="https://grilllounge.fr/fr/">
     <meta http-equiv="refresh" content="0; url=/fr/">
     <script>
-      var userLang = navigator.language || navigator.userLanguage || 'fr';
-      if (userLang.indexOf('es') === 0) {
-        window.location.replace('/es/');
-      } else if (userLang.indexOf('en') === 0) {
-        window.location.replace('/en/');
-      } else {
-        window.location.replace('/fr/');
-      }
+      (function () {
+        var supported = ["fr", "en", "es"];
+        var lang = null;
+        try { lang = localStorage.getItem("preferred-lang"); } catch (e) {}
+        if (supported.indexOf(lang) === -1) {
+          var browserLang = navigator.language || navigator.userLanguage || "fr";
+          lang = "fr";
+          for (var i = 0; i < supported.length; i++) {
+            if (browserLang.indexOf(supported[i]) === 0) { lang = supported[i]; break; }
+          }
+        }
+        window.location.replace("/" + lang + "/");
+      })();
     </script>
   </head>
   <body>

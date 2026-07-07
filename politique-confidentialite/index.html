@@ -8,6 +8,20 @@
   </head>
   <body>
     <p>Redirecting to <a href="/fr/politique-confidentialite/">/fr/politique-confidentialite/</a>...</p>
-    <script>window.location.replace("/fr/politique-confidentialite/");</script>
+    <script>
+      (function () {
+        var supported = ["fr", "en", "es"];
+        var lang = null;
+        try { lang = localStorage.getItem("preferred-lang"); } catch (e) {}
+        if (supported.indexOf(lang) === -1) {
+          var browserLang = navigator.language || navigator.userLanguage || "fr";
+          lang = "fr";
+          for (var i = 0; i < supported.length; i++) {
+            if (browserLang.indexOf(supported[i]) === 0) { lang = supported[i]; break; }
+          }
+        }
+        window.location.replace("/" + lang + "/politique-confidentialite/");
+      })();
+    </script>
   </body>
 </html>

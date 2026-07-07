@@ -46,6 +46,15 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('click', () => {
             langDropdown.classList.remove('open');
         });
+
+        // Remember explicit language choice so redirect pages respect it
+        document.querySelectorAll('.lang-select-item').forEach(item => {
+            item.addEventListener('click', () => {
+                try {
+                    localStorage.setItem('preferred-lang', item.dataset.lang);
+                } catch (e) { /* storage unavailable */ }
+            });
+        });
     }
 
     // ----------------------------------------------------
