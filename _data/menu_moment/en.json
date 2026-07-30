@@ -1,47 +1,27 @@
 {
   "title": "Suggestions of the Moment",
   "section1": {
-    "title": "Dish of the week",
+    "title": "Weekly Specials",
     "items": [
       {
-        "name": "Grill Trio",
-        "description": "Chicken skewer, Adana kebab, lamb chops. Served with rice or salad, and Grill Lounge sauce.",
-        "price": "15 €"
-      }
-    ]
-  },
-  "section2": {
-    "title": "Weekly Formula",
-    "categories": [
-      {
-        "name": "Starter",
-        "price": "8 €",
-        "items": [
-          {
-            "name": "Tunisian-style baked Tajine",
-            "description": "Egg, potatoes, and traditional spices."
-          }
-        ]
+        "name": "Salade croquante",
+        "description": "Marinated chicken, soy, and sesame seeds.",
+        "price": "14 €"
       },
       {
-        "name": "Main Course",
-        "price": "18 €",
-        "items": [
-          {
-            "name": "Traditional Couscous",
-            "description": "Semolina, seasonal vegetables, chicken skewer, kefta, and Merguez."
-          }
-        ]
+        "name": "Salade fraîcheur",
+        "description": "Mozzarella, Black Krim tomato.",
+        "price": "14 €"
       },
       {
-        "name": "Dessert",
-        "price": "7 €",
-        "items": [
-          {
-            "name": "Caramel Roll",
-            "description": "Speculoos sauce topping."
-          }
-        ]
+        "name": "Poké Bowl",
+        "description": "Fine semolina, avocado, red cabbage, cucumbers, radish.",
+        "price": "17.90 €"
+      },
+      {
+        "name": "Royal Couscous",
+        "description": "3 meats and vegetables.",
+        "price": "17 €"
       }
     ]
   }

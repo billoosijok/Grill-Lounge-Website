@@ -1,47 +1,27 @@
 {
   "title": "Suggestions du Moment",
   "section1": {
-    "title": "Plat de la semaine",
+    "title": "Formule de la semaine",
     "items": [
       {
-        "name": "Trio de grillades",
-        "description": "Brochette de poulet, Adana kebab, Côtelettes d’agneau. Accompagnements : Riz ou salade, Sauce Grill Lounge.",
-        "price": "15 €"
-      }
-    ]
-  },
-  "section2": {
-    "title": "Formule de la semaine",
-    "categories": [
-      {
-        "name": "Entrée",
-        "price": "8 €",
-        "items": [
-          {
-            "name": "Tajine au four façon tunisienne",
-            "description": "Œuf, pommes de terre et épices traditionnelles."
-          }
-        ]
+        "name": "Salade croquante",
+        "description": "Poulet mariné, soja et sésames.",
+        "price": "14 €"
       },
       {
-        "name": "Plat",
-        "price": "18 €",
-        "items": [
-          {
-            "name": "Couscous traditionnel",
-            "description": "Semoule, légumes de saison, brochette de poulet, kefta et Merguez."
-          }
-        ]
+        "name": "Salade fraîcheur",
+        "description": "Mozzarella, tomate noire de Crimée.",
+        "price": "14 €"
       },
       {
-        "name": "Dessert",
-        "price": "7 €",
-        "items": [
-          {
-            "name": "Roulé au caramel",
-            "description": "Nappage de sauce spéculoos."
-          }
-        ]
+        "name": "Poké Bowl",
+        "description": "Semoule fine, avocat, chou rouge, concombres, radis.",
+        "price": "17,90 €"
+      },
+      {
+        "name": "Couscous Royal",
+        "description": "3 viandes et légumes.",
+        "price": "17 €"
       }
     ]
   }

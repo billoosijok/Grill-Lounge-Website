@@ -1,5 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
-Disallow:
+Disallow: /fr/avis/
+Disallow: /en/avis/
+Disallow: /es/avis/
 
 Sitemap: https://grilllounge.fr/sitemap.xml
