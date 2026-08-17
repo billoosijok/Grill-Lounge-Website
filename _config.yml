@@ -7,6 +7,9 @@ destination: docs
 markdown: kramdown
 highlighter: rouge
 
+plugins:
+  - jekyll-redirect-from
+
 exclude:
   - package.json
   - yarn.lock

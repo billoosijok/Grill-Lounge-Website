@@ -9,6 +9,17 @@
     <title>Contact & Booking - Grill Lounge Narbonne</title>
     <meta name="description" content="Book a table at Grill Lounge in Narbonne. Find our address, phone number, opening hours, and contact form." />
     
+    <link rel="canonical" href="https://grilllounge.fr/en/contact/" />
+    
+    
+    
+    
+    <link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/contact/" />
+    <link rel="alternate" hreflang="en" href="https://grilllounge.fr/en/contact/" />
+    <link rel="alternate" hreflang="es" href="https://grilllounge.fr/es/contact/" />
+    <link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr/contact/" />
+    
+    
 
     <link rel="apple-touch-icon" href="/icon.png" />
 
@@ -250,7 +261,273 @@
 
         </div>
 
+        <!-- Booking Section -->
+        <div id="booking-section" style="background: #fff; border-radius: 16px; padding: 35px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.05); margin-bottom: 60px;">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2 style="font-size: 2.2em; color: var(--accent-green); margin-bottom: 10px;">
+                    Book a Table
+                </h2>
+                <p style="color: var(--text-muted); font-size: 1.1em; max-width: 550px; margin: 0 auto;">
+                    Reserve your table directly at Grill Lounge
+                </p>
+            </div>
+
+            <form id="public-booking-form" novalidate style="display: flex; flex-direction: column; gap: 20px; max-width: 700px; margin: 0 auto;">
+                <div id="booking-alert" style="display: none; padding: 15px; border-radius: 8px; font-size: 0.95em;"></div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <!-- Guest Name -->
+                    <div>
+                        <label for="booking-guest-name" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Full name <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="booking-guest-name" 
+                            name="guestName" 
+                            required 
+                            placeholder="e.g. Jean Dupont" 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+
+                    <!-- Phone -->
+                    <div>
+                        <label for="booking-phone" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Phone number <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="booking-phone" 
+                            name="phone" 
+                            required 
+                            placeholder="e.g. +33612345678" 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                    <!-- Email -->
+                    <div>
+                        <label for="booking-email" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Email address
+                        </label>
+                        <input 
+                            type="email" 
+                            id="booking-email" 
+                            name="email" 
+                            placeholder="e.g. jean.dupont@example.com" 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+
+                    <!-- Service ID -->
+                    <div>
+                        <label for="booking-service" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Service <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <select 
+                            id="booking-service" 
+                            name="serviceId" 
+                            required 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; background: #fff; box-sizing: border-box;"
+                        >
+                            <option value="dinner" selected>Dinner</option>
+                            <option value="lunch">Lunch</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+                    <!-- Date -->
+                    <div>
+                        <label for="booking-date" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Booking date <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <input 
+                            type="date" 
+                            id="booking-date" 
+                            name="bookingDate" 
+                            required 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+
+                    <!-- Time -->
+                    <div>
+                        <label for="booking-time" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Time <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <input 
+                            type="time" 
+                            id="booking-time" 
+                            name="bookingTime" 
+                            value="19:30" 
+                            required 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+
+                    <!-- Adults -->
+                    <div>
+                        <label for="booking-adults" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Adults <span style="color: var(--accent-red);">*</span>
+                        </label>
+                        <input 
+                            type="number" 
+                            id="booking-adults" 
+                            name="adultsCount" 
+                            min="1" 
+                            value="2" 
+                            required 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+
+                    <!-- Children -->
+                    <div>
+                        <label for="booking-children" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                            Children (optional)
+                        </label>
+                        <input 
+                            type="number" 
+                            id="booking-children" 
+                            name="childrenCount" 
+                            min="0" 
+                            value="0" 
+                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
+                        />
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div>
+                    <label for="booking-notes" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
+                        Special requests (optional)
+                    </label>
+                    <textarea 
+                        id="booking-notes" 
+                        name="notes" 
+                        rows="3" 
+                        placeholder="e.g. Quiet table, high chair..." 
+                        style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box; resize: vertical;"
+                    ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div style="text-align: center; margin-top: 10px;">
+                    <button 
+                        type="submit" 
+                        id="booking-submit-btn" 
+                        class="cta-button" 
+                        style="padding: 14px 40px; font-size: 1.1em; cursor: pointer; border: none; border-radius: 8px;"
+                    >
+                        Confirm Reservation
+                    </button>
+                </div>
+            </form>
+        </div>
+
     </main>
+
+    <script>
+        (function() {
+            var API_URL = "https://dishtributer.com/api/public/bookings";
+            var API_KEY = "dt_QVQvdN7Gf9nHrUSitreJgqkz4s4BF34i";
+
+            var form = document.getElementById("public-booking-form");
+            if (!form) return;
+
+            var alertEl = document.getElementById("booking-alert");
+            var submitBtn = document.getElementById("booking-submit-btn");
+
+            // Set default date to today
+            var dateInput = document.getElementById("booking-date");
+            if (dateInput && !dateInput.value) {
+                var today = new Date().toISOString().split("T")[0];
+                dateInput.value = today;
+            }
+
+            function showAlert(msg, isError) {
+                alertEl.style.display = "block";
+                alertEl.style.backgroundColor = isError ? "#f8d7da" : "#d4edda";
+                alertEl.style.color = isError ? "#721c24" : "#155724";
+                alertEl.style.border = "1px solid " + (isError ? "#f5c6cb" : "#c3e6cb");
+                alertEl.textContent = msg;
+            }
+
+            function hideAlert() {
+                alertEl.style.display = "none";
+            }
+
+            form.addEventListener("submit", function(e) {
+                e.preventDefault();
+                hideAlert();
+
+                var guestName = (document.getElementById("booking-guest-name").value || "").trim();
+                var phone = (document.getElementById("booking-phone").value || "").trim();
+                var email = (document.getElementById("booking-email").value || "").trim();
+                var bookingDate = document.getElementById("booking-date").value;
+                var bookingTime = document.getElementById("booking-time").value;
+                var serviceId = document.getElementById("booking-service").value;
+                var adultsCount = parseInt(document.getElementById("booking-adults").value, 10) || 1;
+                var childrenCount = parseInt(document.getElementById("booking-children").value, 10) || 0;
+                var notes = (document.getElementById("booking-notes").value || "").trim();
+
+                if (!guestName) {
+                    showAlert("Full name is required.", true);
+                    return;
+                }
+
+                submitBtn.disabled = true;
+                submitBtn.textContent = "Submitting reservation...";
+
+                var payload = {
+                    guestName: guestName,
+                    bookingDate: bookingDate,
+                    bookingTime: bookingTime,
+                    serviceId: serviceId,
+                    adultsCount: adultsCount,
+                    childrenCount: childrenCount,
+                    phone: phone,
+                    email: email || undefined,
+                    notes: notes || undefined
+                };
+
+                fetch(API_URL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "x-api-key": API_KEY
+                    },
+                    body: JSON.stringify(payload)
+                })
+                .then(function(res) {
+                    if (!res.ok) {
+                        return res.json().then(function(data) {
+                            throw new Error((data && data.error) || "Booking request failed");
+                        });
+                    }
+                    return res.json();
+                })
+                .then(function(data) {
+                    showAlert("Your booking has been successfully confirmed!", false);
+                    form.reset();
+                    if (dateInput) {
+                        dateInput.value = new Date().toISOString().split("T")[0];
+                    }
+                })
+                .catch(function(err) {
+                    showAlert(err.message || "An error occurred while placing your reservation. Please try again.", true);
+                })
+                .finally(function() {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = "Confirm Reservation";
+                });
+            });
+        })();
+    </script>
 
     
 <footer class="site-footer">
@@ -373,6 +650,7 @@
 </footer>
 
 </div>
+
 
     </div>
 

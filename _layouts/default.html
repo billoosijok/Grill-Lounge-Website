@@ -8,7 +8,24 @@
     <!-- Title and Description are set dynamically per page/language -->
     <title>{{ page.title | default: 'Grill Lounge' }}</title>
     <meta name="description" content="{{ page.description | default: 'Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillante' }}" />
-    {% if page.noindex %}<meta name="robots" content="noindex, nofollow" />{% endif %}
+    {% if page.noindex %}
+    <meta name="robots" content="noindex, nofollow" />
+    {% else %}
+    <link rel="canonical" href="https://grilllounge.fr{{ page.url }}" />
+    {% if page.lang %}
+    {% assign current_lang = page.lang %}
+    {% assign lang_prefix = '/' | append: current_lang | append: '/' %}
+    {% if page.url == '/' or page.url == '/index.html' %}
+      {% assign page_slug = '/' %}
+    {% else %}
+      {% assign page_slug = page.url | replace_first: lang_prefix, '/' %}
+    {% endif %}
+    <link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr{{ page_slug }}" />
+    <link rel="alternate" hreflang="en" href="https://grilllounge.fr/en{{ page_slug }}" />
+    <link rel="alternate" hreflang="es" href="https://grilllounge.fr/es{{ page_slug }}" />
+    <link rel="alternate" hreflang="x-default" href="https://grilllounge.fr/fr{{ page_slug }}" />
+    {% endif %}
+    {% endif %}
 
     <link rel="apple-touch-icon" href="/icon.png" />
 
