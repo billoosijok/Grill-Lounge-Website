@@ -1,377 +1,791 @@
 ---
 layout: default
 ---
+
 {% assign t = site.data.translations %}
 
 <div class="menu-page-container animate__animated animate__fadeIn">
-    {% include header.html %}
+  {% include header.html %}
 
-    <main class="menu-content" style="margin-top: 40px; max-width: 1000px; width: 100%; margin-left: auto; margin-right: auto; padding: 0 15px;">
-        
-        <!-- Hero Section of Contact Page -->
-        <div style="text-align: center; margin-bottom: 50px;">
-            <h1 class="menu-main-title" style="font-size: 3em; color: var(--accent-green); margin-bottom: 15px;">
-                {{ t.contact_page[page.lang].title }}
-            </h1>
-            <p style="font-size: 1.2em; color: var(--text-muted); max-width: 600px; margin: 0 auto; line-height: 1.6;">
-                {{ t.contact_page[page.lang].subtitle }}
+  <main
+    class="menu-content"
+    style="
+      margin-top: 40px;
+      max-width: 1000px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 15px;
+    "
+  >
+    <!-- Hero Section of Contact Page -->
+    <div style="text-align: center; margin-bottom: 50px">
+      <h1
+        class="menu-main-title"
+        style="font-size: 3em; color: var(--accent-green); margin-bottom: 15px"
+      >
+        {{ t.contact_page[page.lang].title }}
+      </h1>
+      <p
+        style="
+          font-size: 1.2em;
+          color: var(--text-muted);
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.6;
+        "
+      >
+        {{ t.contact_page[page.lang].subtitle }}
+      </p>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 40px;
+        margin-bottom: 50px;
+        width: 100%;
+        align-items: stretch;
+      "
+    >
+      <!-- Left Column: Contact info -->
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+          justify-content: space-between;
+        "
+      >
+        <h2
+          class="category-title"
+          style="
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: var(--accent-green);
+          "
+        >
+          {{ t.contact_page[page.lang].info_title }}
+        </h2>
+
+        <!-- Address -->
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+          "
+        >
+          <div style="color: var(--accent-red); margin-top: 3px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+          <div>
+            <h3
+              style="
+                margin: 0 0 5px 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: var(--text-main);
+              "
+            >
+              {{ t.map_section[page.lang].address_label }}
+            </h3>
+            <p style="margin: 0; color: var(--text-muted); line-height: 1.4">
+              5 Av. Pierre Semard, 11100 Narbonne
             </p>
+          </div>
         </div>
 
-        <!-- Main Content Grid -->
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; margin-bottom: 50px; width: 100%; align-items: stretch;">
-            
-            <!-- Left Column: Contact info -->
-            <div style="display: flex; flex-direction: column; gap: 25px; justify-content: space-between;">
-                <h2 class="category-title" style="border-bottom: 2px solid var(--accent-red); padding-bottom: 10px; margin-bottom: 10px; font-size: 1.8em; color: var(--accent-green);">
-                    {{ t.contact_page[page.lang].info_title }}
-                </h2>
-
-                <!-- Address -->
-                <div style="display: flex; gap: 15px; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.03);">
-                    <div style="color: var(--accent-red); margin-top: 3px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                            <circle cx="12" cy="10" r="3"></circle>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 style="margin: 0 0 5px 0; font-size: 1.1em; font-weight: bold; color: var(--text-main);">{{ t.map_section[page.lang].address_label }}</h3>
-                        <p style="margin: 0; color: var(--text-muted); line-height: 1.4;">5 Av. Pierre Semard, 11100 Narbonne</p>
-                    </div>
-                </div>
-
-                <!-- Phone -->
-                <div style="display: flex; gap: 15px; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.03);">
-                    <div style="color: var(--accent-red); margin-top: 3px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 style="margin: 0 0 5px 0; font-size: 1.1em; font-weight: bold; color: var(--text-main);">{{ t.map_section[page.lang].phone_label }}</h3>
-                        <a href="tel:0468652742" style="margin: 0; color: var(--accent-green); font-weight: bold; text-decoration: none; font-size: 1.1em;">04 68 65 27 42</a>
-                    </div>
-                </div>
-
-                <!-- Email -->
-                <div style="display: flex; gap: 15px; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.03);">
-                    <div style="color: var(--accent-red); margin-top: 3px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 style="margin: 0 0 5px 0; font-size: 1.1em; font-weight: bold; color: var(--text-main);">Email</h3>
-                        <a href="mailto:grilllounge.aude@gmail.com" style="margin: 0; color: var(--accent-green); text-decoration: none; word-break: break-all;">grilllounge.aude@gmail.com</a>
-                    </div>
-                </div>
-
-                <!-- Hours -->
-                <div style="display: flex; gap: 15px; background-color: #fff; padding: 20px; border-radius: 12px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.03);">
-                    <div style="color: var(--accent-red); margin-top: 3px;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 style="margin: 0 0 5px 0; font-size: 1.1em; font-weight: bold; color: var(--text-main);">{{ t.map_section[page.lang].hours_label }}</h3>
-                        <p style="margin: 0; color: var(--text-muted); line-height: 1.4;">{{ t.contact_page[page.lang].hours_val }}</p>
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Right Column: Google Map -->
-            <div style="display: flex; flex-direction: column; gap: 25px;">
-                <h2 class="category-title" style="border-bottom: 2px solid var(--accent-red); padding-bottom: 10px; margin-bottom: 10px; font-size: 1.8em; color: var(--accent-green);">
-                    {{ t.contact_page[page.lang].map_title }}
-                </h2>
-                <div style="border-radius: 16px; overflow: hidden; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.08); flex: 1; min-height: 350px; width: 100%; position: relative;">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=5%20Av.%20Pierre%20Semard,%2011100%20Narbonne&t=&z=16&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style="border: 0; position: absolute; top: 0; left: 0;" 
-                        allowfullscreen="" 
-                        loading="lazy"
-                        title="Grill Lounge Narbonne Location"
-                    ></iframe>
-                </div>
-            </div>
-
+        <!-- Phone -->
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+          "
+        >
+          <div style="color: var(--accent-red); margin-top: 3px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3
+              style="
+                margin: 0 0 5px 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: var(--text-main);
+              "
+            >
+              {{ t.map_section[page.lang].phone_label }}
+            </h3>
+            <a
+              href="tel:0468652742"
+              style="
+                margin: 0;
+                color: var(--accent-green);
+                font-weight: bold;
+                text-decoration: none;
+                font-size: 1.1em;
+              "
+              >04 68 65 27 42</a
+            >
+          </div>
         </div>
 
-        <!-- Booking Section -->
-        <div id="booking-section" style="background: #fff; border-radius: 16px; padding: 35px; box-shadow: var(--card-shadow); border: 1px solid rgba(0,0,0,0.05); margin-bottom: 60px;">
-            <div style="text-align: center; margin-bottom: 30px;">
-                <h2 style="font-size: 2.2em; color: var(--accent-green); margin-bottom: 10px;">
-                    {{ t.booking_form[page.lang].title }}
-                </h2>
-                <p style="color: var(--text-muted); font-size: 1.1em; max-width: 550px; margin: 0 auto;">
-                    {{ t.booking_form[page.lang].subtitle }}
-                </p>
-            </div>
-
-            <form id="public-booking-form" novalidate style="display: flex; flex-direction: column; gap: 20px; max-width: 700px; margin: 0 auto;">
-                <div id="booking-alert" style="display: none; padding: 15px; border-radius: 8px; font-size: 0.95em;"></div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                    <!-- Guest Name -->
-                    <div>
-                        <label for="booking-guest-name" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].full_name_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <input 
-                            type="text" 
-                            id="booking-guest-name" 
-                            name="guestName" 
-                            required 
-                            placeholder="{{ t.booking_form[page.lang].full_name_placeholder }}" 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-
-                    <!-- Phone -->
-                    <div>
-                        <label for="booking-phone" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].phone_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <input 
-                            type="tel" 
-                            id="booking-phone" 
-                            name="phone" 
-                            required 
-                            placeholder="{{ t.booking_form[page.lang].phone_placeholder }}" 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-                    <!-- Email -->
-                    <div>
-                        <label for="booking-email" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].email_label }}
-                        </label>
-                        <input 
-                            type="email" 
-                            id="booking-email" 
-                            name="email" 
-                            placeholder="{{ t.booking_form[page.lang].email_placeholder }}" 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-
-                    <!-- Service ID -->
-                    <div>
-                        <label for="booking-service" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].service_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <select 
-                            id="booking-service" 
-                            name="serviceId" 
-                            required 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; background: #fff; box-sizing: border-box;"
-                        >
-                            <option value="dinner" selected>{{ t.booking_form[page.lang].service_dinner }}</option>
-                            <option value="lunch">{{ t.booking_form[page.lang].service_lunch }}</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                    <!-- Date -->
-                    <div>
-                        <label for="booking-date" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].date_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <input 
-                            type="date" 
-                            id="booking-date" 
-                            name="bookingDate" 
-                            required 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-
-                    <!-- Time -->
-                    <div>
-                        <label for="booking-time" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].time_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <input 
-                            type="time" 
-                            id="booking-time" 
-                            name="bookingTime" 
-                            value="19:30" 
-                            required 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-
-                    <!-- Adults -->
-                    <div>
-                        <label for="booking-adults" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].adults_label }} <span style="color: var(--accent-red);">*</span>
-                        </label>
-                        <input 
-                            type="number" 
-                            id="booking-adults" 
-                            name="adultsCount" 
-                            min="1" 
-                            value="2" 
-                            required 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-
-                    <!-- Children -->
-                    <div>
-                        <label for="booking-children" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                            {{ t.booking_form[page.lang].children_label }}
-                        </label>
-                        <input 
-                            type="number" 
-                            id="booking-children" 
-                            name="childrenCount" 
-                            min="0" 
-                            value="0" 
-                            style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box;"
-                        />
-                    </div>
-                </div>
-
-                <!-- Notes -->
-                <div>
-                    <label for="booking-notes" style="display: block; font-weight: bold; margin-bottom: 8px; color: var(--text-main);">
-                        {{ t.booking_form[page.lang].notes_label }}
-                    </label>
-                    <textarea 
-                        id="booking-notes" 
-                        name="notes" 
-                        rows="3" 
-                        placeholder="{{ t.booking_form[page.lang].notes_placeholder }}" 
-                        style="width: 100%; padding: 12px 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 1em; box-sizing: border-box; resize: vertical;"
-                    ></textarea>
-                </div>
-
-                <!-- Submit Button -->
-                <div style="text-align: center; margin-top: 10px;">
-                    <button 
-                        type="submit" 
-                        id="booking-submit-btn" 
-                        class="cta-button" 
-                        style="padding: 14px 40px; font-size: 1.1em; cursor: pointer; border: none; border-radius: 8px;"
-                    >
-                        {{ t.booking_form[page.lang].submit_btn }}
-                    </button>
-                </div>
-            </form>
+        <!-- Email -->
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+          "
+        >
+          <div style="color: var(--accent-red); margin-top: 3px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </svg>
+          </div>
+          <div>
+            <h3
+              style="
+                margin: 0 0 5px 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: var(--text-main);
+              "
+            >
+              Email
+            </h3>
+            <a
+              href="mailto:grilllounge.aude@gmail.com"
+              style="
+                margin: 0;
+                color: var(--accent-green);
+                text-decoration: none;
+                word-break: break-all;
+              "
+              >grilllounge.aude@gmail.com</a
+            >
+          </div>
         </div>
 
-    </main>
+        <!-- Hours -->
+        <div
+          style="
+            display: flex;
+            gap: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.03);
+          "
+        >
+          <div style="color: var(--accent-red); margin-top: 3px">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div>
+            <h3
+              style="
+                margin: 0 0 5px 0;
+                font-size: 1.1em;
+                font-weight: bold;
+                color: var(--text-main);
+              "
+            >
+              {{ t.map_section[page.lang].hours_label }}
+            </h3>
+            <p style="margin: 0; color: var(--text-muted); line-height: 1.4">
+              {{ t.contact_page[page.lang].hours_val }}
+            </p>
+          </div>
+        </div>
+      </div>
 
-    <script>
-        (function() {
-            var API_URL = "https://dishtributer.com/api/public/bookings";
-            var API_KEY = "dt_QVQvdN7Gf9nHrUSitreJgqkz4s4BF34i";
+      <!-- Right Column: Google Map -->
+      <div style="display: flex; flex-direction: column; gap: 25px">
+        <h2
+          class="category-title"
+          style="
+            border-bottom: 2px solid var(--accent-red);
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+            color: var(--accent-green);
+          "
+        >
+          {{ t.contact_page[page.lang].map_title }}
+        </h2>
+        <div
+          style="
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.08);
+            flex: 1;
+            min-height: 350px;
+            width: 100%;
+            position: relative;
+          "
+        >
+          <iframe
+            src="https://maps.google.com/maps?q=5%20Av.%20Pierre%20Semard,%2011100%20Narbonne&t=&z=16&ie=UTF8&iwloc=&output=embed"
+            width="100%"
+            height="100%"
+            style="border: 0; position: absolute; top: 0; left: 0"
+            allowfullscreen=""
+            loading="lazy"
+            title="Grill Lounge Narbonne Location"
+          ></iframe>
+        </div>
+      </div>
+    </div>
 
-            var form = document.getElementById("public-booking-form");
-            if (!form) return;
+    <!-- Booking Section -->
+    <div
+      id="booking-section"
+      style="
+        background: #fff;
+        border-radius: 16px;
+        padding: 35px;
+        box-shadow: var(--card-shadow);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        margin-bottom: 60px;
+      "
+    >
+      <div style="text-align: center; margin-bottom: 30px">
+        <h2
+          style="
+            font-size: 2.2em;
+            color: var(--accent-green);
+            margin-bottom: 10px;
+          "
+        >
+          {{ t.booking_form[page.lang].title }}
+        </h2>
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 1.1em;
+            max-width: 550px;
+            margin: 0 auto;
+          "
+        >
+          {{ t.booking_form[page.lang].subtitle }}
+        </p>
+      </div>
 
-            var alertEl = document.getElementById("booking-alert");
-            var submitBtn = document.getElementById("booking-submit-btn");
+      <form
+        id="public-booking-form"
+        novalidate
+        style="
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          max-width: 700px;
+          margin: 0 auto;
+        "
+      >
+        <div
+          id="booking-alert"
+          style="
+            display: none;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95em;
+          "
+        ></div>
 
-            // Set default date to today
-            var dateInput = document.getElementById("booking-date");
-            if (dateInput && !dateInput.value) {
-                var today = new Date().toISOString().split("T")[0];
-                dateInput.value = today;
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+          "
+        >
+          <!-- Guest Name -->
+          <div>
+            <label
+              for="booking-guest-name"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].full_name_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <input
+              type="text"
+              id="booking-guest-name"
+              name="guestName"
+              required
+              placeholder="{{ t.booking_form[page.lang].full_name_placeholder }}"
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <!-- Phone -->
+          <div>
+            <label
+              for="booking-phone"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].phone_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <input
+              type="tel"
+              id="booking-phone"
+              name="phone"
+              required
+              placeholder="{{ t.booking_form[page.lang].phone_placeholder }}"
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+          "
+        >
+          <!-- Email -->
+          <div>
+            <label
+              for="booking-email"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].email_label }}
+            </label>
+            <input
+              type="email"
+              id="booking-email"
+              name="email"
+              placeholder="{{ t.booking_form[page.lang].email_placeholder }}"
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <!-- Service ID -->
+          <div>
+            <label
+              for="booking-service"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].service_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <select
+              id="booking-service"
+              name="serviceId"
+              required
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                background: #fff;
+                box-sizing: border-box;
+              "
+            >
+              <option value="dinner" selected>
+                {{ t.booking_form[page.lang].service_dinner }}
+              </option>
+              <option value="lunch">
+                {{ t.booking_form[page.lang].service_lunch }}
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+          "
+        >
+          <!-- Date -->
+          <div>
+            <label
+              for="booking-date"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].date_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <input
+              type="date"
+              id="booking-date"
+              name="bookingDate"
+              required
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <!-- Time -->
+          <div>
+            <label
+              for="booking-time"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].time_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <input
+              type="time"
+              id="booking-time"
+              name="bookingTime"
+              value="19:30"
+              required
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <!-- Adults -->
+          <div>
+            <label
+              for="booking-adults"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].adults_label }}
+              <span style="color: var(--accent-red)">*</span>
+            </label>
+            <input
+              type="number"
+              id="booking-adults"
+              name="adultsCount"
+              min="1"
+              value="2"
+              required
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+
+          <!-- Children -->
+          <div>
+            <label
+              for="booking-children"
+              style="
+                display: block;
+                font-weight: bold;
+                margin-bottom: 8px;
+                color: var(--text-main);
+              "
+            >
+              {{ t.booking_form[page.lang].children_label }}
+            </label>
+            <input
+              type="number"
+              id="booking-children"
+              name="childrenCount"
+              min="0"
+              value="0"
+              style="
+                width: 100%;
+                padding: 12px 15px;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                font-size: 1em;
+                box-sizing: border-box;
+              "
+            />
+          </div>
+        </div>
+
+        <!-- Notes -->
+        <div>
+          <label
+            for="booking-notes"
+            style="
+              display: block;
+              font-weight: bold;
+              margin-bottom: 8px;
+              color: var(--text-main);
+            "
+          >
+            {{ t.booking_form[page.lang].notes_label }}
+          </label>
+          <textarea
+            id="booking-notes"
+            name="notes"
+            rows="3"
+            placeholder="{{ t.booking_form[page.lang].notes_placeholder }}"
+            style="
+              width: 100%;
+              padding: 12px 15px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              font-size: 1em;
+              box-sizing: border-box;
+              resize: vertical;
+            "
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div style="text-align: center; margin-top: 10px">
+          <button
+            type="submit"
+            id="booking-submit-btn"
+            class="cta-button"
+            style="
+              padding: 14px 40px;
+              font-size: 1.1em;
+              cursor: pointer;
+              border: none;
+              border-radius: 8px;
+            "
+          >
+            {{ t.booking_form[page.lang].submit_btn }}
+          </button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    (function() {
+        var API_URL = "https://dashboard.dishtributer.com/api/public/bookings";
+        var API_KEY = "dt_QVQvdN7Gf9nHrUSitreJgqkz4s4BF34i";
+
+        var form = document.getElementById("public-booking-form");
+        if (!form) return;
+
+        var alertEl = document.getElementById("booking-alert");
+        var submitBtn = document.getElementById("booking-submit-btn");
+
+        // Set default date to today
+        var dateInput = document.getElementById("booking-date");
+        if (dateInput && !dateInput.value) {
+            var today = new Date().toISOString().split("T")[0];
+            dateInput.value = today;
+        }
+
+        function showAlert(msg, isError) {
+            alertEl.style.display = "block";
+            alertEl.style.backgroundColor = isError ? "#f8d7da" : "#d4edda";
+            alertEl.style.color = isError ? "#721c24" : "#155724";
+            alertEl.style.border = "1px solid " + (isError ? "#f5c6cb" : "#c3e6cb");
+            alertEl.textContent = msg;
+        }
+
+        function hideAlert() {
+            alertEl.style.display = "none";
+        }
+
+        form.addEventListener("submit", function(e) {
+            e.preventDefault();
+            hideAlert();
+
+            var guestName = (document.getElementById("booking-guest-name").value || "").trim();
+            var phone = (document.getElementById("booking-phone").value || "").trim();
+            var email = (document.getElementById("booking-email").value || "").trim();
+            var bookingDate = document.getElementById("booking-date").value;
+            var bookingTime = document.getElementById("booking-time").value;
+            var serviceId = document.getElementById("booking-service").value;
+            var adultsCount = parseInt(document.getElementById("booking-adults").value, 10) || 1;
+            var childrenCount = parseInt(document.getElementById("booking-children").value, 10) || 0;
+            var notes = (document.getElementById("booking-notes").value || "").trim();
+
+            if (!guestName) {
+                showAlert({{ t.booking_form[page.lang].error_name_required | jsonify }}, true);
+                return;
             }
 
-            function showAlert(msg, isError) {
-                alertEl.style.display = "block";
-                alertEl.style.backgroundColor = isError ? "#f8d7da" : "#d4edda";
-                alertEl.style.color = isError ? "#721c24" : "#155724";
-                alertEl.style.border = "1px solid " + (isError ? "#f5c6cb" : "#c3e6cb");
-                alertEl.textContent = msg;
-            }
+            submitBtn.disabled = true;
+            submitBtn.textContent = {{ t.booking_form[page.lang].submitting_btn | jsonify }};
 
-            function hideAlert() {
-                alertEl.style.display = "none";
-            }
+            var payload = {
+                guestName: guestName,
+                bookingDate: bookingDate,
+                bookingTime: bookingTime,
+                serviceId: serviceId,
+                adultsCount: adultsCount,
+                childrenCount: childrenCount,
+                phone: phone,
+                email: email || undefined,
+                notes: notes || undefined
+            };
 
-            form.addEventListener("submit", function(e) {
-                e.preventDefault();
-                hideAlert();
-
-                var guestName = (document.getElementById("booking-guest-name").value || "").trim();
-                var phone = (document.getElementById("booking-phone").value || "").trim();
-                var email = (document.getElementById("booking-email").value || "").trim();
-                var bookingDate = document.getElementById("booking-date").value;
-                var bookingTime = document.getElementById("booking-time").value;
-                var serviceId = document.getElementById("booking-service").value;
-                var adultsCount = parseInt(document.getElementById("booking-adults").value, 10) || 1;
-                var childrenCount = parseInt(document.getElementById("booking-children").value, 10) || 0;
-                var notes = (document.getElementById("booking-notes").value || "").trim();
-
-                if (!guestName) {
-                    showAlert({{ t.booking_form[page.lang].error_name_required | jsonify }}, true);
-                    return;
+            fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "x-api-key": API_KEY
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(function(res) {
+                if (!res.ok) {
+                    return res.json().then(function(data) {
+                        throw new Error((data && data.error) || "Booking request failed");
+                    });
                 }
-
-                submitBtn.disabled = true;
-                submitBtn.textContent = {{ t.booking_form[page.lang].submitting_btn | jsonify }};
-
-                var payload = {
-                    guestName: guestName,
-                    bookingDate: bookingDate,
-                    bookingTime: bookingTime,
-                    serviceId: serviceId,
-                    adultsCount: adultsCount,
-                    childrenCount: childrenCount,
-                    phone: phone,
-                    email: email || undefined,
-                    notes: notes || undefined
-                };
-
-                fetch(API_URL, {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json",
-                        "x-api-key": API_KEY
-                    },
-                    body: JSON.stringify(payload)
-                })
-                .then(function(res) {
-                    if (!res.ok) {
-                        return res.json().then(function(data) {
-                            throw new Error((data && data.error) || "Booking request failed");
-                        });
-                    }
-                    return res.json();
-                })
-                .then(function(data) {
-                    showAlert({{ t.booking_form[page.lang].success_msg | jsonify }}, false);
-                    form.reset();
-                    if (dateInput) {
-                        dateInput.value = new Date().toISOString().split("T")[0];
-                    }
-                })
-                .catch(function(err) {
-                    showAlert(err.message || {{ t.booking_form[page.lang].error_generic | jsonify }}, true);
-                })
-                .finally(function() {
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = {{ t.booking_form[page.lang].submit_btn | jsonify }};
-                });
+                return res.json();
+            })
+            .then(function(data) {
+                showAlert({{ t.booking_form[page.lang].success_msg | jsonify }}, false);
+                form.reset();
+                if (dateInput) {
+                    dateInput.value = new Date().toISOString().split("T")[0];
+                }
+            })
+            .catch(function(err) {
+                showAlert(err.message || {{ t.booking_form[page.lang].error_generic | jsonify }}, true);
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.textContent = {{ t.booking_form[page.lang].submit_btn | jsonify }};
             });
-        })();
-    </script>
+        });
+    })();
+  </script>
 
-    {% include footer.html %}
+  {% include footer.html %}
 </div>
-
