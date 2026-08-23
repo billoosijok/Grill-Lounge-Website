@@ -732,7 +732,7 @@
                 </div>
 
                 <!-- Service ID -->
-                <div>
+                <div id="booking-service-field">
                   <label
                     for="booking-service"
                     style="
@@ -744,10 +744,12 @@
                   >
                     Service <span style="color: var(--accent-red)">*</span>
                   </label>
+                  <!-- Options come from the booking API: it identifies services by their own IDs, not by name. -->
                   <select
                     id="booking-service"
                     name="serviceId"
                     required
+                    disabled
                     style="
                       width: 100%;
                       padding: 12px 15px;
@@ -758,8 +760,7 @@
                       box-sizing: border-box;
                     "
                   >
-                    <option value="dinner" selected>Dîner</option>
-                    <option value="lunch">Déjeuner</option>
+                    <option value="">Chargement des services...</option>
                   </select>
                 </div>
               </div>
@@ -948,6 +949,8 @@
           (function () {
             var API_URL =
               "https://dashboard.dishtributer.com/api/public/bookings";
+            var CONFIG_URL =
+              "https://dashboard.dishtributer.com/api/public/config";
             var API_KEY = "dt_QVQvdN7Gf9nHrUSitreJgqkz4s4BF34i";
 
             var form = document.getElementById("public-booking-form");
@@ -976,6 +979,117 @@
               alertEl.style.display = "none";
             }
 
+            // --- Booking services -------------------------------------------------
+            // The API rejects a booking unless serviceId is one of the restaurant's
+            // own service IDs, so the dropdown is built from the live config.
+            var serviceField = document.getElementById("booking-service-field");
+            var serviceSelect = document.getElementById("booking-service");
+
+            var LUNCH_PATTERN = /d[\u00e9e]jeuner|lunch|almuerzo|midi/i;
+            var DINNER_PATTERN = /d[\u00eei]ner|dinner|cena|soir/i;
+
+            var SERVICE_LABELS = [
+              { match: LUNCH_PATTERN, label: "Déjeuner" },
+              { match: DINNER_PATTERN, label: "Dîner" },
+            ];
+
+            function serviceName(service) {
+              return (
+                service.name ||
+                service.label ||
+                service.title ||
+                service.displayName ||
+                ""
+              );
+            }
+
+            // Prefer our own translation when we recognise the service, so visitors
+            // browsing in English or Spanish don't get French-only names.
+            function serviceLabel(service) {
+              var name = serviceName(service);
+              for (var i = 0; i < SERVICE_LABELS.length; i++) {
+                if (SERVICE_LABELS[i].match.test(name))
+                  return SERVICE_LABELS[i].label;
+              }
+              return name;
+            }
+
+            function looksLikeService(item) {
+              return (
+                !!item &&
+                typeof item === "object" &&
+                !!item.id &&
+                !!serviceName(item)
+              );
+            }
+
+            // Walk the config for the first "...service..." key holding a list of
+            // services, so a change in where the API nests them doesn't break us.
+            function findServices(node, depth) {
+              if (!node || typeof node !== "object" || depth > 6) return null;
+
+              var keys = Object.keys(node);
+              for (var i = 0; i < keys.length; i++) {
+                var value = node[keys[i]];
+                if (
+                  /service/i.test(keys[i]) &&
+                  Array.isArray(value) &&
+                  value.length &&
+                  value.every(looksLikeService)
+                ) {
+                  return value;
+                }
+              }
+              for (var j = 0; j < keys.length; j++) {
+                var found = findServices(node[keys[j]], depth + 1);
+                if (found) return found;
+              }
+              return null;
+            }
+
+            function fillServices(services) {
+              serviceSelect.innerHTML = "";
+              services.forEach(function (service) {
+                var option = document.createElement("option");
+                option.value = service.id;
+                option.textContent = serviceLabel(service);
+                serviceSelect.appendChild(option);
+              });
+              // Dinner has always been the pre-selected service on this form.
+              var defaultIndex = services.findIndex(function (service) {
+                return DINNER_PATTERN.test(serviceName(service));
+              });
+              serviceSelect.selectedIndex =
+                defaultIndex === -1 ? 0 : defaultIndex;
+              serviceSelect.disabled = false;
+            }
+
+            // Nothing to choose from: hide the field and let the backend derive the
+            // service from the booking time rather than send an ID it can't resolve.
+            function hideServiceField() {
+              serviceSelect.disabled = true;
+              serviceSelect.required = false;
+              if (serviceField) serviceField.style.display = "none";
+            }
+
+            submitBtn.disabled = true;
+            fetch(CONFIG_URL, { headers: { "x-api-key": API_KEY } })
+              .then(function (res) {
+                return res.ok ? res.json() : null;
+              })
+              .then(function (data) {
+                var services = findServices(data, 0);
+                if (services) fillServices(services);
+                else hideServiceField();
+              })
+              .catch(function (err) {
+                console.error("Failed to load booking services:", err);
+                hideServiceField();
+              })
+              .finally(function () {
+                submitBtn.disabled = false;
+              });
+
             form.addEventListener("submit", function (e) {
               e.preventDefault();
               hideAlert();
@@ -991,7 +1105,7 @@
               ).trim();
               var bookingDate = document.getElementById("booking-date").value;
               var bookingTime = document.getElementById("booking-time").value;
-              var serviceId = document.getElementById("booking-service").value;
+              var serviceId = serviceSelect.disabled ? "" : serviceSelect.value;
               var adultsCount =
                 parseInt(document.getElementById("booking-adults").value, 10) ||
                 1;
@@ -1016,7 +1130,7 @@
                 guestName: guestName,
                 bookingDate: bookingDate,
                 bookingTime: bookingTime,
-                serviceId: serviceId,
+                serviceId: serviceId || undefined,
                 adultsCount: adultsCount,
                 childrenCount: childrenCount,
                 phone: phone,
