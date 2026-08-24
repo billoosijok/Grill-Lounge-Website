@@ -4,6 +4,93 @@ layout: default
 
 {% assign t = site.data.translations %}
 
+<style>
+  .booking-check-circle {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px auto;
+    border-radius: 50%;
+    border: 2px solid var(--accent-green);
+    background-color: rgba(25, 67, 70, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: bookingPop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  }
+
+  .booking-check-circle svg {
+    width: 40px;
+    height: 40px;
+    color: var(--accent-green);
+  }
+
+  @keyframes bookingPop {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+
+  .booking-recap {
+    margin: 0 0 25px 0;
+    padding: 5px 20px;
+    text-align: left;
+    background-color: var(--primary-bg);
+    border-radius: 8px;
+  }
+
+  .booking-recap-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  }
+
+  .booking-recap-row:last-child {
+    border-bottom: none;
+  }
+
+  .booking-recap-row dt {
+    color: var(--text-muted);
+    font-size: 0.95em;
+  }
+
+  .booking-recap-row dd {
+    margin: 0;
+    color: var(--text-main);
+    font-weight: bold;
+    text-align: right;
+  }
+
+  .booking-again-btn {
+    background: none;
+    border: 1px solid var(--accent-green);
+    color: var(--accent-green);
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color var(--transition-speed),
+      color var(--transition-speed);
+  }
+
+  .booking-again-btn:hover {
+    background-color: var(--accent-green);
+    color: var(--white);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .booking-check-circle {
+      animation: none;
+    }
+  }
+</style>
+
 <div class="menu-page-container animate__animated animate__fadeIn">
   {% include header.html %}
 
@@ -340,6 +427,91 @@ layout: default
         >
           {{ t.booking_form[page.lang].subtitle }}
         </p>
+      </div>
+
+      <!-- Shown in place of the form once a booking is accepted. -->
+      <div
+        id="booking-success"
+        style="
+          display: none;
+          text-align: center;
+          max-width: 700px;
+          margin: 0 auto;
+        "
+      >
+        <div class="booking-check-circle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M5 13l4 4L19 7"
+            />
+          </svg>
+        </div>
+
+        <h3
+          style="
+            font-size: 1.8em;
+            color: var(--accent-green);
+            margin: 0 0 10px 0;
+          "
+        >
+          {{ t.booking_form[page.lang].success_title }}
+        </h3>
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 1.05em;
+            line-height: 1.5;
+            margin: 0 0 25px 0;
+          "
+        >
+          {{ t.booking_form[page.lang].success_msg }}
+        </p>
+
+        <dl id="booking-recap" class="booking-recap">
+          <div class="booking-recap-row">
+            <dt>{{ t.booking_form[page.lang].full_name_label }}</dt>
+            <dd id="recap-name"></dd>
+          </div>
+          <div class="booking-recap-row">
+            <dt>{{ t.booking_form[page.lang].date_label }}</dt>
+            <dd id="recap-date"></dd>
+          </div>
+          <div class="booking-recap-row">
+            <dt>{{ t.booking_form[page.lang].time_label }}</dt>
+            <dd id="recap-time"></dd>
+          </div>
+          <div class="booking-recap-row" id="recap-service-row">
+            <dt>{{ t.booking_form[page.lang].service_label }}</dt>
+            <dd id="recap-service"></dd>
+          </div>
+          <div class="booking-recap-row">
+            <dt>{{ t.booking_form[page.lang].success_guests_label }}</dt>
+            <dd id="recap-guests"></dd>
+          </div>
+        </dl>
+
+        <p
+          style="
+            color: var(--text-muted);
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 0 0 25px 0;
+          "
+        >
+          {{ t.booking_form[page.lang].success_note }}
+        </p>
+
+        <button type="button" id="booking-again-btn" class="booking-again-btn">
+          {{ t.booking_form[page.lang].book_again_btn }}
+        </button>
       </div>
 
       <form
@@ -700,11 +872,21 @@ layout: default
         var alertEl = document.getElementById("booking-alert");
         var submitBtn = document.getElementById("booking-submit-btn");
 
+        // Today in the visitor's own timezone. toISOString() would be UTC, which
+        // hands a Paris visitor yesterday's date between midnight and 02:00.
+        function todayValue() {
+            var now = new Date();
+            return [
+                now.getFullYear(),
+                ("0" + (now.getMonth() + 1)).slice(-2),
+                ("0" + now.getDate()).slice(-2)
+            ].join("-");
+        }
+
         // Set default date to today
         var dateInput = document.getElementById("booking-date");
         if (dateInput && !dateInput.value) {
-            var today = new Date().toISOString().split("T")[0];
-            dateInput.value = today;
+            dateInput.value = todayValue();
         }
 
         function showAlert(msg, isError) {
@@ -861,11 +1043,13 @@ layout: default
                 return res.json();
             })
             .then(function(data) {
-                showAlert({{ t.booking_form[page.lang].success_msg | jsonify }}, false);
-                form.reset();
-                if (dateInput) {
-                    dateInput.value = new Date().toISOString().split("T")[0];
-                }
+                showConfirmation({
+                    guestName: guestName,
+                    bookingDate: bookingDate,
+                    bookingTime: bookingTime,
+                    serviceName: serviceSelect.disabled ? "" : serviceSelect.options[serviceSelect.selectedIndex].textContent,
+                    guests: adultsCount + childrenCount
+                });
             })
             .catch(function(err) {
                 showAlert(err.message || {{ t.booking_form[page.lang].error_generic | jsonify }}, true);
@@ -875,6 +1059,66 @@ layout: default
                 submitBtn.textContent = {{ t.booking_form[page.lang].submit_btn | jsonify }};
             });
         });
+
+        // --- Confirmation -----------------------------------------------------
+        var successPanel = document.getElementById("booking-success");
+        var againBtn = document.getElementById("booking-again-btn");
+
+        var GUESTS_ONE = {{ t.booking_form[page.lang].success_guests_one | jsonify }};
+        var GUESTS_MANY = {{ t.booking_form[page.lang].success_guests_many | jsonify }};
+
+        // Show the date the way a French/English/Spanish reader expects rather
+        // than the ISO string the input holds.
+        function formatDate(value) {
+            var parts = (value || "").split("-");
+            if (parts.length !== 3) return value || "";
+            var date = new Date(+parts[0], +parts[1] - 1, +parts[2]);
+            if (isNaN(date.getTime())) return value;
+            try {
+                return date.toLocaleDateString({{ page.lang | jsonify }}, {
+                    weekday: "long", day: "numeric", month: "long", year: "numeric"
+                });
+            } catch (err) {
+                return value;
+            }
+        }
+
+        function setRecap(id, text) {
+            var el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
+
+        function showConfirmation(booking) {
+            setRecap("recap-name", booking.guestName);
+            setRecap("recap-date", formatDate(booking.bookingDate));
+            setRecap("recap-time", booking.bookingTime);
+            setRecap("recap-guests", booking.guests === 1
+                ? GUESTS_ONE
+                : GUESTS_MANY.replace("{count}", booking.guests));
+
+            var serviceRow = document.getElementById("recap-service-row");
+            if (booking.serviceName) {
+                setRecap("recap-service", booking.serviceName);
+                if (serviceRow) serviceRow.style.display = "";
+            } else if (serviceRow) {
+                serviceRow.style.display = "none";
+            }
+
+            hideAlert();
+            form.style.display = "none";
+            successPanel.style.display = "block";
+            successPanel.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+
+        if (againBtn) {
+            againBtn.addEventListener("click", function() {
+                form.reset();
+                if (dateInput) dateInput.value = todayValue();
+                successPanel.style.display = "none";
+                form.style.display = "flex";
+                form.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+        }
     })();
   </script>
 
