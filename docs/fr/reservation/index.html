@@ -267,11 +267,7 @@
           <div style="text-align: center; margin-bottom: 40px">
             <h1
               class="menu-main-title"
-              style="
-                font-size: 3em;
-                color: var(--accent-green);
-                margin-bottom: 15px;
-              "
+              style="color: var(--accent-green); margin-bottom: 15px"
             >
               Réserver une table
             </h1>
@@ -332,7 +328,10 @@
 
             .booking-slot-grid {
               display: grid;
-              grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+              grid-template-columns: repeat(
+                auto-fill,
+                minmax(min(84px, 100%), 1fr)
+              );
               gap: 10px;
             }
 
@@ -549,7 +548,10 @@
               <div
                 style="
                   display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                  grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(min(280px, 100%), 1fr)
+                  );
                   gap: 20px;
                 "
               >
@@ -617,7 +619,10 @@
               <div
                 style="
                   display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                  grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(min(280px, 100%), 1fr)
+                  );
                   gap: 20px;
                 "
               >
@@ -701,7 +706,10 @@
               <div
                 style="
                   display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  grid-template-columns: repeat(
+                    auto-fit,
+                    minmax(min(200px, 100%), 1fr)
+                  );
                   gap: 20px;
                 "
               >

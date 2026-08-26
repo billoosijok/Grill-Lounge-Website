@@ -244,7 +244,10 @@ main > .links a.LinkItem {
 }
 
 .menu-main-title {
-  font-size: 3em;
+  /* Uppercase at 3em with wide tracking, a word like "SUGGESTIONS" is wider
+     than a phone screen and cannot wrap, so the size scales down to fit.
+     Unchanged at 3em from roughly 535px up. */
+  font-size: clamp(1.75em, 9vw, 3em);
   font-weight: 300;
   letter-spacing: 5px;
   margin: 10px 0;
@@ -261,6 +264,9 @@ main > .links a.LinkItem {
   width: 100%;
   max-width: 800px;
   margin: 0 auto 60px auto;
+  /* Without border-box the horizontal padding is added on top of the 100%
+     width, pushing the page wider than the viewport on phones. */
+  box-sizing: border-box;
   padding: 0 10px;
   display: flex;
   flex-direction: column;
@@ -494,7 +500,9 @@ main > .links a.LinkItem {
 .legal-title {
   color: var(--accent-green);
   font-family: "Outfit", sans-serif;
-  font-size: 2.5em;
+  /* Unchanged at 2.5em from roughly 570px up, then scales so a long word like
+     "CONFIDENTIALITÉ" still fits. */
+  font-size: clamp(1.3em, 7vw, 2.5em);
   font-weight: 300;
   letter-spacing: 2px;
   margin: 0 0 30px 0;
@@ -550,9 +558,6 @@ main > .links a.LinkItem {
 @media (max-width: 600px) {
   .legal-article {
     padding: 25px 20px;
-  }
-  .legal-title {
-    font-size: 2em;
   }
 }
 :root {
