@@ -1,0 +1,15 @@
+# Bookable time slots, one block per service.
+#
+# Derived from the posted opening hours (12h00 - 15h00, 18h00 - 23h00);
+# each block stops short of closing so the last table still gets served.
+# "service" is matched against the service names the booking API returns,
+# which is what supplies the serviceId sent with the booking.
+slots:
+  - service: lunch
+    start: "12:00"
+    end: "14:30"
+    step_minutes: 30
+  - service: dinner
+    start: "18:00"
+    end: "22:30"
+    step_minutes: 30

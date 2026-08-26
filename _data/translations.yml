@@ -614,6 +614,7 @@ booking_form:
     book_again_btn: "Faire une autre réservation"
     success_msg: "Votre réservation a été confirmée avec succès !"
     error_name_required: "Le nom complet est obligatoire."
+    error_time_required: "Veuillez choisir un horaire."
     error_generic: "Une erreur est survenue lors de la réservation. Veuillez réessayer."
   en:
     title: "Book a Table"
@@ -644,6 +645,7 @@ booking_form:
     book_again_btn: "Make another booking"
     success_msg: "Your booking has been successfully confirmed!"
     error_name_required: "Full name is required."
+    error_time_required: "Please choose a time."
     error_generic: "An error occurred while placing your reservation. Please try again."
   es:
     title: "Reservar una mesa"
@@ -674,5 +676,6 @@ booking_form:
     book_again_btn: "Hacer otra reserva"
     success_msg: "¡Su reserva ha sido confirmada con éxito!"
     error_name_required: "El nombre completo es obligatorio."
+    error_time_required: "Por favor, elija una hora."
     error_generic: "Ha ocurrido un error al procesar la reserva. Inténtelo de nuevo."
 

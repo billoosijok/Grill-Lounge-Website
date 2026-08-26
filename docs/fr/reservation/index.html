@@ -317,6 +317,52 @@
               }
             }
 
+            .booking-slot-group + .booking-slot-group {
+              margin-top: 22px;
+            }
+
+            .booking-slot-group-title {
+              margin: 0 0 10px 0;
+              font-size: 0.8em;
+              font-weight: bold;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: var(--text-muted);
+            }
+
+            .booking-slot-grid {
+              display: grid;
+              grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+              gap: 10px;
+            }
+
+            .booking-slot {
+              padding: 12px 6px;
+              border: 1px solid #ccc;
+              border-radius: 8px;
+              background-color: var(--white);
+              color: var(--text-main);
+              font-family: inherit;
+              font-size: 1em;
+              font-variant-numeric: tabular-nums;
+              cursor: pointer;
+              transition:
+                border-color var(--transition-speed),
+                background-color var(--transition-speed),
+                color var(--transition-speed);
+            }
+
+            .booking-slot:hover {
+              border-color: var(--accent-green);
+            }
+
+            .booking-slot.selected {
+              background-color: var(--accent-green);
+              border-color: var(--accent-green);
+              color: var(--white);
+              font-weight: bold;
+            }
+
             .booking-recap {
               margin: 0 0 25px 0;
               padding: 5px 20px;
@@ -604,47 +650,6 @@
                   />
                 </div>
 
-                <!-- Service ID -->
-                <div id="booking-service-field">
-                  <label
-                    for="booking-service"
-                    style="
-                      display: block;
-                      font-weight: bold;
-                      margin-bottom: 8px;
-                      color: var(--text-main);
-                    "
-                  >
-                    Service <span style="color: var(--accent-red)">*</span>
-                  </label>
-                  <!-- Options come from the booking API: it identifies services by their own IDs, not by name. -->
-                  <select
-                    id="booking-service"
-                    name="serviceId"
-                    required
-                    disabled
-                    style="
-                      width: 100%;
-                      padding: 12px 15px;
-                      border: 1px solid #ccc;
-                      border-radius: 8px;
-                      font-size: 1em;
-                      background: #fff;
-                      box-sizing: border-box;
-                    "
-                  >
-                    <option value="">Chargement des services...</option>
-                  </select>
-                </div>
-              </div>
-
-              <div
-                style="
-                  display: grid;
-                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-                  gap: 20px;
-                "
-              >
                 <!-- Date -->
                 <div>
                   <label
@@ -674,37 +679,32 @@
                     "
                   />
                 </div>
+              </div>
 
-                <!-- Time -->
-                <div>
-                  <label
-                    for="booking-time"
-                    style="
-                      display: block;
-                      font-weight: bold;
-                      margin-bottom: 8px;
-                      color: var(--text-main);
-                    "
-                  >
-                    Heure <span style="color: var(--accent-red)">*</span>
-                  </label>
-                  <input
-                    type="time"
-                    id="booking-time"
-                    name="bookingTime"
-                    value="19:30"
-                    required
-                    style="
-                      width: 100%;
-                      padding: 12px 15px;
-                      border: 1px solid #ccc;
-                      border-radius: 8px;
-                      font-size: 1em;
-                      box-sizing: border-box;
-                    "
-                  />
-                </div>
+              <!-- Time slots, grouped by service -->
+              <div>
+                <span
+                  style="
+                    display: block;
+                    font-weight: bold;
+                    margin-bottom: 12px;
+                    color: var(--text-main);
+                  "
+                >
+                  Heure <span style="color: var(--accent-red)">*</span>
+                </span>
+                <!-- Groups and buttons are rendered from _data/booking.yml, named
+               with the services the API reports. -->
+                <div id="booking-slots"></div>
+              </div>
 
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                  gap: 20px;
+                "
+              >
                 <!-- Adults -->
                 <div>
                   <label
@@ -863,18 +863,39 @@
 
               // --- Booking services -------------------------------------------------
               // The API rejects a booking unless serviceId is one of the restaurant's
-              // own service IDs, so the dropdown is built from the live config.
-              var serviceField = document.getElementById(
-                "booking-service-field",
-              );
-              var serviceSelect = document.getElementById("booking-service");
+              // own service IDs, so the slots are labelled from the live config.
+              var slotsEl = document.getElementById("booking-slots");
+              var SLOT_GROUPS = [
+                {
+                  service: "lunch",
+                  start: "12:00",
+                  end: "14:30",
+                  step_minutes: 30,
+                },
+                {
+                  service: "dinner",
+                  start: "18:00",
+                  end: "22:30",
+                  step_minutes: 30,
+                },
+              ];
+
+              // Set by clicking a slot; both are sent with the booking.
+              var selectedTime = "";
+              var selectedServiceId = "";
+              var selectedServiceLabel = "";
 
               var LUNCH_PATTERN = /d[\u00e9e]jeuner|lunch|almuerzo|midi/i;
               var DINNER_PATTERN = /d[\u00eei]ner|dinner|cena|soir/i;
 
+              var GROUP_LABELS = {
+                lunch: "Déjeuner",
+                dinner: "Dîner",
+              };
+
               var SERVICE_LABELS = [
-                { match: LUNCH_PATTERN, label: "Déjeuner" },
-                { match: DINNER_PATTERN, label: "Dîner" },
+                { match: LUNCH_PATTERN, label: GROUP_LABELS.lunch },
+                { match: DINNER_PATTERN, label: GROUP_LABELS.dinner },
               ];
 
               function serviceName(service) {
@@ -931,29 +952,100 @@
                 return null;
               }
 
-              function fillServices(services) {
-                serviceSelect.innerHTML = "";
-                services.forEach(function (service) {
-                  var option = document.createElement("option");
-                  option.value = service.id;
-                  option.textContent = serviceLabel(service);
-                  serviceSelect.appendChild(option);
-                });
-                // Dinner has always been the pre-selected service on this form.
-                var defaultIndex = services.findIndex(function (service) {
-                  return DINNER_PATTERN.test(serviceName(service));
-                });
-                serviceSelect.selectedIndex =
-                  defaultIndex === -1 ? 0 : defaultIndex;
-                serviceSelect.disabled = false;
+              var GROUP_PATTERNS = {
+                lunch: LUNCH_PATTERN,
+                dinner: DINNER_PATTERN,
+              };
+
+              function toMinutes(value) {
+                var parts = String(value).split(":");
+                return +parts[0] * 60 + (+parts[1] || 0);
               }
 
-              // Nothing to choose from: hide the field and let the backend derive the
-              // service from the booking time rather than send an ID it can't resolve.
-              function hideServiceField() {
-                serviceSelect.disabled = true;
-                serviceSelect.required = false;
-                if (serviceField) serviceField.style.display = "none";
+              function toClock(minutes) {
+                return (
+                  ("0" + Math.floor(minutes / 60)).slice(-2) +
+                  ":" +
+                  ("0" + (minutes % 60)).slice(-2)
+                );
+              }
+
+              function slotTimes(group) {
+                var times = [];
+                var step = group.step_minutes > 0 ? group.step_minutes : 30;
+                for (
+                  var m = toMinutes(group.start);
+                  m <= toMinutes(group.end);
+                  m += step
+                ) {
+                  times.push(toClock(m));
+                }
+                return times;
+              }
+
+              function selectSlot(button) {
+                var chosen = slotsEl.querySelector(".booking-slot.selected");
+                if (chosen) chosen.classList.remove("selected");
+                button.classList.add("selected");
+                selectedTime = button.getAttribute("data-time");
+                selectedServiceId =
+                  button.getAttribute("data-service-id") || "";
+                selectedServiceLabel =
+                  button.getAttribute("data-service-label") || "";
+                hideAlert();
+              }
+
+              // One block of times per configured service. `services` is what the API
+              // reported, or null when it could not be reached: the times still work,
+              // the booking just goes out without a serviceId for the backend to
+              // derive from the time instead.
+              function renderSlots(services) {
+                slotsEl.innerHTML = "";
+                selectedTime = selectedServiceId = selectedServiceLabel = "";
+
+                SLOT_GROUPS.forEach(function (group) {
+                  var pattern = GROUP_PATTERNS[group.service];
+                  var service =
+                    !services || !pattern
+                      ? null
+                      : services.filter(function (candidate) {
+                          return pattern.test(serviceName(candidate));
+                        })[0];
+
+                  // A service the API knows about but we have no times for is left
+                  // out rather than shown as an empty block.
+                  if (services && pattern && !service) return;
+
+                  var wrapper = document.createElement("div");
+                  wrapper.className = "booking-slot-group";
+
+                  var label = service
+                    ? serviceLabel(service)
+                    : GROUP_LABELS[group.service] || group.service;
+                  var title = document.createElement("p");
+                  title.className = "booking-slot-group-title";
+                  title.textContent = label;
+                  wrapper.appendChild(title);
+
+                  var grid = document.createElement("div");
+                  grid.className = "booking-slot-grid";
+                  slotTimes(group).forEach(function (time) {
+                    var button = document.createElement("button");
+                    button.type = "button";
+                    button.className = "booking-slot";
+                    button.textContent = time;
+                    button.setAttribute("data-time", time);
+                    button.setAttribute("data-service-label", label);
+                    if (service)
+                      button.setAttribute("data-service-id", service.id);
+                    button.addEventListener("click", function () {
+                      selectSlot(button);
+                    });
+                    grid.appendChild(button);
+                  });
+                  wrapper.appendChild(grid);
+                  slotsEl.appendChild(wrapper);
+                });
               }
 
               submitBtn.disabled = true;
@@ -962,13 +1054,11 @@
                   return res.ok ? res.json() : null;
                 })
                 .then(function (data) {
-                  var services = findServices(data, 0);
-                  if (services) fillServices(services);
-                  else hideServiceField();
+                  renderSlots(findServices(data, 0));
                 })
                 .catch(function (err) {
                   console.error("Failed to load booking services:", err);
-                  hideServiceField();
+                  renderSlots(null);
                 })
                 .finally(function () {
                   submitBtn.disabled = false;
@@ -988,10 +1078,8 @@
                   document.getElementById("booking-email").value || ""
                 ).trim();
                 var bookingDate = document.getElementById("booking-date").value;
-                var bookingTime = document.getElementById("booking-time").value;
-                var serviceId = serviceSelect.disabled
-                  ? ""
-                  : serviceSelect.value;
+                var bookingTime = selectedTime;
+                var serviceId = selectedServiceId;
                 var adultsCount =
                   parseInt(
                     document.getElementById("booking-adults").value,
@@ -1008,6 +1096,15 @@
 
                 if (!guestName) {
                   showAlert("Le nom complet est obligatoire.", true);
+                  return;
+                }
+
+                if (!bookingTime) {
+                  showAlert("Veuillez choisir un horaire.", true);
+                  slotsEl.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                   return;
                 }
 
@@ -1049,10 +1146,7 @@
                       guestName: guestName,
                       bookingDate: bookingDate,
                       bookingTime: bookingTime,
-                      serviceName: serviceSelect.disabled
-                        ? ""
-                        : serviceSelect.options[serviceSelect.selectedIndex]
-                            .textContent,
+                      serviceName: selectedServiceLabel,
                       guests: adultsCount + childrenCount,
                     });
                   })
@@ -1100,6 +1194,12 @@
                 if (el) el.textContent = text;
               }
 
+              function clearSlotSelection() {
+                var chosen = slotsEl.querySelector(".booking-slot.selected");
+                if (chosen) chosen.classList.remove("selected");
+                selectedTime = selectedServiceId = selectedServiceLabel = "";
+              }
+
               function showConfirmation(booking) {
                 setRecap("recap-name", booking.guestName);
                 setRecap("recap-date", formatDate(booking.bookingDate));
@@ -1132,6 +1232,7 @@
                 againBtn.addEventListener("click", function () {
                   form.reset();
                   if (dateInput) dateInput.value = todayValue();
+                  clearSlotSelection();
                   successPanel.style.display = "none";
                   form.style.display = "flex";
                   form.scrollIntoView({ behavior: "smooth", block: "center" });
