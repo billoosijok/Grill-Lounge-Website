@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+{% assign t = site.data.translations %}
+
+<div class="menu-page-container animate__animated animate__fadeIn">
+  {% include header.html %}
+
+  <main
+    class="menu-content"
+    style="
+      margin-top: 40px;
+      max-width: 1000px;
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 0 15px;
+    "
+  >
+    <!-- Hero -->
+    <div style="text-align: center; margin-bottom: 40px">
+      <h1
+        class="menu-main-title"
+        style="font-size: 3em; color: var(--accent-green); margin-bottom: 15px"
+      >
+        {{ t.booking_form[page.lang].title }}
+      </h1>
+      <p
+        style="
+          font-size: 1.2em;
+          color: var(--text-muted);
+          max-width: 600px;
+          margin: 0 auto;
+          line-height: 1.6;
+        "
+      >
+        {{ t.booking_form[page.lang].subtitle }}
+      </p>
+    </div>
+
+    {% include booking-form.html %}
+
+    <!-- Booking by phone, for anyone who would rather not use the form -->
+    <div style="text-align: center; margin-bottom: 60px">
+      <p style="color: var(--text-muted); font-size: 1.05em; margin: 0">
+        {{ t.reservation_page[page.lang].phone_prompt }}
+        <a
+          href="tel:0468652742"
+          style="
+            color: var(--accent-green);
+            font-weight: bold;
+            text-decoration: none;
+            white-space: nowrap;
+          "
+          >04 68 65 27 42</a
+        >
+      </p>
+    </div>
+  </main>
+
+  {% include footer.html %}
+</div>

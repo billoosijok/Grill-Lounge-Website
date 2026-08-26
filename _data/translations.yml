@@ -576,6 +576,14 @@ contact_page:
     map_title: "Encuéntranos en Narbona"
     hours_val: "Lunes - Domingo: 12:00 - 15:00, 18:00 - 23:00"
 
+reservation_page:
+  fr:
+    phone_prompt: "Vous préférez réserver par téléphone ? Appelez-nous au"
+  en:
+    phone_prompt: "Prefer to book by phone? Call us on"
+  es:
+    phone_prompt: "¿Prefiere reservar por teléfono? Llámenos al"
+
 booking_form:
   fr:
     title: "Réserver une table"
