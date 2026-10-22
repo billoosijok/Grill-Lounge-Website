@@ -1,3 +1,28 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: 'fr' }}">
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://grilllounge.fr/{{ page.lang | default: 'fr' }}/">
+    <meta http-equiv="refresh" content="0; url=/{{ page.lang | default: 'fr' }}/">
+  </head>
+  <body>
+    <p>Redirecting to <a href="/{{ page.lang | default: 'fr' }}/">/{{ page.lang | default: 'fr' }}/</a>...</p>
+    <script>
+      window.location.replace("/{{ page.lang | default: 'fr' }}/");
+    </script>
+  </body>
+</html>
+{% comment %}
+=============================================================================
+TEMPORARILY HIDDEN: Menu du Moment (will return in a couple of weeks)
+To re-enable:
+1. Replace this file's contents with the original layout below.
+2. Uncomment the Menu du Moment nav link in _includes/header.html.
+3. In _data/translations.yml, restore the couscous card url/btnText if needed.
+4. In sitemap.xml, uncomment the menu-moment entries.
+=============================================================================
 ---
 layout: default
 ---
@@ -145,3 +170,4 @@ layout: default
 
     {% include footer.html %}
 </div>
+{% endcomment %}

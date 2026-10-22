@@ -59,7 +59,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Menu Moment -->
+  <!-- Menu Moment (temporarily hidden - uncomment when restored)
   <url>
     <loc>https://grilllounge.fr/fr/menu-moment/</loc>
     <xhtml:link rel="alternate" hreflang="fr" href="https://grilllounge.fr/fr/menu-moment/" />
@@ -87,6 +87,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
+  -->
 
   <!-- Contact -->
   <url>

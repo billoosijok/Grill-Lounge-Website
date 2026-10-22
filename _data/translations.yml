@@ -98,8 +98,9 @@ features:
         image: "/couscous.jpg"
         title: "Couscous Maison"
         desc: "Chaque week-end, retrouvez notre couscous maison préparé dans la tradition,"
-        url: "/menu-moment"
-        btnText: "Découvrir le Menu du Moment"
+        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Découvrir le Menu du Moment")
+        url: "/reservation"
+        btnText: "Réserver une table"
   en:
     title: "Our Specialties"
     items:
@@ -119,8 +120,9 @@ features:
         image: "/couscous.jpg"
         title: "Homemade Couscous"
         desc: "Every weekend, enjoy our traditional homemade couscous prepared in the pure tradition,"
-        url: "/menu-moment"
-        btnText: "Discover the Special Menu"
+        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Discover the Special Menu")
+        url: "/reservation"
+        btnText: "Book a table"
   es:
     title: "Nuestras Especialidades"
     items:
@@ -140,8 +142,9 @@ features:
         image: "/couscous.jpg"
         title: "Cuscús Casero"
         desc: "Cada fin de semana, disfrute de nuestro cuscús casero preparado según la tradición,"
-        url: "/menu-moment"
-        btnText: "Descubrir el Menú del Momento"
+        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Descubrir el Menú del Momento")
+        url: "/reservation"
+        btnText: "Reservar una mesa"
 
 about:
   fr:

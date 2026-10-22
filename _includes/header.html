@@ -13,10 +13,12 @@
         <a href="/{{ page.lang }}/menu/" class="header-link {% if page.url contains '/menu/' %}active-nav{% endif %}">
             {{ t.header[page.lang].menu }}
         </a>
+        {% comment %} Temporarily hidden - will return in a couple of weeks
         <a href="/{{ page.lang }}/menu-moment/" class="header-link menu-moment-highlight {% if page.url contains '/menu-moment/' %}active-nav{% endif %}">
             {{ t.header[page.lang].menu_moment }}
             <span class="pulse-dot"></span>
         </a>
+        {% endcomment %}
         <a href="/{{ page.lang }}/contact/" class="header-link {% if page.url contains '/contact/' %}active-nav{% endif %}">
             {{ t.header[page.lang].contact }}
         </a>
