@@ -38,7 +38,7 @@ hero:
     label2: "LE GOÛT DE L’ EXCELLENCE"
     label3: "à deux minutes de la Gare"
     desc: "Viandes premium grillées à la pierre de lave, burgers maison, spécialités orientales et couscous traditionnel."
-    reviews: "Plus de 800 avis Google"
+    reviews: "Plus de 1 000 avis Google"
     bullets:
       - "Viandes Premium"
       - "Cuisson à la pierre de lave"
@@ -53,7 +53,7 @@ hero:
     label2: "THE TASTE OF EXCELLENCE"
     label3: "two minutes from the Station"
     desc: "Premium meats grilled on lava stone, homemade burgers, oriental specialties, and traditional couscous."
-    reviews: "More than 800 Google reviews"
+    reviews: "More than 1,000 Google reviews"
     bullets:
       - "Premium Meats"
       - "Lava stone cooking"
@@ -68,7 +68,7 @@ hero:
     label2: "EL SABOR DE LA EXCELENCIA"
     label3: "a dos minutes de la Estación"
     desc: "Carnes premium cocinadas a la piedra de lava, hamburguesas caseras, especialidades orientales y cuscús tradicional."
-    reviews: "Más de 800 reseñas de Google"
+    reviews: "Más de 1 000 reseñas de Google"
     bullets:
       - "Carnes Premium"
       - "Cocción a la piedra de lava"
@@ -177,7 +177,7 @@ about:
 
 reviews:
   fr:
-    subtitle: "Plus de 800 clients nous ont déjà laissé un avis sur Google."
+    subtitle: "Plus de 1 000 clients nous ont déjà laissé un avis sur Google."
     title: "Ils nous font confiance"
     cta: "Voir tous les avis Google"
     verified: "Avis Vérifié"
@@ -231,7 +231,7 @@ reviews:
         rating: 5
         date: "Google Maps"
   en:
-    subtitle: "More than 800 customers have already left us a review on Google."
+    subtitle: "More than 1,000 customers have already left us a review on Google."
     title: "They Trust Us"
     cta: "View all Google Reviews"
     verified: "Verified Review"
@@ -285,7 +285,7 @@ reviews:
         rating: 5
         date: "Google Maps"
   es:
-    subtitle: "Más de 800 clientes ya nos han dejado una reseña en Google."
+    subtitle: "Más de 1 000 clientes ya nos han dejado una reseña en Google."
     title: "Confían en Nosotros"
     cta: "Ver todas las reseñas de Google"
     verified: "Opinión Verificada"
