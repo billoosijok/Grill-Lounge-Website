@@ -37,7 +37,7 @@ hero:
     label1: "Le restaurant de grillades"
     label2: "LE GOÛT DE L’ EXCELLENCE"
     label3: "à deux minutes de la Gare"
-    desc: "Viandes premium grillées à la pierre de lave, burgers maison, spécialités orientales et couscous traditionnel."
+    desc: "Viandes premium grillées à la pierre de lave, burgers maison, spécialités orientales et recettes maison."
     reviews: "Plus de 1 000 avis Google"
     bullets:
       - "Viandes Premium"
@@ -52,7 +52,7 @@ hero:
     label1: "The grill restaurant"
     label2: "THE TASTE OF EXCELLENCE"
     label3: "two minutes from the Station"
-    desc: "Premium meats grilled on lava stone, homemade burgers, oriental specialties, and traditional couscous."
+    desc: "Premium meats grilled on lava stone, homemade burgers, oriental specialties, and homemade recipes."
     reviews: "More than 1,000 Google reviews"
     bullets:
       - "Premium Meats"
@@ -67,7 +67,7 @@ hero:
     label1: "El restaurante de parrilla"
     label2: "EL SABOR DE LA EXCELENCIA"
     label3: "a dos minutes de la Estación"
-    desc: "Carnes premium cocinadas a la piedra de lava, hamburguesas caseras, especialidades orientales y cuscús tradicional."
+    desc: "Carnes premium cocinadas a la piedra de lava, hamburguesas caseras, especialidades orientales y recetas caseras."
     reviews: "Más de 1 000 reseñas de Google"
     bullets:
       - "Carnes Premium"
@@ -94,13 +94,6 @@ features:
         desc: "Préparés à la commande avec des ingrédients frais, sauces maison et pain moelleux"
         url: "/menu#burgers-signatures"
         btnText: "Voir nos Burgers"
-      - id: "couscous"
-        image: "/couscous.jpg"
-        title: "Couscous Maison"
-        desc: "Chaque week-end, retrouvez notre couscous maison préparé dans la tradition,"
-        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Découvrir le Menu du Moment")
-        url: "/reservation"
-        btnText: "Réserver une table"
   en:
     title: "Our Specialties"
     items:
@@ -116,13 +109,6 @@ features:
         desc: "Prepared to order with fresh ingredients, homemade sauces, and soft buns"
         url: "/menu#burgers-signatures"
         btnText: "See our Burgers"
-      - id: "couscous"
-        image: "/couscous.jpg"
-        title: "Homemade Couscous"
-        desc: "Every weekend, enjoy our traditional homemade couscous prepared in the pure tradition,"
-        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Discover the Special Menu")
-        url: "/reservation"
-        btnText: "Book a table"
   es:
     title: "Nuestras Especialidades"
     items:
@@ -138,13 +124,6 @@ features:
         desc: "Preparadas al momento con ingredientes frescos, salsas caseras y pan tierno"
         url: "/menu#burgers-signatures"
         btnText: "Ver nuestras Hamburguesas"
-      - id: "couscous"
-        image: "/couscous.jpg"
-        title: "Cuscús Casero"
-        desc: "Cada fin de semana, disfrute de nuestro cuscús casero preparado según la tradición,"
-        # Temporarily points to /reservation while Menu du Moment is hidden (originally /menu-moment and "Descubrir el Menú del Momento")
-        url: "/reservation"
-        btnText: "Reservar una mesa"
 
 about:
   fr:
@@ -342,19 +321,19 @@ reviews:
 bottom_cta:
   fr:
     title: "Une adresse incontournable à Narbonne"
-    desc: "Que vous recherchiez un restaurant de grillades, un burger maison, un couscous traditionnel ou simplement un endroit chaleureux, Notre équipe vous réserve un accueil convivial et une expérience que vous aurez envie de renouveler."
+    desc: "Que vous recherchiez un restaurant de grillades, un burger maison ou simplement un endroit chaleureux, Notre équipe vous réserve un accueil convivial et une expérience que vous aurez envie de renouveler."
     cta_book: "Réserver une table"
     cta_call: "Nous appeler"
     cta_map: "Obtenir l'itinéraire"
   en:
     title: "A Must-Visit Address in Narbonne"
-    desc: "Whether you are looking for a grill restaurant, a homemade burger, traditional couscous, or simply a warm place, our team promises a friendly welcome and an experience you will want to repeat."
+    desc: "Whether you are looking for a grill restaurant, a homemade burger, or simply a warm place, our team promises a friendly welcome and an experience you will want to repeat."
     cta_book: "Book a Table"
     cta_call: "Call Us"
     cta_map: "Get Directions"
   es:
     title: "Una Dirección Imprescindible en Narbona"
-    desc: "Tanto si busca un restaurante de parrillada, una hamburguesa casera, un cuscús tradicional o simplemente un lugar cálido, nuestro equipo le reserva una acogida cordial y una experiencia que querrá repetir."
+    desc: "Tanto si busca un restaurante de parrillada, una hamburguesa casera o simplemente un lugar cálido, nuestro equipo le reserva una acogida cordial y una experiencia que querrá repetir."
     cta_book: "Reservar mesa"
     cta_call: "Llamarnos"
     cta_map: "Cómo llegar"
@@ -397,7 +376,7 @@ faq:
       - q: "Est-il possible de commander à emporter ?"
         a: "Oui, tous nos plats (grillades, burgers, salades, etc.) sont disponibles sur place et à emporter."
       - q: "Faut-il réserver une table ?"
-        a: "La réservation est vivement conseillée, particulièrement les week-ends pour déguster notre couscous traditionnel ou en soirée. Vous pouvez réserver directement en nous contactant."
+        a: "La réservation est vivement conseillée, particulièrement les week-ends et en soirée. Vous pouvez réserver directement en nous contactant."
       - q: "Comment accéder au restaurant depuis la gare ?"
         a: "Le restaurant est situé au 5 Avenue Pierre Semard, à seulement 2 minutes à pied de la gare SNCF de Narbonne. Idéal pour manger rapidement avant ou après votre train."
   en:
@@ -411,7 +390,7 @@ faq:
       - q: "Is takeout available?"
         a: "Yes, all our dishes (grills, burgers, salads, etc.) are available for dine-in and takeout."
       - q: "Do I need to book a table?"
-        a: "Booking is highly recommended, especially on weekends to enjoy our traditional couscous or during busy evenings. You can book directly by contacting us."
+        a: "Booking is highly recommended, especially on weekends and during busy evenings. You can book directly by contacting us."
       - q: "How do I access the restaurant from the train station?"
         a: "The restaurant is located at 5 Avenue Pierre Semard, just a 2-minute walk from the Narbonne SNCF station. Ideal for a quick bite before or after your train."
   es:
@@ -425,7 +404,7 @@ faq:
       - q: "¿Se puede pedir para llevar?"
         a: "Sí, todos nuestros platos (parrilladas, hamburguesas, ensaladas, etc.) están disponibles para consumir aquí o para llevar."
       - q: "¿Es necesario reservar mesa?"
-        a: "Se recomienda encarecidamente reservar, sobre todo los fines de semana para disfrutar de nuestro cuscús tradicional o por la noche. Puede reservar directamente contactando con nosotros."
+        a: "Se recomienda encarecidamente reservar, sobre todo los fines de semana y por la noche. Puede reservar directamente contactando con nosotros."
       - q: "¿Cómo llegar al restaurante desde la estación?"
         a: "El restaurante está situado en el 5 Avenue Pierre Semard, a solo 2 minutos a pie de la estación de tren SNCF de Narbona. Ideal para comer rápido antes o después de su tren."
 

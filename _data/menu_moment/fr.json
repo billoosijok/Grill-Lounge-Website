@@ -17,11 +17,6 @@
         "name": "Poké Bowl",
         "description": "Semoule fine, avocat, chou rouge, concombres, radis.",
         "price": "17,90 €"
-      },
-      {
-        "name": "Couscous Royal",
-        "description": "3 viandes et légumes.",
-        "price": "17 €"
       }
     ]
   }

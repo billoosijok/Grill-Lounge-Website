@@ -17,11 +17,6 @@
         "name": "Poké Bowl",
         "description": "Sémola fina, aguacate, col lombarda, pepinos, rábano.",
         "price": "17,90 €"
-      },
-      {
-        "name": "Cuscús Real",
-        "description": "3 carnes y verduras.",
-        "price": "17 €"
       }
     ]
   }

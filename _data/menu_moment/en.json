@@ -17,11 +17,6 @@
         "name": "Poké Bowl",
         "description": "Fine semolina, avocado, red cabbage, cucumbers, radish.",
         "price": "17.90 €"
-      },
-      {
-        "name": "Royal Couscous",
-        "description": "3 meats and vegetables.",
-        "price": "17 €"
       }
     ]
   }
