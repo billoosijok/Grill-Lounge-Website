@@ -3,6 +3,14 @@ email: grilllounge.aude@gmail.com
 description: "Steakhouse élégant proposant des steaks savoureux. Personnel amical, saveurs uniques et atmosphère accueillante."
 url: "https://grilllounge.fr"
 
+# Google Ads conversion tracking. Labels come from Google Ads → Goals →
+# Conversions → (action) → Tag setup → "Use Google tag" (the part after the "/").
+# A conversion is only sent once its label is filled in.
+google_ads:
+  id: "AW-18169686115"
+  booking_label: ""
+  phone_label: ""
+
 destination: docs
 markdown: kramdown
 highlighter: rouge

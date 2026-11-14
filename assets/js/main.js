@@ -359,8 +359,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const telLink = e.target.closest('a[href^="tel:"]');
         if (telLink) {
             const phoneNumber = telLink.getAttribute('href').replace(/^tel:/, '').trim();
-            if (typeof window.gtag === 'function') {
-                window.gtag('event', 'phone_click', {
+            if (typeof window.trackConversion === 'function') {
+                window.trackConversion('phone_click', {
                     phone_number: phoneNumber
                 });
             }

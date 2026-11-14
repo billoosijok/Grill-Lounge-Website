@@ -39,6 +39,26 @@
       gtag('js', new Date());
 
       gtag('config', 'G-DQYS58J1H6');
+      gtag('config', "AW-18169686115");
+
+      // Send a GA4 event and, when a label is configured, the matching Google Ads conversion.
+      var GOOGLE_ADS = {
+        id: "AW-18169686115",
+        labels: {
+          booking_complete: "",
+          phone_click: ""
+        }
+      };
+      window.trackConversion = function(eventName, params) {
+        var eventParams = Object.assign({}, params);
+        var conversionParams = eventParams.conversion || {};
+        delete eventParams.conversion;
+        gtag('event', eventName, eventParams);
+        var label = GOOGLE_ADS.labels[eventName];
+        if (label) {
+          gtag('event', 'conversion', Object.assign({ send_to: GOOGLE_ADS.id + '/' + label }, conversionParams));
+        }
+      };
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>

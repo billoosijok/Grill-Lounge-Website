@@ -777,6 +777,15 @@ script, so a page only has to include it. Used by the reservation page.
                 return res.json();
             })
             .then(function(data) {
+                if (typeof window.trackConversion === "function") {
+                    window.trackConversion("booking_complete", {
+                        party_size: adultsCount + childrenCount,
+                        booking_date: bookingDate,
+                        booking_time: bookingTime,
+                        service: selectedServiceLabel || undefined,
+                        conversion: data && data.id ? { transaction_id: String(data.id) } : undefined
+                    });
+                }
                 showConfirmation({
                     guestName: guestName,
                     bookingDate: bookingDate,
