@@ -26,7 +26,7 @@ redirect_from:
             if (browserLang.indexOf(supported[i]) === 0) { lang = supported[i]; break; }
           }
         }
-        window.location.replace("/" + lang + "/menu/");
+        window.location.replace("/" + lang + "/menu/" + window.location.search + window.location.hash);
       })();
     </script>
   </body>

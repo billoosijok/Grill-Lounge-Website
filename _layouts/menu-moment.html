@@ -10,7 +10,7 @@
   <body>
     <p>Redirecting to <a href="/{{ page.lang | default: 'fr' }}/">/{{ page.lang | default: 'fr' }}/</a>...</p>
     <script>
-      window.location.replace("/{{ page.lang | default: 'fr' }}/");
+      window.location.replace("/{{ page.lang | default: 'fr' }}/" + window.location.search + window.location.hash);
     </script>
   </body>
 </html>

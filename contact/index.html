@@ -21,7 +21,7 @@
             if (browserLang.indexOf(supported[i]) === 0) { lang = supported[i]; break; }
           }
         }
-        window.location.replace("/" + lang + "/contact/");
+        window.location.replace("/" + lang + "/contact/" + window.location.search + window.location.hash);
       })();
     </script>
   </body>
